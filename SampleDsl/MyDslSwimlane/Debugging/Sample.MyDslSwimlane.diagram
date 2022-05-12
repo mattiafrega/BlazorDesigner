@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslSwimlaneDiagram dslVersion="1.0.0.0" Id="249e3293-a924-4922-8087-5eb871b66c51" absoluteBounds="0, 0, 18, 8.5" name="Sample">
+  <exampleModelMoniker Id="5ad6a7e8-c67c-47c0-ac08-cd96ad775910" />
+  <nestedChildShapes>
+    <swimLane1 Id="9b728d89-fabb-4be3-87b3-2ce748d571a1" absoluteBounds="0, 0, 4.2499997988343239, 8.5">
+      <mySwimLaneMoniker Id="b62fcaeb-7234-4dfd-a68e-11fb65a478c7" />
+    </swimLane1>
+    <swimLane1 Id="c548c3a1-509a-4bc5-b0e6-2dcd4c80f114" absoluteBounds="4.2499997988343239, 0, 5.4583333134651184, 8.5">
+      <mySwimLaneMoniker Id="75d3ab84-c6bc-4e6d-8306-79fdb2615971" />
+      <nestedChildShapes>
+        <myButtonShape Id="5ea86c1e-ef14-40ba-b57a-3742a7d6a7ef" absoluteBounds="5.2499997988343239, 2.75, 3.125, 1">
+          <myButtonMoniker Id="961730a3-e9ea-4705-a4a3-623e21b680d3" />
+          <relativeChildShapes />
+        </myButtonShape>
+        <myButtonShape Id="f08f0193-c426-4b53-9ef7-0249fbb31a01" absoluteBounds="5.3749997988343239, 4.75, 3, 1">
+          <myButtonMoniker Id="1b5ae795-4e3e-4de9-b551-8381d2d1608f" />
+          <relativeChildShapes />
+        </myButtonShape>
+        <myButtonShape Id="23a7334b-2b18-4bc3-9433-a81fb71b30e9" absoluteBounds="4.8749997988343239, 0.75, 4.25, 1">
+          <myButtonMoniker Id="4cd036f1-b43e-4324-bdaa-acbf56896b1c" />
+          <relativeChildShapes />
+        </myButtonShape>
+      </nestedChildShapes>
+    </swimLane1>
+    <swimLane1 Id="7b5ec807-d5a7-4ffa-b997-298ba870db49" absoluteBounds="9.7083331122994423, 0, 8.2916668877005577, 8.5">
+      <mySwimLaneMoniker Id="bb8fad81-fee9-4331-a27b-39f795863480" />
+      <nestedChildShapes>
+        <myButtonShape Id="d77cd081-8abc-40f5-ab17-f1db1d4f1350" absoluteBounds="10.583333112299442, 2.75, 4.125, 1">
+          <myButtonMoniker Id="2548ff70-4b4c-420e-880c-95dbeb425079" />
+          <relativeChildShapes />
+        </myButtonShape>
+      </nestedChildShapes>
+    </swimLane1>
+  </nestedChildShapes>
+</myDslSwimlaneDiagram>

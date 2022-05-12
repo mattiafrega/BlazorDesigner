@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{108906e1-ec1b-4711-b60d-147967efcbd8}</TemplateID>
+		<Name Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="103"/>
+		<Description Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="102"/>
+		<Icon Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>MyDslSwimlane.MyDslSwimlane</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslSwimlane">MyDslSwimlane.MyDslSwimlane</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslSwimlane.diagram">MyDslSwimlane.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslInheritanceDiagram dslVersion="1.0.0.0" Id="935a2f2c-2be5-45b8-9775-b0026f0576f6" absoluteBounds="0, 0, 17.625, 10.875" name="Sample">
+  <exampleModelMoniker Id="e8585279-b3a4-4b8d-8c51-473bc4a1e350" />
+  <nestedChildShapes>
+    <dogShape Id="ece2cd1b-e24f-4d38-af94-bd55e54c0817" absoluteBounds="15.375, 6.625, 2, 2">
+      <dogMoniker name="/e8585279-b3a4-4b8d-8c51-473bc4a1e350/Dog1" />
+    </dogShape>
+    <catShape Id="57df68be-e4ff-4356-b02f-d25a83a83ed1" absoluteBounds="13.25, 8.625, 2, 2">
+      <catMoniker name="/e8585279-b3a4-4b8d-8c51-473bc4a1e350/Cat1" />
+    </catShape>
+  </nestedChildShapes>
+</myDslInheritanceDiagram>

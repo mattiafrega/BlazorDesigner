@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslEmbeddingRelationDiagram dslVersion="1.0.0.0" Id="b3f59972-8e0d-4867-a34c-d7c3d8163eda" absoluteBounds="0, 0, 17.75, 9.75" name="Sample">
+  <exampleModelMoniker Id="f0e97d4f-f1e6-473c-8f2d-9d7e5aad23b5" />
+  <nestedChildShapes>
+    <myPanelShape Id="91c61809-5324-4a53-bf73-618c9f6e60e0" absoluteBounds="4.5, 1.375, 9.5, 6.25">
+      <myPanelMoniker name="/f0e97d4f-f1e6-473c-8f2d-9d7e5aad23b5/MyPanel1" />
+    </myPanelShape>
+    <myEmbeddedButtonShape Id="2eea44af-e710-486f-8c4a-c16608379905" absoluteBounds="5, 1.625, 8.25, 1.625">
+      <myEmbeddedButtonMoniker Id="1759016d-42ab-4698-a8cd-0f1c2230b85a" />
+    </myEmbeddedButtonShape>
+    <myEmbeddedButtonShape Id="ad8128d1-23d9-4a5c-ab5d-eb97fd43e9a2" absoluteBounds="9.5, 3.625, 4.25, 1.5">
+      <myEmbeddedButtonMoniker Id="6029aebc-bfa6-465f-b248-516d8c57cd8d" />
+    </myEmbeddedButtonShape>
+    <myEmbeddedButtonShape Id="d123d15b-9c74-463e-b047-4df8f77ef62b" absoluteBounds="13, 5.5, 4.5, 1.375">
+      <myEmbeddedButtonMoniker Id="e7979440-e44e-41f0-b3f1-68bb537bffb7" />
+    </myEmbeddedButtonShape>
+    <myNotEmbeddedButtonShape Id="66519c5e-e7c4-41b7-ae5b-2059d38cd64d" absoluteBounds="2.5, 8.375, 5.75, 1">
+      <myNotEmbeddedButtonMoniker Id="78501f8a-0dcd-4fd5-acf2-c2647a7eedbf" />
+    </myNotEmbeddedButtonShape>
+    <myNotEmbeddedButtonShape Id="3da44125-653b-4093-95a4-3debbca62620" absoluteBounds="9.25, 8.5, 5.875, 1">
+      <myNotEmbeddedButtonMoniker Id="4242bf19-1605-403d-aa52-9e10e707ccb7" />
+    </myNotEmbeddedButtonShape>
+    <myNotEmbeddedButtonShape Id="954b36db-1f04-4a55-92fc-e5ef18819511" absoluteBounds="7.375, 6.875, 5, 1">
+      <myNotEmbeddedButtonMoniker Id="18881fac-1f5d-4994-bd22-fd1361093d6a" />
+    </myNotEmbeddedButtonShape>
+  </nestedChildShapes>
+</myDslEmbeddingRelationDiagram>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e8585279-b3a4-4b8d-8c51-473bc4a1e350" xmlns="http://schemas.microsoft.com/dsltools/MyDslInheritance">
+  <dog>
+    <exampleModelHasDog Id="884039b9-1d3c-456e-b447-8a560b699874">
+      <dog Id="7bfe2ff7-7771-453a-8cd6-da4c7772039a" name="Dog1" />
+    </exampleModelHasDog>
+  </dog>
+  <cat>
+    <exampleModelHasCat Id="8d8fb6a8-b084-4596-a12c-78d14ee2e0a0">
+      <cat Id="f73e1efe-2c4d-4af3-b1ee-c3bb683ee4b2" name="Cat1" animalProperty="questa proprietà è ereditata da Animale / this property is inherted from Animal Class" catProperty="questa è una proprietà della classe Gatto" />
+    </exampleModelHasCat>
+  </cat>
+</exampleModel>

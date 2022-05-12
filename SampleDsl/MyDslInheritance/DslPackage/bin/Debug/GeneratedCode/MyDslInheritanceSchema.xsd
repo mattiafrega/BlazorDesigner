@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="MyDslInheritanceSchema" targetNamespace="http://schemas.microsoft.com/dsltools/MyDslInheritance" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/MyDslInheritance" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- ExampleModel -->
+  <xsd:element name="exampleModel" type="ExampleModel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModel">
+    <xsd:annotation>
+      <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ExampleModelHasDog -->
+          <xsd:element name="dog" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ExampleModelHasDog</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="exampleModelHasDog" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ExampleModelHasDog needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ExampleModelHasCat -->
+          <xsd:element name="cat" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ExampleModelHasCat</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="exampleModelHasCat" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ExampleModelHasCat needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModel Moniker -->
+  <xsd:element name="exampleModelMoniker" type="ExampleModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Animal -->
+  <xsd:element name="animal" abstract="true" type="Animal" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Animal" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Elements embedded in the model. Appear as boxes on the diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" />
+        <!-- Property: AnimalProperty -->
+        <xsd:attribute name="animalProperty" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Animal Moniker -->
+  <xsd:element name="animalMoniker" abstract="true" type="AnimalMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AnimalMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Animal instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Dog -->
+  <xsd:element name="dog" type="Dog" substitutionGroup="animal" />
+  <xsd:complexType name="Dog">
+    <xsd:complexContent>
+      <xsd:extension base="Animal">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: DogProperty -->
+        <xsd:attribute name="dogProperty" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Dog Moniker -->
+  <xsd:element name="dogMoniker" type="DogMoniker" substitutionGroup="animalMoniker" />
+  <xsd:complexType name="DogMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Dog instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AnimalMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Cat -->
+  <xsd:element name="cat" type="Cat" substitutionGroup="animal" />
+  <xsd:complexType name="Cat">
+    <xsd:complexContent>
+      <xsd:extension base="Animal">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CatProperty -->
+        <xsd:attribute name="catProperty" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Cat Moniker -->
+  <xsd:element name="catMoniker" type="CatMoniker" substitutionGroup="animalMoniker" />
+  <xsd:complexType name="CatMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Cat instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="AnimalMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasDog -->
+  <xsd:element name="exampleModelHasDog" type="ExampleModelHasDog" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModelHasDog">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Dog -->
+          <xsd:element ref="dog" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasDog Moniker -->
+  <xsd:element name="exampleModelHasDogMoniker" type="ExampleModelHasDogMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelHasDogMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModelHasDog instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasCat -->
+  <xsd:element name="exampleModelHasCat" type="ExampleModelHasCat" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModelHasCat">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Cat -->
+          <xsd:element ref="cat" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasCat Moniker -->
+  <xsd:element name="exampleModelHasCatMoniker" type="ExampleModelHasCatMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelHasCatMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModelHasCat instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+</xsd:schema>
+

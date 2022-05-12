@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MyDslSwimlane</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{fb9f1c09-80d2-4682-b6db-97160ab90610}</TemplateID>
+        <Name Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="103" />
+        <Description Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="102" />
+        <Icon Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslSwimlane.MyDslSwimlane</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MyDslSwimlane</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{108906e1-ec1b-4711-b60d-147967efcbd8}</TemplateID>
+        <Name Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="103" />
+        <Description Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="102" />
+        <Icon Package="{37390659-abd3-4e56-85de-a6ad827c2ae4}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslSwimlane.MyDslSwimlane</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

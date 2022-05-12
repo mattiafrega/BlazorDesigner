@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{e203276c-3094-4a48-be38-41528d4f6710}</TemplateID>
+		<Name Package="{6fe39456-fd33-4a54-a9f0-801a1a2cff5c}" ID="103"/>
+		<Description Package="{6fe39456-fd33-4a54-a9f0-801a1a2cff5c}" ID="102"/>
+		<Icon Package="{6fe39456-fd33-4a54-a9f0-801a1a2cff5c}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>MyDslInheritance.MyDslInheritance</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslInheritance">MyDslInheritance.MyDslInheritance</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslInheritance.diagram">MyDslInheritance.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

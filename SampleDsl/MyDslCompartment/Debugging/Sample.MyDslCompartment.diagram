@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslCompartmentDiagram dslVersion="1.0.0.0" Id="e7960da2-7572-4436-b1d4-fb38b47aadb8" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="242640f1-4c26-46f4-8056-cebc8e71ea66" />
+  <nestedChildShapes>
+    <scaffaleShape Id="56803d04-d219-46b7-a565-feac144a58e3" absoluteBounds="4, 0.75, 4.125, 1.9362939453124994">
+      <scaffaleMoniker Id="69b035d3-4a82-4e05-8db3-83480a34de13" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fbbbf634-436e-4bfb-b154-03e70e407de1" absoluteBounds="4.0150000000000006, 1.7599999999999998, 4.0950000000000006, 0.8262939453125" name="Libri" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </scaffaleShape>
+  </nestedChildShapes>
+</myDslCompartmentDiagram>

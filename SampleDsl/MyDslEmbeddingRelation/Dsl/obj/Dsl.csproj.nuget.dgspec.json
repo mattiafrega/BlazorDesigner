@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\matti\\source\\repos\\MyDslEmbeddingRelation\\Dsl\\Dsl.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\matti\\source\\repos\\MyDslEmbeddingRelation\\Dsl\\Dsl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\matti\\source\\repos\\MyDslEmbeddingRelation\\Dsl\\Dsl.csproj",
+        "projectName": "Company.MyDslEmbeddingRelation.Dsl",
+        "projectPath": "C:\\Users\\matti\\source\\repos\\MyDslEmbeddingRelation\\Dsl\\Dsl.csproj",
+        "packagesPath": "C:\\Users\\matti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matti\\source\\repos\\MyDslEmbeddingRelation\\Dsl\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\matti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.VisualStudio.Modeling.Sdk": {
+              "target": "Package",
+              "version": "[17.0.*-*, )"
+            },
+            "Microsoft.VisualStudio.Modeling.Sdk.Diagrams": {
+              "target": "Package",
+              "version": "[17.0.*-*, )"
+            },
+            "Microsoft.VisualStudio.TextTemplating": {
+              "target": "Package",
+              "version": "[17.0.*-*, )"
+            },
+            "Microsoft.VisualStudio.TextTemplating.Interfaces.10.0": {
+              "target": "Package",
+              "version": "[17.0.*-*, )"
+            },
+            "Microsoft.VisualStudio.TextTemplating.Interfaces.11.0": {
+              "target": "Package",
+              "version": "[17.0.*-*, )"
+            },
+            "Microsoft.VisualStudio.TextTemplating.Modeling": {
+              "target": "Package",
+              "version": "[17.0.*-*, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

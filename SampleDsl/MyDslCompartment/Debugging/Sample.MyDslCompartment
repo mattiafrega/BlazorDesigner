@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="242640f1-4c26-46f4-8056-cebc8e71ea66" xmlns="http://schemas.microsoft.com/dsltools/MyDslCompartment">
+  <scaffale>
+    <exampleModelHasScaffale Id="f8762018-012a-4174-8e3f-f454a9da6046">
+      <scaffale Id="69b035d3-4a82-4e05-8db3-83480a34de13">
+        <libro>
+          <scaffaleHasLibro Id="122f4c78-7f6f-4f5c-9e57-984f1322dc6a">
+            <libro Id="0768eb40-86d2-4f3b-8334-5f5713888474" titoloLibro="Iliade" />
+          </scaffaleHasLibro>
+          <scaffaleHasLibro Id="b80307e4-c2ea-459d-aadc-fc0251ed6ae5">
+            <libro Id="a7d31918-6f35-4de5-aa0e-bf544e02b5ea" titoloLibro="Odissea" />
+          </scaffaleHasLibro>
+          <scaffaleHasLibro Id="cf345978-6378-4592-9eba-08eaf83a2d58">
+            <libro Id="38893ee8-74ff-4012-bb26-6c89a3a871cf" titoloLibro="Eneide" />
+          </scaffaleHasLibro>
+        </libro>
+      </scaffale>
+    </exampleModelHasScaffale>
+  </scaffale>
+</exampleModel>

@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MyDslEmbeddingRelation</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{596dc21a-2d8a-4eb6-814a-b1adaabaaa2b}</TemplateID>
+        <Name Package="{6c422edd-8648-4dc6-8cc5-c8b8cbbf2c9e}" ID="103" />
+        <Description Package="{6c422edd-8648-4dc6-8cc5-c8b8cbbf2c9e}" ID="102" />
+        <Icon Package="{6c422edd-8648-4dc6-8cc5-c8b8cbbf2c9e}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslEmbeddingRelation.MyDslEmbeddingRelation</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MyDslEmbeddingRelation</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{e99def7b-33a8-4bdb-8803-7bc4f2e52840}</TemplateID>
+        <Name Package="{6c422edd-8648-4dc6-8cc5-c8b8cbbf2c9e}" ID="103" />
+        <Description Package="{6c422edd-8648-4dc6-8cc5-c8b8cbbf2c9e}" ID="102" />
+        <Icon Package="{6c422edd-8648-4dc6-8cc5-c8b8cbbf2c9e}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslEmbeddingRelation.MyDslEmbeddingRelation</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

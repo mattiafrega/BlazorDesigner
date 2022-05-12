@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="MyDslEmbeddingRelationSchema" targetNamespace="http://schemas.microsoft.com/dsltools/MyDslEmbeddingRelation" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/MyDslEmbeddingRelation" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- ExampleModel -->
+  <xsd:element name="exampleModel" type="ExampleModel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModel">
+    <xsd:annotation>
+      <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ExampleModelHasElements -->
+          <xsd:element name="elements" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ExampleModelHasElements</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="exampleModelHasElements">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ExampleModelHasElements needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="myPanel" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ExampleModelHasMyNotEmbeddedButton -->
+          <xsd:element name="myNotEmbeddedButton" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ExampleModelHasMyNotEmbeddedButton</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="exampleModelHasMyNotEmbeddedButton" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ExampleModelHasMyNotEmbeddedButton needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModel Moniker -->
+  <xsd:element name="exampleModelMoniker" type="ExampleModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyPanel -->
+  <xsd:element name="myPanel" type="MyPanel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MyPanel">
+    <xsd:annotation>
+      <xsd:documentation>Elements embedded in the model. Appear as boxes on the diagram.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: MyPanelHasMyEmbeddedButton -->
+          <xsd:element name="myEmbeddedButton" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of MyPanelHasMyEmbeddedButton</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="myPanelHasMyEmbeddedButton" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of MyPanelHasMyEmbeddedButton needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyPanel Moniker -->
+  <xsd:element name="myPanelMoniker" type="MyPanelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MyPanelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MyPanel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyEmbeddedButton -->
+  <xsd:element name="myEmbeddedButton" type="MyEmbeddedButton" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MyEmbeddedButton">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyEmbeddedButton Moniker -->
+  <xsd:element name="myEmbeddedButtonMoniker" type="MyEmbeddedButtonMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MyEmbeddedButtonMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MyEmbeddedButton instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyNotEmbeddedButton -->
+  <xsd:element name="myNotEmbeddedButton" type="MyNotEmbeddedButton" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MyNotEmbeddedButton">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyNotEmbeddedButton Moniker -->
+  <xsd:element name="myNotEmbeddedButtonMoniker" type="MyNotEmbeddedButtonMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MyNotEmbeddedButtonMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MyNotEmbeddedButton instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasElements -->
+  <xsd:element name="exampleModelHasElements" abstract="true" type="ExampleModelHasElements" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModelHasElements" abstract="true" >
+    <xsd:annotation>
+      <xsd:documentation>Embedding relationship between the Model and Elements</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end MyPanel -->
+          <xsd:element ref="myPanel" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasElements Moniker -->
+  <xsd:element name="exampleModelHasElementsMoniker" type="ExampleModelHasElementsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelHasElementsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModelHasElements instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyPanelHasMyEmbeddedButton -->
+  <xsd:element name="myPanelHasMyEmbeddedButton" type="MyPanelHasMyEmbeddedButton" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="MyPanelHasMyEmbeddedButton">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end MyEmbeddedButton -->
+          <xsd:element ref="myEmbeddedButton" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- MyPanelHasMyEmbeddedButton Moniker -->
+  <xsd:element name="myPanelHasMyEmbeddedButtonMoniker" type="MyPanelHasMyEmbeddedButtonMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MyPanelHasMyEmbeddedButtonMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for MyPanelHasMyEmbeddedButton instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasMyNotEmbeddedButton -->
+  <xsd:element name="exampleModelHasMyNotEmbeddedButton" type="ExampleModelHasMyNotEmbeddedButton" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModelHasMyNotEmbeddedButton">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end MyNotEmbeddedButton -->
+          <xsd:element ref="myNotEmbeddedButton" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ExampleModelHasMyNotEmbeddedButton Moniker -->
+  <xsd:element name="exampleModelHasMyNotEmbeddedButtonMoniker" type="ExampleModelHasMyNotEmbeddedButtonMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelHasMyNotEmbeddedButtonMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ExampleModelHasMyNotEmbeddedButton instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+</xsd:schema>
+

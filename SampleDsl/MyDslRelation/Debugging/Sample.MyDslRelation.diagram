@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslRelationDiagram dslVersion="1.0.0.0" Id="6b2209a2-8baf-496b-a1fe-355655583712" absoluteBounds="0, 0, 13.375, 8.5" name="Sample">
+  <exampleModelMoniker Id="37875f0e-c960-4607-9492-9b8825ebd452" />
+  <nestedChildShapes>
+    <myButtonShape Id="8e0d30ba-65d0-4ee6-87a3-b5a54390c233" absoluteBounds="5.125, 1.75, 2, 0.75">
+      <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton1" />
+    </myButtonShape>
+    <myButtonShape Id="08757e36-6078-4c25-98fc-b15e54897994" absoluteBounds="5.125, 5.125, 2, 0.75">
+      <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton2" />
+    </myButtonShape>
+    <myButtonShape Id="fa5336fc-6167-4c0b-b108-d9955e9507a1" absoluteBounds="10.875, 3.25, 2, 0.75">
+      <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton3" />
+    </myButtonShape>
+    <myConnector Id="4b505c37-347e-4fbf-aef7-20719c20c22b" edgePoints="[(5.79687625 : 5.125); (5.79687625 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="49ef33c9-9bd5-41b7-81be-292dbebc1ee0">
+      <nodes>
+        <myButtonShapeMoniker Id="08757e36-6078-4c25-98fc-b15e54897994" />
+        <myButtonShapeMoniker Id="8e0d30ba-65d0-4ee6-87a3-b5a54390c233" />
+      </nodes>
+    </myConnector>
+    <myButtonShape Id="a7f2811d-2ec4-47ff-9ecf-6938acde5dc3" absoluteBounds="11.125, 5.25, 2, 0.75">
+      <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton4" />
+    </myButtonShape>
+    <myConnector Id="607f80ea-644a-4518-966a-ed7374421415" edgePoints="[(6.492190625 : 5.125); (6.492190625 : 3.625); (10.875 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="49ef33c9-9bd5-41b7-81be-292dbebc1ee0">
+      <nodes>
+        <myButtonShapeMoniker Id="08757e36-6078-4c25-98fc-b15e54897994" />
+        <myButtonShapeMoniker Id="fa5336fc-6167-4c0b-b108-d9955e9507a1" />
+      </nodes>
+    </myConnector>
+    <myConnector Id="ca6884c9-9ae3-4244-94d2-addc3904badb" edgePoints="[(7.125 : 5.5625); (11.125 : 5.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="49ef33c9-9bd5-41b7-81be-292dbebc1ee0">
+      <nodes>
+        <myButtonShapeMoniker Id="08757e36-6078-4c25-98fc-b15e54897994" />
+        <myButtonShapeMoniker Id="a7f2811d-2ec4-47ff-9ecf-6938acde5dc3" />
+      </nodes>
+    </myConnector>
+    <myConnector Id="eadb983f-974c-4a64-a70e-052a9eac0082" edgePoints="[(12 : 4); (12 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="49ef33c9-9bd5-41b7-81be-292dbebc1ee0">
+      <nodes>
+        <myButtonShapeMoniker Id="fa5336fc-6167-4c0b-b108-d9955e9507a1" />
+        <myButtonShapeMoniker Id="a7f2811d-2ec4-47ff-9ecf-6938acde5dc3" />
+      </nodes>
+    </myConnector>
+    <myConnector Id="841032c2-ae5f-4cea-a329-7e131cc6b0cc" edgePoints="[(12.5 : 5.25); (12.5 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="49ef33c9-9bd5-41b7-81be-292dbebc1ee0">
+      <nodes>
+        <myButtonShapeMoniker Id="a7f2811d-2ec4-47ff-9ecf-6938acde5dc3" />
+        <myButtonShapeMoniker Id="fa5336fc-6167-4c0b-b108-d9955e9507a1" />
+      </nodes>
+    </myConnector>
+  </nestedChildShapes>
+</myDslRelationDiagram>

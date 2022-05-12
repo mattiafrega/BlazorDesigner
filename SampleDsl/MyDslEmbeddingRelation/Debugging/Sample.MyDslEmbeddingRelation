@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="f0e97d4f-f1e6-473c-8f2d-9d7e5aad23b5" xmlns="http://schemas.microsoft.com/dsltools/MyDslEmbeddingRelation">
+  <elements>
+    <myPanel Id="794d1dd5-ef58-4232-bda0-0960049e3d0d" name="MyPanel1">
+      <myEmbeddedButton>
+        <myPanelHasMyEmbeddedButton Id="4eb814cd-97fc-4e06-85f8-57ee4349cc18">
+          <myEmbeddedButton Id="1759016d-42ab-4698-a8cd-0f1c2230b85a" name="i button rossi sono embedded e possono essere creati solo dentro al panel. " />
+        </myPanelHasMyEmbeddedButton>
+        <myPanelHasMyEmbeddedButton Id="bdc5e505-103d-4b47-83e1-792ae9f0cbe2">
+          <myEmbeddedButton Id="6029aebc-bfa6-465f-b248-516d8c57cd8d" name="nella gerarchia del diagramma sono i child del Panel" />
+        </myPanelHasMyEmbeddedButton>
+        <myPanelHasMyEmbeddedButton Id="ac1afba5-6df6-405e-b42c-2996ea6a6d9f">
+          <myEmbeddedButton Id="e7979440-e44e-41f0-b3f1-68bb537bffb7" name="possono essere spostati fuori, ma questo si può evitare con una rule (regola)" />
+        </myPanelHasMyEmbeddedButton>
+      </myEmbeddedButton>
+    </myPanel>
+  </elements>
+  <myNotEmbeddedButton>
+    <exampleModelHasMyNotEmbeddedButton Id="bb87d505-0bb4-4034-bb65-5c59a77b5a7c">
+      <myNotEmbeddedButton Id="78501f8a-0dcd-4fd5-acf2-c2647a7eedbf" name="i button blu NON sono embedded e non possono essere posizionati dentro altri elementi" />
+    </exampleModelHasMyNotEmbeddedButton>
+    <exampleModelHasMyNotEmbeddedButton Id="33f4bd3a-e9aa-4b50-a0af-59d2b56f4151">
+      <myNotEmbeddedButton Id="4242bf19-1605-403d-aa52-9e10e707ccb7" name="nella gerarchia appaiono indipendenti da qualsiasi altro elemento" />
+    </exampleModelHasMyNotEmbeddedButton>
+    <exampleModelHasMyNotEmbeddedButton Id="354ecf36-3326-4722-9bba-517ee3dc8c4c">
+      <myNotEmbeddedButton Id="18881fac-1f5d-4994-bd22-fd1361093d6a" name="possono essere trascinati dentro al panel ma si può evitare con una rule (regola)" />
+    </exampleModelHasMyNotEmbeddedButton>
+  </myNotEmbeddedButton>
+</exampleModel>

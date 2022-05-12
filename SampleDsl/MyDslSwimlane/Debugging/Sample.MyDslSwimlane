@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5ad6a7e8-c67c-47c0-ac08-cd96ad775910" xmlns="http://schemas.microsoft.com/dsltools/MyDslSwimlane">
+  <mySwimLane>
+    <exampleModelHasMySwimLane Id="f1da10e2-a834-413a-84f8-5760d7a3859b">
+      <mySwimLane Id="b62fcaeb-7234-4dfd-a68e-11fb65a478c7" name="MySwimLane1" />
+    </exampleModelHasMySwimLane>
+    <exampleModelHasMySwimLane Id="0f5729b3-06cb-40f5-95fe-524918adeb69">
+      <mySwimLane Id="75d3ab84-c6bc-4e6d-8306-79fdb2615971" name="SwimLane Centrale">
+        <myButton>
+          <mySwimLaneHasMyButton Id="b3c59e01-f637-4fbe-8558-87b6ae016902">
+            <myButton Id="961730a3-e9ea-4705-a4a3-623e21b680d3" name="MyButton1" myProperty="hello world" />
+          </mySwimLaneHasMyButton>
+          <mySwimLaneHasMyButton Id="5708179d-6d57-47d3-9b77-5341f79d71f5">
+            <myButton Id="1b5ae795-4e3e-4de9-b551-8381d2d1608f" name="MyButton2" />
+          </mySwimLaneHasMyButton>
+          <mySwimLaneHasMyButton Id="4317f2cf-4b9a-4010-b97c-caf8931e7105">
+            <myButton Id="4cd036f1-b43e-4324-bdaa-acbf56896b1c" name="MyButton3" />
+          </mySwimLaneHasMyButton>
+        </myButton>
+      </mySwimLane>
+    </exampleModelHasMySwimLane>
+    <exampleModelHasMySwimLane Id="a2c374c9-e023-4e5e-915b-b0f99fa5f40f">
+      <mySwimLane Id="bb8fad81-fee9-4331-a27b-39f795863480" name="MySwimLane3">
+        <myButton>
+          <mySwimLaneHasMyButton Id="fe154364-5f42-4506-9a74-1a37d4d65838">
+            <myButton Id="2548ff70-4b4c-420e-880c-95dbeb425079" name="MyButton1" />
+          </mySwimLaneHasMyButton>
+        </myButton>
+      </mySwimLane>
+    </exampleModelHasMySwimLane>
+  </mySwimLane>
+</exampleModel>

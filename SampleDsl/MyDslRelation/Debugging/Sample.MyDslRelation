@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="37875f0e-c960-4607-9492-9b8825ebd452" xmlns="http://schemas.microsoft.com/dsltools/MyDslRelation">
+  <elements>
+    <myButton Id="14a3cda8-07de-4399-889f-16842564e7d1" name="MyButton1" />
+    <myButton Id="8bdfadc5-2869-45c7-b035-17a0120d7b05" name="MyButton2">
+      <targets>
+        <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton1" />
+        <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton3" />
+        <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton4" />
+      </targets>
+    </myButton>
+    <myButton Id="ead1ff2d-96c0-4674-991b-6fb1c47e5458" name="MyButton3">
+      <targets>
+        <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton4" />
+      </targets>
+    </myButton>
+    <myButton Id="01704d04-7b27-4fe1-a904-2cdf23b5d865" name="MyButton4">
+      <targets>
+        <myButtonMoniker name="/37875f0e-c960-4607-9492-9b8825ebd452/MyButton3" />
+      </targets>
+    </myButton>
+  </elements>
+</exampleModel>
