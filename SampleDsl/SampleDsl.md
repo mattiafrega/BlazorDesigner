@@ -8,3 +8,7 @@ L'obiettivo è quello di comprendere il significato di ogni feature permessa da 
 - MyDslEmbeddingRelation: mostra il funzionamento dell'incorporamento (embedding) tra oggetti
 - MyDslInheritance: mostra il funzionamento dell'ereditarietà tra Classi in DSL Tools
 - MyDslCompartment: mostra il funzionamento della classe Compartment che permette di raggruppare oggetti di altre classi.
+
+
+
+La cartella "/screenshots" contiene per ogni modello di DSL una schermata della sua definizione e una schermata di come appare in fase di debugging.
