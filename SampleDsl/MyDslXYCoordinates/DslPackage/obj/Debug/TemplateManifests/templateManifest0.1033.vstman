@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MyDslXYCoordinates</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{3b5d42ae-6f62-42e4-8349-d446bd7f71df}</TemplateID>
+        <Name Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="103" />
+        <Description Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="102" />
+        <Icon Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslXYCoordinates.MyDslXYCoordinates</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MyDslXYCoordinates</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{7f8909ef-fb01-4c17-85f1-7a5d9f04c7a5}</TemplateID>
+        <Name Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="103" />
+        <Description Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="102" />
+        <Icon Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslXYCoordinates.MyDslXYCoordinates</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

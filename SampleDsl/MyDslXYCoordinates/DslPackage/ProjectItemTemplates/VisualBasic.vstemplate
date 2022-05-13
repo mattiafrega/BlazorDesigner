@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{7f8909ef-fb01-4c17-85f1-7a5d9f04c7a5}</TemplateID>
+		<Name Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="103"/>
+		<Description Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="102"/>
+		<Icon Package="{423c4d6f-fa08-4062-83a2-76b3bb8bc0db}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>MyDslXYCoordinates.MyDslXYCoordinates</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslXYCoordinates">MyDslXYCoordinates.MyDslXYCoordinates</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslXYCoordinates.diagram">MyDslXYCoordinates.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

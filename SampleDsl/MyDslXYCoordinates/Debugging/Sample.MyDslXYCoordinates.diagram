@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslXYCoordinatesDiagram dslVersion="1.0.0.0" Id="1afc8afe-5e52-489a-a6d2-870f00a753c3" absoluteBounds="0, 0, 16.375, 8.5" name="Sample">
+  <exampleModelMoniker Id="9d49f3e0-3057-4943-95d0-aad7404e5a9e" />
+  <nestedChildShapes>
+    <exampleShape Id="2c9a44f4-8cbb-41e7-a4ff-9eca26536832" absoluteBounds="11.25, 5.625, 4.875, 2.375">
+      <exampleElementMoniker name="/9d49f3e0-3057-4943-95d0-aad7404e5a9e/Nome elemento" />
+      <relativeChildShapes />
+    </exampleShape>
+  </nestedChildShapes>
+</myDslXYCoordinatesDiagram>

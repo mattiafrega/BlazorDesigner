@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9d49f3e0-3057-4943-95d0-aad7404e5a9e" xmlns="http://schemas.microsoft.com/dsltools/MyDslXYCoordinates">
+  <elements>
+    <exampleElement Id="373a2ebb-5ccd-4d7a-bb99-62c0752bc508" name="Nome elemento" comment="questo elemento ha come proprietà i valori X,Y,Width ed Height della sua Shape" />
+  </elements>
+</exampleModel>
