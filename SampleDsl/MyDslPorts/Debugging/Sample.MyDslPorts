@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47a4e91b-296c-47f4-84dd-b50baf9f8950" name="A component model" xmlns="http://schemas.microsoft.com/dsltools/MyDslPorts">
+  <comments>
+    <comment Id="d5eac8ff-1dd2-4382-9363-c2c686b4e44b" text="le porte sono di due tipi: input e output. Permettono di connettere due oggetti con una relazione che parte dalla porta di output e termina in quella di input" />
+  </comments>
+  <components>
+    <componentModelHasComponents Id="931e4e22-2dc7-4242-b2da-457c8e090624">
+      <component Id="47aaa9db-ea4d-475e-a5dc-46e89357c423" name="Component1">
+        <ports>
+          <inPort Id="641fca66-131d-492a-833e-757266f20231" name="InPort1" />
+          <inPort Id="10d39fdf-4971-453a-9bd9-780b5a202804" name="InPort2" />
+        </ports>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents Id="51543af4-d623-425f-b8c3-8753c28261db">
+      <component Id="252b7f18-27fb-45e7-9c4d-81f9a3d372d9" name="Component2">
+        <ports>
+          <outPort Id="c80a56d9-0d44-4b58-bbf4-b1878fc927aa" name="OutPort1">
+            <targets>
+              <connection Id="913dcbac-138b-4a2b-84a4-318e88347a36">
+                <inPortMoniker name="/A component model/Component1/InPort1" />
+              </connection>
+              <connection Id="2a67f767-33d0-4652-9b75-36e3886e1b8e">
+                <inPortMoniker name="/A component model/Component3/InPort1" />
+              </connection>
+            </targets>
+          </outPort>
+        </ports>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents Id="1526720c-21f6-4ae0-b165-82b8553fac1f">
+      <component Id="5da173fc-cb99-46dc-832e-723915573656" name="Component3">
+        <ports>
+          <outPort Id="83b4bd53-1570-464e-9da4-002957533fc8" name="OutPort1">
+            <targets>
+              <connection Id="fcae8eb1-c153-4e84-bc61-265d172ad20b">
+                <inPortMoniker name="/A component model/Component1/InPort2" />
+              </connection>
+            </targets>
+          </outPort>
+          <inPort Id="43989f4d-8d9c-4d5d-af02-c294355fdeeb" name="InPort1" />
+        </ports>
+      </component>
+    </componentModelHasComponents>
+  </components>
+</componentModel>

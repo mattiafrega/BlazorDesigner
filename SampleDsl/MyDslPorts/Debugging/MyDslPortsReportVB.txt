@@ -1,0 +1,15 @@
+﻿
+Report template
+
+
+A component model
+
+    
+	Component1 
+			    --  : Component2
+    
+	Component2 
+    
+	Component3 : Component1
+			   trigger2 -- stop : Component2
+			   trigger -- start : Component2

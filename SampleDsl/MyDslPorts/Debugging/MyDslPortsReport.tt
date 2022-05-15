@@ -1,0 +1,39 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".txt" #>
+<#@ MyDslPorts processor="MyDslPortsDirectiveProcessor" requires="fileName='Sample.MyDslPorts'"  #>
+
+Report template
+
+
+<#= this.ComponentModel.Name #>
+
+<#
+  // When you change the DSL Definition, some of the code below may not work.
+
+  foreach (Component eachComponent in this.ComponentModel.Components)
+  {
+#>
+
+	<#= eachComponent.Name #> <#= 
+		string.IsNullOrEmpty(eachComponent.Kind) ? "" : "(" + eachComponent.Kind + ")" #> <#=
+		eachComponent.Superclass == null ? "" : ": " + eachComponent.Superclass.Name #>
+<#
+	// List the links to other Components via their ports
+	foreach (ComponentPort port in eachComponent.Ports)
+	{
+		OutPort source = port as OutPort;
+		if (source != null) // a ComponentPort might be an InPort
+		{
+		    // List the connections from this OutPort
+			foreach (Connection link in Connection.GetLinksToTargets(source))
+			{
+			   // Give the labels on the links, and
+			   // the name of the parent Component of the target InPort.
+#>
+			   <#= link.SourceRoleName #> -- <#= link.TargetRoleName #> : <#= link.Target.Component.Name #>
+<#		
+			}
+		}
+	}
+  }
+#>

@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MyDslPorts</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{87fcd2a3-59f2-44c3-8de0-da561efea2df}</TemplateID>
+        <Name Package="{82abe8f5-e749-4235-80e6-de8c2202eec2}" ID="103" />
+        <Description Package="{82abe8f5-e749-4235-80e6-de8c2202eec2}" ID="102" />
+        <Icon Package="{82abe8f5-e749-4235-80e6-de8c2202eec2}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslPorts.MyDslPorts</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MyDslPorts</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{316771ab-6720-4142-a734-dc605b928ad5}</TemplateID>
+        <Name Package="{82abe8f5-e749-4235-80e6-de8c2202eec2}" ID="103" />
+        <Description Package="{82abe8f5-e749-4235-80e6-de8c2202eec2}" ID="102" />
+        <Icon Package="{82abe8f5-e749-4235-80e6-de8c2202eec2}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MyDslPorts.MyDslPorts</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

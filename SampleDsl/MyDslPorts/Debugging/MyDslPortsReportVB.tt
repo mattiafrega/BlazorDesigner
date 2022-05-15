@@ -1,0 +1,40 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"  language="VB" #>
+<#@ output extension=".txt" #>
+<#@ MyDslPorts processor="MyDslPortsDirectiveProcessor" requires="fileName='Sample.MyDslPorts'"  #>
+
+Report template
+
+
+<#= Me.ComponentModel.Name #>
+
+<#
+  Rem When you change the DSL Definition, some of the code below may not work.
+
+  For Each eachComponent As Component In Me.ComponentModel.Components
+
+    Dim baseString As string
+    If eachComponent.Superclass Is Nothing Then
+      baseString = ""
+    Else
+      baseString = ": " + eachComponent.Superclass.Name
+    End If
+#>
+    
+	<#= eachComponent.Name #> <#= baseString #>
+<#
+	Rem List the links to other Components via their ports
+	For Each  port As ComponentPort In eachComponent.Ports
+		Dim source As OutPort = TryCast(port, OutPort)
+		If Not source Is Nothing Then
+		    Rem List the connections from this OutPort
+			For Each link As Connection In Connection.GetLinksToTargets(source)
+			   Rem Give the labels on the links, and
+			   Rem the name of the parent Component of the target InPort.
+#>
+			   <#= link.SourceRoleName #> -- <#= link.TargetRoleName #> : <#= link.Target.Component.Name #>
+<#		
+			Next
+		End If
+	Next
+  Next
+#>

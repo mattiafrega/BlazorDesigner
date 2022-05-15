@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="MyDslPortsSchema" targetNamespace="http://schemas.microsoft.com/dsltools/MyDslPorts" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/MyDslPorts" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
+  <!-- NamedElement -->
+  <xsd:element name="namedElement" abstract="true" type="NamedElement" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="NamedElement" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- NamedElement Moniker -->
+  <xsd:element name="namedElementMoniker" abstract="true" type="NamedElementMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="NamedElementMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for NamedElement instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="name" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentModel -->
+  <xsd:element name="componentModel" type="ComponentModel" substitutionGroup="namedElement" />
+  <xsd:complexType name="ComponentModel">
+    <xsd:complexContent>
+      <xsd:extension base="NamedElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ComponentModelHasComments -->
+          <xsd:element name="comments" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ComponentModelHasComments</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="componentModelHasComments">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ComponentModelHasComments needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="comment" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: ComponentModelHasComponents -->
+          <xsd:element name="components" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ComponentModelHasComponents</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="componentModelHasComponents" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ComponentModelHasComponents needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- dslVersion -->
+        <xsd:attribute name="dslVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Version of the model serialized in this file.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentModel Moniker -->
+  <xsd:element name="componentModelMoniker" type="ComponentModelMoniker" substitutionGroup="namedElementMoniker" />
+  <xsd:complexType name="ComponentModelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ComponentModel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="NamedElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Component -->
+  <xsd:element name="component" type="Component" substitutionGroup="namedElement" />
+  <xsd:complexType name="Component">
+    <xsd:complexContent>
+      <xsd:extension base="NamedElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ComponentHasPorts -->
+          <xsd:element name="ports" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ComponentHasPorts</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
+                  <xsd:element ref="componentHasPorts">
+                    <xsd:annotation>
+                      <xsd:documentation>[Relationship deriving from ComponentHasPorts needs to be serialized in full-form]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element ref="componentPort" >
+                    <xsd:annotation>
+                      <xsd:documentation>[Target role-player]</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Kind -->
+        <xsd:attribute name="kind" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Component Moniker -->
+  <xsd:element name="componentMoniker" type="ComponentMoniker" substitutionGroup="namedElementMoniker" />
+  <xsd:complexType name="ComponentMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Component instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="NamedElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentPort -->
+  <xsd:element name="componentPort" abstract="true" type="ComponentPort" substitutionGroup="namedElement" />
+  <xsd:complexType name="ComponentPort" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="NamedElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentPort Moniker -->
+  <xsd:element name="componentPortMoniker" abstract="true" type="ComponentPortMoniker" substitutionGroup="namedElementMoniker" />
+  <xsd:complexType name="ComponentPortMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ComponentPort instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="NamedElementMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InPort -->
+  <xsd:element name="inPort" type="InPort" substitutionGroup="componentPort" />
+  <xsd:complexType name="InPort">
+    <xsd:complexContent>
+      <xsd:extension base="ComponentPort">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InPort Moniker -->
+  <xsd:element name="inPortMoniker" type="InPortMoniker" substitutionGroup="componentPortMoniker" />
+  <xsd:complexType name="InPortMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for InPort instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ComponentPortMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OutPort -->
+  <xsd:element name="outPort" type="OutPort" substitutionGroup="componentPort" />
+  <xsd:complexType name="OutPort">
+    <xsd:complexContent>
+      <xsd:extension base="ComponentPort">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: Connection -->
+          <xsd:element name="targets" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of Connection</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="connection" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of Connection needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OutPort Moniker -->
+  <xsd:element name="outPortMoniker" type="OutPortMoniker" substitutionGroup="componentPortMoniker" />
+  <xsd:complexType name="OutPortMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for OutPort instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ComponentPortMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Comment -->
+  <xsd:element name="comment" type="Comment" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Comment">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Comment Moniker -->
+  <xsd:element name="commentMoniker" type="CommentMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="CommentMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Comment instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Connection -->
+  <xsd:element name="connection" type="Connection" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Connection">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end InPort -->
+          <xsd:element ref="inPortMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: SourceRoleName -->
+        <xsd:attribute name="sourceRoleName" type="xsd:string" />
+        <!-- Property: TargetRoleName -->
+        <xsd:attribute name="targetRoleName" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Connection Moniker -->
+  <xsd:element name="connectionMoniker" type="ConnectionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ConnectionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Connection instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentHasPorts -->
+  <xsd:element name="componentHasPorts" abstract="true" type="ComponentHasPorts" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ComponentHasPorts" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ComponentPort -->
+          <xsd:element ref="componentPort" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentHasPorts Moniker -->
+  <xsd:element name="componentHasPortsMoniker" type="ComponentHasPortsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ComponentHasPortsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ComponentHasPorts instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentModelHasComments -->
+  <xsd:element name="componentModelHasComments" abstract="true" type="ComponentModelHasComments" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ComponentModelHasComments" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Comment -->
+          <xsd:element ref="comment" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentModelHasComments Moniker -->
+  <xsd:element name="componentModelHasCommentsMoniker" type="ComponentModelHasCommentsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ComponentModelHasCommentsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ComponentModelHasComments instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentModelHasComponents -->
+  <xsd:element name="componentModelHasComponents" type="ComponentModelHasComponents" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ComponentModelHasComponents">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Component -->
+          <xsd:element ref="component" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ComponentModelHasComponents Moniker -->
+  <xsd:element name="componentModelHasComponentsMoniker" type="ComponentModelHasComponentsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ComponentModelHasComponentsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ComponentModelHasComponents instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+</xsd:schema>
+

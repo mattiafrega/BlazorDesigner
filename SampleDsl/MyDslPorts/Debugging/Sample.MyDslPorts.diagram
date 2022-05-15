@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslPortsDiagram dslVersion="1.0.0.0" Id="02ddd142-75df-4dd2-87b3-156af0d86dad" absoluteBounds="0, 0, 18, 11" name="Sample">
+  <componentModelMoniker name="/A component model" />
+  <nestedChildShapes>
+    <componentShape Id="49fb08fd-11e9-4fc1-804c-472380904943" absoluteBounds="10.25, 6.25, 2.25, 1">
+      <componentMoniker name="/A component model/Component1" />
+      <relativeChildShapes>
+        <inPortShape Id="2d8a1dd3-5701-478e-ae71-3e92979f7256" absoluteBounds="12.4, 6.75, 0.2, 0.2">
+          <inPortMoniker name="/A component model/Component1/InPort1" />
+        </inPortShape>
+        <inPortShape Id="ea5a8d70-4df6-4dab-bc2d-ba53094cb8ba" absoluteBounds="12.03125, 6.15, 0.2, 0.2">
+          <inPortMoniker name="/A component model/Component1/InPort2" />
+        </inPortShape>
+      </relativeChildShapes>
+    </componentShape>
+    <componentShape Id="801df2f3-616a-4370-9dfa-7e8dcb3e9f7c" absoluteBounds="14.875, 7.5, 2.5, 1.5">
+      <componentMoniker name="/A component model/Component2" />
+      <relativeChildShapes>
+        <outPortShape Id="e350d0fd-523f-4353-b2cd-adf04a60a0a9" absoluteBounds="15.59375, 7.4, 0.2, 0.2">
+          <outPortMoniker name="/A component model/Component2/OutPort1" />
+        </outPortShape>
+      </relativeChildShapes>
+    </componentShape>
+    <componentShape Id="a350baf9-a98f-41d3-b656-0bb0bc679d06" absoluteBounds="15, 4, 2.5, 1.625">
+      <componentMoniker name="/A component model/Component3" />
+      <relativeChildShapes>
+        <outPortShape Id="e1b0755c-3df9-431e-8dea-383de9a0904a" absoluteBounds="14.9, 4.46875, 0.2, 0.2">
+          <outPortMoniker name="/A component model/Component3/OutPort1" />
+        </outPortShape>
+        <inPortShape Id="aa61a68e-111b-4aa5-b5ec-c12796ecaf6e" absoluteBounds="16.46875, 5.525, 0.2, 0.2">
+          <inPortMoniker name="/A component model/Component3/InPort1" />
+        </inPortShape>
+      </relativeChildShapes>
+    </componentShape>
+    <associationLink Id="23d5097a-65b6-479b-b1f9-a27e7e71cc10" edgePoints="[(15.69375 : 7.4); (15.69375 : 6.85); (12.6 : 6.85)]" fixedFrom="Caller" fixedTo="Caller">
+      <connectionMoniker Id="913dcbac-138b-4a2b-84a4-318e88347a36" />
+      <relativeChildShapes />
+      <nodes>
+        <outPortShapeMoniker Id="e350d0fd-523f-4353-b2cd-adf04a60a0a9" />
+        <inPortShapeMoniker Id="2d8a1dd3-5701-478e-ae71-3e92979f7256" />
+      </nodes>
+    </associationLink>
+    <associationLink Id="3f65b0a4-be7c-47d3-ba72-e00500abfab9" edgePoints="[(14.9 : 4.56875); (12.13125 : 4.56875); (12.13125 : 6.15)]" fixedFrom="Caller" fixedTo="Caller">
+      <connectionMoniker Id="fcae8eb1-c153-4e84-bc61-265d172ad20b" />
+      <relativeChildShapes />
+      <nodes>
+        <outPortShapeMoniker Id="e1b0755c-3df9-431e-8dea-383de9a0904a" />
+        <inPortShapeMoniker Id="ea5a8d70-4df6-4dab-bc2d-ba53094cb8ba" />
+      </nodes>
+    </associationLink>
+    <associationLink Id="a7771ef3-b6a7-4775-9f6a-9a23eef56792" edgePoints="[(15.69375 : 7.4); (15.69375 : 7.025); (16.56875 : 7.025); (16.56875 : 5.725)]" fixedFrom="Caller" fixedTo="Caller">
+      <connectionMoniker Id="2a67f767-33d0-4652-9b75-36e3886e1b8e" />
+      <relativeChildShapes />
+      <nodes>
+        <outPortShapeMoniker Id="e350d0fd-523f-4353-b2cd-adf04a60a0a9" />
+        <inPortShapeMoniker Id="aa61a68e-111b-4aa5-b5ec-c12796ecaf6e" />
+      </nodes>
+    </associationLink>
+    <commentBoxShape Id="ba6921e1-0995-44bc-874f-c9537cead402" absoluteBounds="8.625, 9.125, 9.125, 1.625">
+      <commentMoniker Id="d5eac8ff-1dd2-4382-9363-c2c686b4e44b" />
+    </commentBoxShape>
+  </nestedChildShapes>
+</myDslPortsDiagram>
