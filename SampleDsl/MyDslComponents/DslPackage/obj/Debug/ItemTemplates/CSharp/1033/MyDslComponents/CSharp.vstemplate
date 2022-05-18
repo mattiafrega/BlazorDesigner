@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{db1a443c-1bfa-4696-80e9-2c176bb128a6}</TemplateID>
+		<Name Package="{8bf03763-7a37-44f3-8516-11ef3578ac6f}" ID="103"/>
+		<Description Package="{8bf03763-7a37-44f3-8516-11ef3578ac6f}" ID="102"/>
+		<Icon Package="{8bf03763-7a37-44f3-8516-11ef3578ac6f}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>MyDslComponents.MyDslComponents</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslComponents">MyDslComponents.MyDslComponents</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.MyDslComponents.diagram">MyDslComponents.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

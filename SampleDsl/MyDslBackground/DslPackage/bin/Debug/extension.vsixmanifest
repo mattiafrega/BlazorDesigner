@@ -1,0 +1,24 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="712081f4-a117-40ea-9c8e-9517f6e78c6d" Version="1.0.0.0" Language="en-US" Publisher="Company" />
+    <DisplayName>MyDSL</DisplayName>
+    <Description>Description for Company.MyDSL.MyDSL</Description>
+  </Metadata>
+  <Installation InstalledByMsi="false">
+    <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.VisualStudio.MPF.17.0" DisplayName="Visual Studio MPF 17.0" Version="[17.0,18.0)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="Company.MyDSL.DslPackage.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Company.MyDSL.DslPackage.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="Company.MyDSL.Dsl.dll" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" Path="ItemTemplates" />
+  </Assets>
+</PackageManifest>

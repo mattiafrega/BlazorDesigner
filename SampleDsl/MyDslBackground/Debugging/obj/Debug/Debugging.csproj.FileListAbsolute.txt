@@ -1,0 +1,6 @@
+C:\Users\Mattia\source\repos\MyDSL\Debugging\bin\Debug\Debugging.dll
+C:\Users\Mattia\source\repos\MyDSL\Debugging\bin\Debug\Debugging.pdb
+C:\Users\Mattia\source\repos\MyDSL\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\Mattia\source\repos\MyDSL\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\Mattia\source\repos\MyDSL\Debugging\obj\Debug\Debugging.dll
+C:\Users\Mattia\source\repos\MyDSL\Debugging\obj\Debug\Debugging.pdb

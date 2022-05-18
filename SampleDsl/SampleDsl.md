@@ -10,5 +10,8 @@ L'obiettivo è quello di comprendere il significato di ogni feature permessa da 
 - MyDslCompartment: mostra il funzionamento della classe Compartment che permette di raggruppare oggetti di altre classi.
 - MyDslXYCoordinates: mostra un metodo per salvare le coordinate X e Y (proprietà della Shape) nella classe di dominio. L'estensione di funzionalità della partial class ExampleElement è dentro la cartella "/CustomCode"
 - MyDslPorts: mostra il funzionamento delle porte, dei componenti a porte e delle relazioni tra essi
+- MyDslModeling: mostra come sia possibile cambiare dinamicamente le shape degli oggetti a seconda delle proprietà inserite
+- MyDslBackground: mostra il miglior modo per inserire una immagine di sfondo per il DSL
+- MyDslComponents: mostra alcuni componenti di base 
 
 La cartella "/screenshots" contiene per ogni modello di DSL una schermata della sua definizione e una schermata di come appare in fase di debugging.

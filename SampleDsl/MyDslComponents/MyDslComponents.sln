@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl", "Dsl\Dsl.csproj", "{274CDBFB-D673-41AF-93D4-6D049F4DE346}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DslPackage", "DslPackage\DslPackage.csproj", "{C3C4104A-D07C-431E-9984-5DD578134007}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Debug|x86.Build.0 = Debug|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Release|x86.ActiveCfg = Release|Any CPU
+		{274CDBFB-D673-41AF-93D4-6D049F4DE346}.Release|x86.Build.0 = Release|Any CPU
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Debug|x86.ActiveCfg = Debug|x86
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Debug|x86.Build.0 = Debug|x86
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Release|x86.ActiveCfg = Release|x86
+		{C3C4104A-D07C-431E-9984-5DD578134007}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7F130AC-1C0F-4A24-9340-47C987C362AD}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://172.17.130.27:8080/tfs/tesiuniversitarie
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Dsl\\Dsl.csproj
+		SccProjectName1 = Dsl
+		SccLocalPath1 = Dsl
+		SccProjectUniqueName2 = DslPackage\\DslPackage.csproj
+		SccProjectName2 = DslPackage
+		SccLocalPath2 = DslPackage
+	EndGlobalSection
+EndGlobal

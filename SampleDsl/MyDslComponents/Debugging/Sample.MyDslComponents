@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1" xmlns="http://schemas.microsoft.com/dsltools/MyDslComponents">
+  <elements>
+    <myButton Id="eac6f420-79c2-4a97-a60a-3ef6329d5aaa" name="MyButton1" text="CLICCAMI!" />
+    <myButton Id="145441b8-ffb4-4bec-bd4e-5f9c9a5c69b3" name="MyButton2" text="CLIC CLIC" />
+  </elements>
+  <myTextbox>
+    <exampleModelHasMyTextbox Id="69edf40d-5137-4bc1-a71f-0728f5c9a4e3">
+      <myTextbox Id="9cde84e6-1ee5-41a2-bb70-4e8be67e3dde" name="MyTextbox1" text="questo è testo personalizzabile dentro l'attributo Text della texbox" />
+    </exampleModelHasMyTextbox>
+  </myTextbox>
+  <myGauge>
+    <exampleModelHasMyGauge Id="ad1e4081-4872-46b7-93b1-ca7158c87533">
+      <myGauge Id="c24870ac-fa01-47a9-b858-2370759cc60d" rangeStart="30" rangeEnd="100" name="MyGauge1" />
+    </exampleModelHasMyGauge>
+  </myGauge>
+</exampleModel>

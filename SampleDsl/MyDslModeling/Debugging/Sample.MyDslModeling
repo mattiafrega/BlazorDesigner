@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="88cd1401-bd72-456e-8250-e57f73d1b029" xmlns="http://schemas.microsoft.com/dsltools/MyDslModeling">
+  <mySecondObject>
+    <exampleModelHasMySecondObject Id="7286f61c-9fe7-485c-92c6-91fdc19d7f50">
+      <mySecondObject Id="f0c1a51e-e41e-42dc-a907-291a8655705e" name="MyCustomGauge" title="Aggiornando la proprietà Val, la shape si aggiorna. Mostra come è possibile cambiare le Shapes di un DSL al variare delle proprietà" />
+    </exampleModelHasMySecondObject>
+  </mySecondObject>
+</exampleModel>

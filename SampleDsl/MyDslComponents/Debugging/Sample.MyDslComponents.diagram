@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslComponentsDiagram dslVersion="1.0.0.0" Id="bc16ccea-fa32-46f6-a489-a8f5d140a4f2" absoluteBounds="0, 0, 11.125, 8.5" name="Sample">
+  <exampleModelMoniker Id="dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1" />
+  <nestedChildShapes>
+    <myGaugeShape Id="960f2903-0e07-47a9-b39f-10ae6494774d" absoluteBounds="4.875, 5.375, 2, 2">
+      <myGaugeMoniker Id="c24870ac-fa01-47a9-b858-2370759cc60d" />
+      <relativeChildShapes />
+    </myGaugeShape>
+    <myTextboxShape Id="55307cf6-f13f-4989-89fe-b3b7eb5c509b" absoluteBounds="4.625, 4, 6.25, 0.5">
+      <myTextboxMoniker Id="9cde84e6-1ee5-41a2-bb70-4e8be67e3dde" />
+      <relativeChildShapes />
+    </myTextboxShape>
+    <myButtonShape Id="4fc599ff-9f82-4873-b61d-70c72c470652" absoluteBounds="8.5, 5.125, 2, 1">
+      <myButtonMoniker name="/dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1/MyButton1" />
+      <relativeChildShapes />
+    </myButtonShape>
+    <myButtonShape Id="035aa887-a742-4b99-b941-40412aa41053" absoluteBounds="8.5, 6.5, 2, 1">
+      <myButtonMoniker name="/dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1/MyButton2" />
+      <relativeChildShapes />
+    </myButtonShape>
+  </nestedChildShapes>
+</myDslComponentsDiagram>

@@ -1,0 +1,30 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".razor" #>
+<#@ MyDSL processor="MyDSLDirectiveProcessor" requires="fileName='Sample.MyDSL'" #>
+
+output:
+<#
+  //T4 works with foreach loops on Components to generate razor code.
+
+  foreach (MyPanel panel in this.ExampleModel.Elements)
+  {
+#>
+<MyPanel > <#= panel.Name #>
+	<# 
+	foreach(MyButton button in panel.MyButtons){
+	#>
+	<MyButton X ="<#= button.Name #>" Y ="<#= button.Name #>"/> 
+	<#
+	}
+	#>
+	<#
+	foreach(MyInput input in panel.MyInputs){
+	#>
+<MyInput X ="<#= input.Name #>" Y ="<#= input.Name #>"/>
+	<#
+	}
+	#>
+</MyPanel>
+<#    
+  }
+#>

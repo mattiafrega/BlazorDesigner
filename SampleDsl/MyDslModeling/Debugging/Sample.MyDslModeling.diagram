@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslModelingDiagram dslVersion="1.0.0.0" Id="5fd38b17-d277-4958-9806-67f53da30a53" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="88cd1401-bd72-456e-8250-e57f73d1b029" />
+  <nestedChildShapes>
+    <mySecondObjShape Id="d8447fdb-0d49-4604-9211-83831d2bf271" absoluteBounds="2.75, 4.625, 3, 3" val="60">
+      <mySecondObjectMoniker Id="f0c1a51e-e41e-42dc-a907-291a8655705e" />
+      <relativeChildShapes />
+    </mySecondObjShape>
+  </nestedChildShapes>
+</myDslModelingDiagram>

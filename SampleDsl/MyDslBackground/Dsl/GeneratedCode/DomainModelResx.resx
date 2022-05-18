@@ -1,0 +1,939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Company.MyDSL.MyDSLDomainModel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyDSL</value>
+    <comment>Description for DslLibrary &apos;MyDSL&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyDSLDomainModel.DisplayName" xml:space="preserve">
+    <value>MyDSL</value>
+    <comment>DisplayName for DslLibrary &apos;MyDSL&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModel.Description" xml:space="preserve">
+    <value>The root in which all other elements are embedded. Appears as a diagram.</value>
+    <comment>Description for DomainClass &apos;ExampleModel&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModel.DisplayName" xml:space="preserve">
+    <value>Example Model</value>
+    <comment>DisplayName for DomainClass &apos;ExampleModel&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanel.Description" xml:space="preserve">
+    <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
+    <comment>Description for DomainClass &apos;MyPanel&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainClass &apos;MyPanel&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanel/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanel.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyPanel&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanel/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyPanel&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyButton.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyButton</value>
+    <comment>Description for DomainClass &apos;MyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyButton.DisplayName" xml:space="preserve">
+    <value>My Button</value>
+    <comment>DisplayName for DomainClass &apos;MyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyButton/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyButton.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyButton/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyInput.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyInput</value>
+    <comment>Description for DomainClass &apos;MyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyInput.DisplayName" xml:space="preserve">
+    <value>My Input</value>
+    <comment>DisplayName for DomainClass &apos;MyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyInput/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyInput.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyInput/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCompBase.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyCompBase</value>
+    <comment>Description for DomainClass &apos;MyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCompBase.DisplayName" xml:space="preserve">
+    <value>My Comp Base</value>
+    <comment>DisplayName for DomainClass &apos;MyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWatch.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWatch</value>
+    <comment>Description for DomainClass &apos;MyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWatch.DisplayName" xml:space="preserve">
+    <value>My Watch</value>
+    <comment>DisplayName for DomainClass &apos;MyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWatch/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWatch.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWatch/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.Swim.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.Swim</value>
+    <comment>Description for DomainClass &apos;Swim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.Swim.DisplayName" xml:space="preserve">
+    <value>Swim</value>
+    <comment>DisplayName for DomainClass &apos;Swim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.Swim/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.Swim.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Swim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.Swim/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Swim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFi.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWiFi</value>
+    <comment>Description for DomainClass &apos;MyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFi.DisplayName" xml:space="preserve">
+    <value>My Wi Fi</value>
+    <comment>DisplayName for DomainClass &apos;MyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFi/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWiFi.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFi/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFi/GHz.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWiFi.GHz</value>
+    <comment>Description for DomainProperty &apos;GHz&apos; on DomainClass &apos;MyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFi/GHz.DisplayName" xml:space="preserve">
+    <value>GHz</value>
+    <comment>DisplayName for DomainProperty &apos;GHz&apos; on DomainClass &apos;MyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MySetting.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MySetting</value>
+    <comment>Description for DomainClass &apos;MySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MySetting.DisplayName" xml:space="preserve">
+    <value>My Setting</value>
+    <comment>DisplayName for DomainClass &apos;MySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MySetting/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MySetting.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MySetting/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCart.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyCart</value>
+    <comment>Description for DomainClass &apos;MyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCart.DisplayName" xml:space="preserve">
+    <value>My Cart</value>
+    <comment>DisplayName for DomainClass &apos;MyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCart/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyCart.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCart/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCart/Total.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyCart.Total</value>
+    <comment>Description for DomainProperty &apos;Total&apos; on DomainClass &apos;MyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCart/Total.DisplayName" xml:space="preserve">
+    <value>Total</value>
+    <comment>DisplayName for DomainProperty &apos;Total&apos; on DomainClass &apos;MyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements.Description" xml:space="preserve">
+    <value>Embedding relationship between the Model and Elements</value>
+    <comment>Description for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements.DisplayName" xml:space="preserve">
+    <value>Example Model Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements/ExampleModel.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements/ExampleModel.DisplayName" xml:space="preserve">
+    <value>Example Model</value>
+    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements/ExampleModel.PropertyDisplayName" xml:space="preserve">
+    <value>Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements/Element.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements/Element.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasElements/Element.PropertyDisplayName" xml:space="preserve">
+    <value>Example Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.ExampleModelHasSwim</value>
+    <comment>Description for DomainClass &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim.DisplayName" xml:space="preserve">
+    <value>Example Model Has Swim</value>
+    <comment>DisplayName for DomainClass &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim/ExampleModel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.ExampleModelHasSwim.ExampleModel</value>
+    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim/ExampleModel.DisplayName" xml:space="preserve">
+    <value>Example Model</value>
+    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim/ExampleModel.PropertyDisplayName" xml:space="preserve">
+    <value>Swim</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim/Swim.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.ExampleModelHasSwim.Swim</value>
+    <comment>Description for DomainRole &apos;Swim&apos; on DomainRelationship &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim/Swim.DisplayName" xml:space="preserve">
+    <value>Swim</value>
+    <comment>DisplayName for DomainRole &apos;Swim&apos; on DomainRelationship &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.ExampleModelHasSwim/Swim.PropertyDisplayName" xml:space="preserve">
+    <value>Example Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Swim&apos; on DomainRelationship &apos;ExampleModelHasSwim&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyButton</value>
+    <comment>Description for DomainClass &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton.DisplayName" xml:space="preserve">
+    <value>My Panel References My Button</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton/MyPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyButton.MyPanel</value>
+    <comment>Description for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton/MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton/MyPanel.PropertyDisplayName" xml:space="preserve">
+    <value>My Button</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton/MyButton.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyButton.MyButton</value>
+    <comment>Description for DomainRole &apos;MyButton&apos; on DomainRelationship &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton/MyButton.DisplayName" xml:space="preserve">
+    <value>My Button</value>
+    <comment>DisplayName for DomainRole &apos;MyButton&apos; on DomainRelationship &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyButton/MyButton.PropertyDisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyButton&apos; on DomainRelationship &apos;MyPanelReferencesMyButton&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyInput</value>
+    <comment>Description for DomainClass &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput.DisplayName" xml:space="preserve">
+    <value>My Panel References My Input</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput/MyPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyInput.MyPanel</value>
+    <comment>Description for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput/MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput/MyPanel.PropertyDisplayName" xml:space="preserve">
+    <value>My Input</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput/MyInput.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyInput.MyInput</value>
+    <comment>Description for DomainRole &apos;MyInput&apos; on DomainRelationship &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput/MyInput.DisplayName" xml:space="preserve">
+    <value>My Input</value>
+    <comment>DisplayName for DomainRole &apos;MyInput&apos; on DomainRelationship &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyInput/MyInput.PropertyDisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyInput&apos; on DomainRelationship &apos;MyPanelReferencesMyInput&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyCart</value>
+    <comment>Description for DomainClass &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart.DisplayName" xml:space="preserve">
+    <value>My Panel References My Cart</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart/MyPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyCart.MyPanel</value>
+    <comment>Description for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart/MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart/MyPanel.PropertyDisplayName" xml:space="preserve">
+    <value>My Cart</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart/MyCart.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyCart.MyCart</value>
+    <comment>Description for DomainRole &apos;MyCart&apos; on DomainRelationship &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart/MyCart.DisplayName" xml:space="preserve">
+    <value>My Cart</value>
+    <comment>DisplayName for DomainRole &apos;MyCart&apos; on DomainRelationship &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyCart/MyCart.PropertyDisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyCart&apos; on DomainRelationship &apos;MyPanelReferencesMyCart&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMySetting</value>
+    <comment>Description for DomainClass &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting.DisplayName" xml:space="preserve">
+    <value>My Panel References My Setting</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting/MyPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMySetting.MyPanel</value>
+    <comment>Description for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting/MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting/MyPanel.PropertyDisplayName" xml:space="preserve">
+    <value>My Setting</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting/MySetting.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMySetting.MySetting</value>
+    <comment>Description for DomainRole &apos;MySetting&apos; on DomainRelationship &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting/MySetting.DisplayName" xml:space="preserve">
+    <value>My Setting</value>
+    <comment>DisplayName for DomainRole &apos;MySetting&apos; on DomainRelationship &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMySetting/MySetting.PropertyDisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MySetting&apos; on DomainRelationship &apos;MyPanelReferencesMySetting&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyWiFi</value>
+    <comment>Description for DomainClass &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi.DisplayName" xml:space="preserve">
+    <value>My Panel References My Wi Fi</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi/MyPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyWiFi.MyPanel</value>
+    <comment>Description for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi/MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi/MyPanel.PropertyDisplayName" xml:space="preserve">
+    <value>My Wi Fi</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi/MyWiFi.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyWiFi.MyWiFi</value>
+    <comment>Description for DomainRole &apos;MyWiFi&apos; on DomainRelationship &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi/MyWiFi.DisplayName" xml:space="preserve">
+    <value>My Wi Fi</value>
+    <comment>DisplayName for DomainRole &apos;MyWiFi&apos; on DomainRelationship &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWiFi/MyWiFi.PropertyDisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyWiFi&apos; on DomainRelationship &apos;MyPanelReferencesMyWiFi&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyWatch</value>
+    <comment>Description for DomainClass &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch.DisplayName" xml:space="preserve">
+    <value>My Panel References My Watch</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch/MyPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyWatch.MyPanel</value>
+    <comment>Description for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch/MyPanel.DisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>DisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch/MyPanel.PropertyDisplayName" xml:space="preserve">
+    <value>My Watch</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyPanel&apos; on DomainRelationship &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch/MyWatch.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyPanelReferencesMyWatch.MyWatch</value>
+    <comment>Description for DomainRole &apos;MyWatch&apos; on DomainRelationship &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch/MyWatch.DisplayName" xml:space="preserve">
+    <value>My Watch</value>
+    <comment>DisplayName for DomainRole &apos;MyWatch&apos; on DomainRelationship &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelReferencesMyWatch/MyWatch.PropertyDisplayName" xml:space="preserve">
+    <value>My Panel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyWatch&apos; on DomainRelationship &apos;MyPanelReferencesMyWatch&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.SwimHasMyCompBase</value>
+    <comment>Description for DomainClass &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase.DisplayName" xml:space="preserve">
+    <value>Swim Has My Comp Base</value>
+    <comment>DisplayName for DomainClass &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase/Swim.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.SwimHasMyCompBase.Swim</value>
+    <comment>Description for DomainRole &apos;Swim&apos; on DomainRelationship &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase/Swim.DisplayName" xml:space="preserve">
+    <value>Swim</value>
+    <comment>DisplayName for DomainRole &apos;Swim&apos; on DomainRelationship &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase/Swim.PropertyDisplayName" xml:space="preserve">
+    <value>My Comp Base</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Swim&apos; on DomainRelationship &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase/MyCompBase.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.SwimHasMyCompBase.MyCompBase</value>
+    <comment>Description for DomainRole &apos;MyCompBase&apos; on DomainRelationship &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase/MyCompBase.DisplayName" xml:space="preserve">
+    <value>My Comp Base</value>
+    <comment>DisplayName for DomainRole &apos;MyCompBase&apos; on DomainRelationship &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.SwimHasMyCompBase/MyCompBase.PropertyDisplayName" xml:space="preserve">
+    <value>Swim</value>
+    <comment>PropertyDisplayName for DomainRole &apos;MyCompBase&apos; on DomainRelationship &apos;SwimHasMyCompBase&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelShape.Description" xml:space="preserve">
+    <value>Shape used to represent ExampleElements on a Diagram.</value>
+    <comment>Description for DomainClass &apos;MyPanelShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyPanelShape.DisplayName" xml:space="preserve">
+    <value>My Panel Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyPanelShape&apos;</comment>
+  </data>
+  <data name="MyPanelShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MyDSL.MyButtonShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyButtonShape</value>
+    <comment>Description for DomainClass &apos;MyButtonShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyButtonShape.DisplayName" xml:space="preserve">
+    <value>My Button Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyButtonShape&apos;</comment>
+  </data>
+  <data name="MyButtonShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MyDSL.MyInputShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyInputShape</value>
+    <comment>Description for DomainClass &apos;MyInputShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyInputShape.DisplayName" xml:space="preserve">
+    <value>My Input Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyInputShape&apos;</comment>
+  </data>
+  <data name="MyInputShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MyDSL.MyWatchShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWatchShape</value>
+    <comment>Description for DomainClass &apos;MyWatchShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWatchShape.DisplayName" xml:space="preserve">
+    <value>My Watch Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyWatchShape&apos;</comment>
+  </data>
+  <data name="MyWatchShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MyDSL.MyBaseShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyBaseShape</value>
+    <comment>Description for DomainClass &apos;MyBaseShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyBaseShape.DisplayName" xml:space="preserve">
+    <value>My Base Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyBaseShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.LayoutSwimLane.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.LayoutSwimLane</value>
+    <comment>Description for DomainClass &apos;LayoutSwimLane&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.LayoutSwimLane.DisplayName" xml:space="preserve">
+    <value>Layout Swim Lane</value>
+    <comment>DisplayName for DomainClass &apos;LayoutSwimLane&apos;</comment>
+  </data>
+  <data name="LayoutSwimLaneSwimNameDefaultText" xml:space="preserve">
+    <value>SwimName</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFiShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyWiFiShape</value>
+    <comment>Description for DomainClass &apos;MyWiFiShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyWiFiShape.DisplayName" xml:space="preserve">
+    <value>My Wi Fi Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyWiFiShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MySettingShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MySettingShape</value>
+    <comment>Description for DomainClass &apos;MySettingShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MySettingShape.DisplayName" xml:space="preserve">
+    <value>My Setting Shape</value>
+    <comment>DisplayName for DomainClass &apos;MySettingShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCartShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyCartShape</value>
+    <comment>Description for DomainClass &apos;MyCartShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyCartShape.DisplayName" xml:space="preserve">
+    <value>My Cart Shape</value>
+    <comment>DisplayName for DomainClass &apos;MyCartShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.CommentShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.CommentShape</value>
+    <comment>Description for DomainClass &apos;CommentShape&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.CommentShape.DisplayName" xml:space="preserve">
+    <value>Comment Shape</value>
+    <comment>DisplayName for DomainClass &apos;CommentShape&apos;</comment>
+  </data>
+  <data name="CommentShapeTextDecorDefaultText" xml:space="preserve">
+    <value>TextDecor</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>MyDSL (*.MyDSL)|*.MyDSL</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>MyDSL Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="Company.MyDSL.MyDSLDiagram.Description" xml:space="preserve">
+    <value>Description for Company.MyDSL.MyDSLDiagram</value>
+    <comment>Description for DomainClass &apos;MyDSLDiagram&apos;</comment>
+  </data>
+  <data name="Company.MyDSL.MyDSLDiagram.DisplayName" xml:space="preserve">
+    <value>Minimal Language Diagram</value>
+    <comment>DisplayName for DomainClass &apos;MyDSLDiagram&apos;</comment>
+  </data>
+  <data name="MyDSLToolboxTab" xml:space="preserve">
+    <value>MyDSL</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="PanelComponentToolboxItem" xml:space="preserve">
+    <value>PanelComponent</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="PanelComponentToolboxTooltip" xml:space="preserve">
+    <value>Create an ExampleElement</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ButtonComponentToolboxItem" xml:space="preserve">
+    <value>ButtonComponent</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ButtonComponentToolboxTooltip" xml:space="preserve">
+    <value>Button Component</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="InputComponentToolboxItem" xml:space="preserve">
+    <value>InputComponent</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="InputComponentToolboxTooltip" xml:space="preserve">
+    <value>Input Component</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="SwimToolboxItem" xml:space="preserve">
+    <value>Swim</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="SwimToolboxTooltip" xml:space="preserve">
+    <value>Swim</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="MyWatchCompToolboxItem" xml:space="preserve">
+    <value>MyWatchComp</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="MyWatchCompToolboxTooltip" xml:space="preserve">
+    <value>My Watch Comp</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="MyWifiCompToolboxItem" xml:space="preserve">
+    <value>MyWifiComp</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="MyWifiCompToolboxTooltip" xml:space="preserve">
+    <value>My Wifi Comp</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="MySettingCompToolboxItem" xml:space="preserve">
+    <value>MySettingComp</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="MySettingCompToolboxTooltip" xml:space="preserve">
+    <value>My Setting Comp</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="MyCartCompToolboxItem" xml:space="preserve">
+    <value>MyCartComp</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="MyCartCompToolboxTooltip" xml:space="preserve">
+    <value>My Cart Comp</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MyWatchShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\watch.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>MyWatchShape shape image</comment>
+  </data>
+  <data name="MyWiFiShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\wifi.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>MyWiFiShape shape image</comment>
+  </data>
+  <data name="MySettingShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\setting.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>MySettingShape shape image</comment>
+  </data>
+  <data name="MyCartShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\cart.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>MyCartShape shape image</comment>
+  </data>
+  <data name="PanelComponentToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ButtonComponentToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\bmp\setting (1).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="InputComponentToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="SwimToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleConnectorToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="MyWatchCompToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="MyWifiCompToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="MySettingCompToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="MyCartCompToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+
