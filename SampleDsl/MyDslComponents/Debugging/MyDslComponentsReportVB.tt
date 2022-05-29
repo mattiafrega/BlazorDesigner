@@ -1,16 +1,80 @@
-﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="VB" #>
-<#@ output extension=".txt" #>
-<#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents'" #>
+﻿<#@ template debug="true" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".razor" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents.diagram'" #>
 
-Generated material. Generating code in VB.
-
-
+//prints all the nodes in the Xml of the DSl Diagram
 <#
-  Rem When you change the DSL Definition, some of the code below may not work.
-
-  For Each element As ExampleElement In Me.ExampleModel.Elements
+ // Read the model file
+ XmlDocument doc = new XmlDocument();
+ doc.Load(@"C:\Users\matti\source\repos\MyDslComponents\Debugging\Sample.MyDslComponents.diagram");
+ Dictionary <string, string> nodeTypes =
+        new Dictionary<string, string>();
+ foreach (XmlNode node in doc.SelectNodes("//*"))
+ {
+   nodeTypes[node.Name] = "";
+ }
+ // Generate the code
+ foreach (string nodeName in nodeTypes.Keys)
+ {
 #>
-	<#= element.Name #>
-<#    
-  Next
+< <#= nodeName #> />
+<#
+ }
+#>
+
+
+//prints only the MyButtonShapes
+<#
+ Dictionary <string, string> buttonShapes =
+        new Dictionary<string, string>();
+ foreach (XmlNode node in doc.SelectNodes("//myButtonShape"))
+ {
+   buttonShapes[node.Name] = "";
+ }
+ // Generate the code
+ foreach (string nodeName in buttonShapes.Keys)
+ {
+#>
+< <#= nodeName #> />
+<#
+ }
+#>
+
+//prints only the MyTextBoxShapes
+<#
+ Dictionary <string, string> textboxShapes =
+        new Dictionary<string, string>();
+ foreach (XmlNode node in doc.SelectNodes("//myTextboxShape"))
+ {
+   textboxShapes[node.Name] = "";
+ }
+ // Generate the code
+ foreach (string nodeName in textboxShapes.Keys)
+ {
+#>
+< <#= nodeName #> />
+<#
+ }
+#>
+
+//prints only the MyGaugeShapes
+<#
+ Dictionary <string, string> gaugeShapes =
+        new Dictionary<string, string>();
+ foreach (XmlNode node in doc.SelectNodes("//myGaugeShape"))
+ {
+   gaugeShapes[node.Name] = "";
+ }
+ // Generate the code
+ foreach (string nodeName in gaugeShapes.Keys)
+ {
+#>
+< <#= nodeName #>/>
+<#
+ }
 #>

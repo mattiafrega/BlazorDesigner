@@ -53,9 +53,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MyDslComponentsReport.razor</LastGenOutput>
     </None>
+    <None Include="MyDslComponentsReportVB.razor">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDslComponentsReportVB.tt</DependentUpon>
+    </None>
     <None Include="MyDslComponentsReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyDslComponentsReportVB.txt</LastGenOutput>
+      <LastGenOutput>MyDslComponentsReportVB.razor</LastGenOutput>
     </None>
     <None Include="Sample.MyDslComponents" />
     <None Include="Sample.MyDslComponents.diagram">
@@ -68,13 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MyDslComponentsReportVB.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyDslComponentsReportVB.tt</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

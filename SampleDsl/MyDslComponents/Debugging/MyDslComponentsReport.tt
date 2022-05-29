@@ -14,7 +14,7 @@
   foreach (MyTextbox textbox in this.ExampleModel.MyTextbox)
   {
 #>
-	<MyTextBox Name ":<#= textbox.Name #>" Text: "<#= textbox.Text #>" />
+	<MyTextBox Name: ":<#= textbox.Name #>" Text: "<#= textbox.Text #>" />
 <#    
   }
 #>
