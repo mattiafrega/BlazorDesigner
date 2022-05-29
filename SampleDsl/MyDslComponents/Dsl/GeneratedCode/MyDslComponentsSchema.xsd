@@ -10,17 +10,17 @@
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ExampleModelHasElements -->
-          <xsd:element name="elements" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ExampleModelHasMyButton -->
+          <xsd:element name="myButton" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ExampleModelHasElements</xsd:documentation>
+              <xsd:documentation>Instances of ExampleModelHasMyButton</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
                 <xsd:choice minOccurs="0" maxOccurs="unbounded" >
-                  <xsd:element ref="exampleModelHasElements">
+                  <xsd:element ref="exampleModelHasMyButton">
                     <xsd:annotation>
-                      <xsd:documentation>[Relationship deriving from ExampleModelHasElements needs to be serialized in full-form]</xsd:documentation>
+                      <xsd:documentation>[Relationship deriving from ExampleModelHasMyButton needs to be serialized in full-form]</xsd:documentation>
                     </xsd:annotation>
                   </xsd:element>
                   <xsd:element ref="myButton" >
@@ -231,9 +231,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModelHasElements -->
-  <xsd:element name="exampleModelHasElements" abstract="true" type="ExampleModelHasElements" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleModelHasElements" abstract="true" >
+  <!-- ExampleModelHasMyButton -->
+  <xsd:element name="exampleModelHasMyButton" abstract="true" type="ExampleModelHasMyButton" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ExampleModelHasMyButton" abstract="true" >
     <xsd:annotation>
       <xsd:documentation>Embedding relationship between the Model and Elements</xsd:documentation>
     </xsd:annotation>
@@ -257,11 +257,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModelHasElements Moniker -->
-  <xsd:element name="exampleModelHasElementsMoniker" type="ExampleModelHasElementsMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleModelHasElementsMoniker">
+  <!-- ExampleModelHasMyButton Moniker -->
+  <xsd:element name="exampleModelHasMyButtonMoniker" type="ExampleModelHasMyButtonMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ExampleModelHasMyButtonMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleModelHasElements instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ExampleModelHasMyButton instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

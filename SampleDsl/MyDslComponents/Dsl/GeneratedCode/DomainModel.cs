@@ -72,7 +72,7 @@ namespace Company.MyDslComponents
 				typeof(MyTextbox),
 				typeof(MyGauge),
 				typeof(MyComponent),
-				typeof(ExampleModelHasElements),
+				typeof(ExampleModelHasMyButton),
 				typeof(ExampleModelHasMyTextbox),
 				typeof(ExampleModelHasMyGauge),
 				typeof(MyDslComponentsDiagram),
@@ -109,8 +109,8 @@ namespace Company.MyDslComponents
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(ExampleModelHasElements), "ExampleModel", ExampleModelHasElements.ExampleModelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasElements), "Element", ExampleModelHasElements.ElementDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ExampleModelHasMyButton), "ExampleModel", ExampleModelHasMyButton.ExampleModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ExampleModelHasMyButton), "Element", ExampleModelHasMyButton.ElementDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ExampleModelHasMyTextbox), "ExampleModel", ExampleModelHasMyTextbox.ExampleModelDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ExampleModelHasMyTextbox), "MyTextbox", ExampleModelHasMyTextbox.MyTextboxDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ExampleModelHasMyGauge), "ExampleModel", ExampleModelHasMyGauge.ExampleModelDomainRoleId),
@@ -189,7 +189,7 @@ namespace Company.MyDslComponents
 			if (createElementLinkMap == null)
 			{
 				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
-				createElementLinkMap.Add(typeof(ExampleModelHasElements), 0);
+				createElementLinkMap.Add(typeof(ExampleModelHasMyButton), 0);
 				createElementLinkMap.Add(typeof(ExampleModelHasMyTextbox), 1);
 				createElementLinkMap.Add(typeof(ExampleModelHasMyGauge), 2);
 			}
@@ -206,7 +206,7 @@ namespace Company.MyDslComponents
 			}
 			switch (index)
 			{
-				case 0: return new ExampleModelHasElements(partition, roleAssignments, propertyAssignments);
+				case 0: return new ExampleModelHasMyButton(partition, roleAssignments, propertyAssignments);
 				case 1: return new ExampleModelHasMyTextbox(partition, roleAssignments, propertyAssignments);
 				case 2: return new ExampleModelHasMyGauge(partition, roleAssignments, propertyAssignments);
 				default: return null;
@@ -377,7 +377,7 @@ namespace Company.MyDslComponents
 		public MyDslComponentsDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasElements.ElementDomainRoleId, true);
+			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId, true);
 			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasMyTextbox.MyTextboxDomainRoleId, true);
 			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasMyGauge.MyGaugeDomainRoleId, true);
 			#endregion

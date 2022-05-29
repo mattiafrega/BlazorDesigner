@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0ec01f68-5b3c-4a10-a9a9-51fae490f952}</ProjectGuid>
+    <ProjectGuid>{0EC01F68-5B3C-4A10-A9A9-51FAE490F952}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -44,9 +44,14 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="MyDslComponentsReport.razor">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDslComponentsReport.tt</DependentUpon>
+    </None>
     <None Include="MyDslComponentsReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyDslComponentsReport.txt</LastGenOutput>
+      <LastGenOutput>MyDslComponentsReport.razor</LastGenOutput>
     </None>
     <None Include="MyDslComponentsReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -65,11 +70,6 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyDslComponentsReport.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyDslComponentsReport.tt</DependentUpon>
-    </Content>
     <Content Include="MyDslComponentsReportVB.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

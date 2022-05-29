@@ -12,33 +12,33 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// DomainRelationship ExampleModelHasElements
+	/// DomainRelationship ExampleModelHasMyButton
 	/// Embedding relationship between the Model and Elements
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasElements.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasElements.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyButton.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyButton.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("47dccd67-a58d-4a32-a17d-b214354dc8b1")]
-	public partial class ExampleModelHasElements : DslModeling::ElementLink
+	public partial class ExampleModelHasMyButton : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ExampleModelHasElements domain class Id.
+		/// ExampleModelHasMyButton domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x47dccd67, 0xa58d, 0x4a32, 0xa1, 0x7d, 0xb2, 0x14, 0x35, 0x4d, 0xc8, 0xb1);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ExampleModelHasElements link in the same Partition as the given ExampleModel
+		/// Creates a ExampleModelHasMyButton link in the same Partition as the given ExampleModel
 		/// </summary>
 		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
 		/// <param name="target">MyButton to use as the target of the relationship.</param>
-		public ExampleModelHasElements(ExampleModel source, MyButton target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasElements.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasElements.ElementDomainRoleId, target)}, null)
+		public ExampleModelHasMyButton(ExampleModel source, MyButton target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasMyButton.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasMyButton.ElementDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -47,7 +47,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasElements(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ExampleModelHasMyButton(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -58,7 +58,7 @@ namespace Company.MyDslComponents
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasElements(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ExampleModelHasMyButton(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -68,7 +68,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasElements(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ExampleModelHasMyButton(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -79,7 +79,7 @@ namespace Company.MyDslComponents
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasElements(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ExampleModelHasMyButton(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
@@ -94,9 +94,9 @@ namespace Company.MyDslComponents
 		/// <summary>
 		/// DomainRole ExampleModel
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasElements/ExampleModel.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasElements/ExampleModel.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasElements/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "MyButton", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("e2991666-69ee-4198-aa74-58b7491119d5")]
 		public virtual ExampleModel ExampleModel
 		{
@@ -144,9 +144,9 @@ namespace Company.MyDslComponents
 		/// <summary>
 		/// DomainRole Element
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasElements/Element.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasElements/Element.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasElements/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyButton/Element.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyButton/Element.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyButton/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("3f31746e-f47c-4609-ad2b-68587bdeea78")]
 		public virtual MyButton Element
 		{
@@ -163,37 +163,37 @@ namespace Company.MyDslComponents
 		}
 				
 		#endregion
-		#region Static methods to access Elements of a ExampleModel
+		#region Static methods to access MyButton of a ExampleModel
 		/// <summary>
-		/// Gets a list of Elements.
+		/// Gets a list of MyButton.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<MyButton> GetElements(ExampleModel element)
+		public static DslModeling::LinkedElementCollection<MyButton> GetMyButton(ExampleModel element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<MyButton>, MyButton>(element, ExampleModelDomainRoleId);
 		}
 		#endregion
 		#region ExampleModel link accessor
 		/// <summary>
-		/// Get the list of ExampleModelHasElements links to a ExampleModel.
+		/// Get the list of ExampleModelHasMyButton links to a ExampleModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasElements> GetLinksToElements ( global::Company.MyDslComponents.ExampleModel exampleModelInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyButton> GetLinksToMyButton ( global::Company.MyDslComponents.ExampleModel exampleModelInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasElements>(exampleModelInstance, global::Company.MyDslComponents.ExampleModelHasElements.ExampleModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(exampleModelInstance, global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
 		}
 		#endregion
 		#region Element link accessor
 		/// <summary>
-		/// Get the ExampleModelHasElements link to a MyButton.
+		/// Get the ExampleModelHasMyButton link to a MyButton.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasElements GetLinkToExampleModel (global::Company.MyDslComponents.MyButton elementInstance)
+		public static global::Company.MyDslComponents.ExampleModelHasMyButton GetLinkToExampleModel (global::Company.MyDslComponents.MyButton elementInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasElements>(elementInstance, global::Company.MyDslComponents.ExampleModelHasElements.ElementDomainRoleId);
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyButton> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(elementInstance, global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Element not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -205,18 +205,18 @@ namespace Company.MyDslComponents
 			}
 		}
 		#endregion
-		#region ExampleModelHasElements instance accessors
+		#region ExampleModelHasMyButton instance accessors
 		
 		/// <summary>
-		/// Get any ExampleModelHasElements links between a given ExampleModel and a MyButton.
+		/// Get any ExampleModelHasMyButton links between a given ExampleModel and a MyButton.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasElements> GetLinks( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyButton target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyButton> GetLinks( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyButton target )
 		{
-			global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasElements> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasElements>();
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasElements>(source, global::Company.MyDslComponents.ExampleModelHasElements.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasElements link in links )
+			global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyButton> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyButton>();
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyButton> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(source, global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
+			foreach ( global::Company.MyDslComponents.ExampleModelHasMyButton link in links )
 			{
 				if ( target.Equals(link.Element) )
 				{
@@ -226,14 +226,14 @@ namespace Company.MyDslComponents
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ExampleModelHasElements link between a given ExampleModeland a MyButton.
+		/// Get the one ExampleModelHasMyButton link between a given ExampleModeland a MyButton.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasElements GetLink( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyButton target )
+		public static global::Company.MyDslComponents.ExampleModelHasMyButton GetLink( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyButton target )
 		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasElements>(source, global::Company.MyDslComponents.ExampleModelHasElements.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasElements link in links )
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyButton> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(source, global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
+			foreach ( global::Company.MyDslComponents.ExampleModelHasMyButton link in links )
 			{
 				if ( target.Equals(link.Element) )
 				{

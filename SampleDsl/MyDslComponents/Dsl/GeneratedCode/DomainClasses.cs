@@ -48,17 +48,17 @@ namespace Company.MyDslComponents
 		{
 		}
 		#endregion
-		#region Elements opposite domain role accessor
+		#region MyButton opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Elements.
+		/// Gets a list of MyButton.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<MyButton> Elements
+		public virtual DslModeling::LinkedElementCollection<MyButton> MyButton
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<MyButton>, MyButton>(global::Company.MyDslComponents.ExampleModelHasElements.ExampleModelDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<MyButton>, MyButton>(global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
 			}
 		}
 		#endregion
@@ -154,8 +154,8 @@ namespace Company.MyDslComponents
 			global::Company.MyDslComponents.MyButton sourceMyButton1 = sourceElement as global::Company.MyDslComponents.MyButton;
 			if (sourceMyButton1 != null)
 			{
-				// Create link for path ExampleModelHasElements.Elements
-				this.Elements.Add(sourceMyButton1);
+				// Create link for path ExampleModelHasMyButton.MyButton
+				this.MyButton.Add(sourceMyButton1);
 
 				return;
 			}
@@ -203,12 +203,12 @@ namespace Company.MyDslComponents
 			global::Company.MyDslComponents.MyButton sourceMyButton1 = sourceElement as global::Company.MyDslComponents.MyButton;
 			if (sourceMyButton1 != null)
 			{
-				// Delete link for path ExampleModelHasElements.Elements
+				// Delete link for path ExampleModelHasMyButton.MyButton
 				
-				foreach (DslModeling::ElementLink link in global::Company.MyDslComponents.ExampleModelHasElements.GetLinks((global::Company.MyDslComponents.ExampleModel)this, sourceMyButton1))
+				foreach (DslModeling::ElementLink link in global::Company.MyDslComponents.ExampleModelHasMyButton.GetLinks((global::Company.MyDslComponents.ExampleModel)this, sourceMyButton1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Company.MyDslComponents.ExampleModelHasElements.ExampleModelDomainRoleId, global::Company.MyDslComponents.ExampleModelHasElements.ElementDomainRoleId);
+					link.Delete(global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId, global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId);
 				}
 
 				return;
@@ -472,12 +472,12 @@ namespace Company.MyDslComponents
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.MyDslComponents.ExampleModelHasElements.ElementDomainRoleId) as ExampleModel;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId) as ExampleModel;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MyDslComponents.ExampleModelHasElements.ElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId, value);
 			}
 		}
 		#endregion

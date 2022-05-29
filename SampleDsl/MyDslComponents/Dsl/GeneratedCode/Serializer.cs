@@ -204,16 +204,16 @@ namespace Company.MyDslComponents
 			{
 				switch (reader.LocalName)
 				{
-					case "elements":	// Relationship "ExampleModelHasElements"
+					case "myButton":	// Relationship "ExampleModelHasMyButton"
 						if (reader.IsEmptyElement)
 						{	// No instance of this relationship, just skip
 							DslModeling::SerializationUtilities.Skip(reader);
 						}
 						else
 						{
-							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <elements>
-							ReadExampleModelHasElementsInstances(serializationContext, element, reader);
-							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </elements>
+							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <myButton>
+							ReadExampleModelHasMyButtonInstances(serializationContext, element, reader);
+							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </myButton>
 						}
 						break;
 					case "myTextbox":	// Relationship "ExampleModelHasMyTextbox"
@@ -247,7 +247,7 @@ namespace Company.MyDslComponents
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship ExampleModelHasElements.
+		/// Reads all instances of relationship ExampleModelHasMyButton.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
@@ -257,36 +257,36 @@ namespace Company.MyDslComponents
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory ExampleModel instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadExampleModelHasElementsInstances(DslModeling::SerializationContext serializationContext, ExampleModel element, global::System.Xml.XmlReader reader)
+		private static void ReadExampleModelHasMyButtonInstances(DslModeling::SerializationContext serializationContext, ExampleModel element, global::System.Xml.XmlReader reader)
 		{
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				DslModeling::DomainClassXmlSerializer newMyButtonOfExampleModelHasElementsSerializer = serializationContext.Directory.GetSerializer(MyButton.DomainClassId);
-				global::System.Diagnostics.Debug.Assert(newMyButtonOfExampleModelHasElementsSerializer != null, "Cannot find serializer for MyButton!");
-				MyButton newMyButtonOfExampleModelHasElements = newMyButtonOfExampleModelHasElementsSerializer.TryCreateInstance(serializationContext, reader, element.Partition) as MyButton;
-				if (newMyButtonOfExampleModelHasElements != null)
+				DslModeling::DomainClassXmlSerializer newMyButtonOfExampleModelHasMyButtonSerializer = serializationContext.Directory.GetSerializer(MyButton.DomainClassId);
+				global::System.Diagnostics.Debug.Assert(newMyButtonOfExampleModelHasMyButtonSerializer != null, "Cannot find serializer for MyButton!");
+				MyButton newMyButtonOfExampleModelHasMyButton = newMyButtonOfExampleModelHasMyButtonSerializer.TryCreateInstance(serializationContext, reader, element.Partition) as MyButton;
+				if (newMyButtonOfExampleModelHasMyButton != null)
 				{
-					element.Elements.Add(newMyButtonOfExampleModelHasElements);
-					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newMyButtonOfExampleModelHasElements.GetDomainClass().Id);	
-					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newMyButtonOfExampleModelHasElements.GetDomainClass().Name + "!");
-					targetSerializer.Read(serializationContext, newMyButtonOfExampleModelHasElements, reader);
+					element.MyButton.Add(newMyButtonOfExampleModelHasMyButton);
+					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newMyButtonOfExampleModelHasMyButton.GetDomainClass().Id);	
+					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newMyButtonOfExampleModelHasMyButton.GetDomainClass().Name + "!");
+					targetSerializer.Read(serializationContext, newMyButtonOfExampleModelHasMyButton, reader);
 				}
 				else
 				{
-					global::System.Type typeofExampleModelHasElements = typeof(ExampleModelHasElements);
-					DslModeling::DomainRelationshipXmlSerializer newExampleModelHasElementsSerializer = serializationContext.Directory.GetSerializer(ExampleModelHasElements.DomainClassId) as DslModeling::DomainRelationshipXmlSerializer;
-					global::System.Diagnostics.Debug.Assert(newExampleModelHasElementsSerializer != null, "Cannot find serializer for ExampleModelHasElements!");
-					ExampleModelHasElements newExampleModelHasElements = newExampleModelHasElementsSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as ExampleModelHasElements;
-					if (newExampleModelHasElements != null)
+					global::System.Type typeofExampleModelHasMyButton = typeof(ExampleModelHasMyButton);
+					DslModeling::DomainRelationshipXmlSerializer newExampleModelHasMyButtonSerializer = serializationContext.Directory.GetSerializer(ExampleModelHasMyButton.DomainClassId) as DslModeling::DomainRelationshipXmlSerializer;
+					global::System.Diagnostics.Debug.Assert(newExampleModelHasMyButtonSerializer != null, "Cannot find serializer for ExampleModelHasMyButton!");
+					ExampleModelHasMyButton newExampleModelHasMyButton = newExampleModelHasMyButtonSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as ExampleModelHasMyButton;
+					if (newExampleModelHasMyButton != null)
 					{
-						if (newExampleModelHasElements.GetType() == typeofExampleModelHasElements)
+						if (newExampleModelHasMyButton.GetType() == typeofExampleModelHasMyButton)
 						{	// The relationship should be serialized in short-form.
-							MyDslComponentsSerializationBehaviorSerializationMessages.ExpectingShortFormRelationship(serializationContext, reader, typeof(ExampleModelHasElements));
+							MyDslComponentsSerializationBehaviorSerializationMessages.ExpectingShortFormRelationship(serializationContext, reader, typeof(ExampleModelHasMyButton));
 						}
-						DslModeling::DomainRoleInfo.SetRolePlayer (newExampleModelHasElements, ExampleModelHasElements.ExampleModelDomainRoleId, element);
-						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newExampleModelHasElements.GetDomainClass().Id);	
-						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newExampleModelHasElements.GetDomainClass().Name + "!");
-						targetSerializer.Read(serializationContext, newExampleModelHasElements, reader);
+						DslModeling::DomainRoleInfo.SetRolePlayer (newExampleModelHasMyButton, ExampleModelHasMyButton.ExampleModelDomainRoleId, element);
+						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newExampleModelHasMyButton.GetDomainClass().Id);	
+						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newExampleModelHasMyButton.GetDomainClass().Name + "!");
+						targetSerializer.Read(serializationContext, newExampleModelHasMyButton, reader);
 					}
 					else
 					{	// Unknown element, skip
@@ -818,26 +818,26 @@ namespace Company.MyDslComponents
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
 		private static void WriteChildElements(DslModeling::SerializationContext serializationContext, ExampleModel element, global::System.Xml.XmlWriter writer)
 		{
-			// ExampleModelHasElements
-			global::System.Collections.ObjectModel.ReadOnlyCollection<ExampleModelHasElements> allExampleModelHasElementsInstances = ExampleModelHasElements.GetLinksToElements(element);
-			if (!serializationContext.Result.Failed && allExampleModelHasElementsInstances.Count > 0)
+			// ExampleModelHasMyButton
+			global::System.Collections.ObjectModel.ReadOnlyCollection<ExampleModelHasMyButton> allExampleModelHasMyButtonInstances = ExampleModelHasMyButton.GetLinksToMyButton(element);
+			if (!serializationContext.Result.Failed && allExampleModelHasMyButtonInstances.Count > 0)
 			{
-				writer.WriteStartElement("elements");
-				global::System.Type typeofExampleModelHasElements = typeof(ExampleModelHasElements);
-				foreach (ExampleModelHasElements eachExampleModelHasElementsInstance in allExampleModelHasElementsInstances)
+				writer.WriteStartElement("myButton");
+				global::System.Type typeofExampleModelHasMyButton = typeof(ExampleModelHasMyButton);
+				foreach (ExampleModelHasMyButton eachExampleModelHasMyButtonInstance in allExampleModelHasMyButtonInstances)
 				{
 					if (serializationContext.Result.Failed)
 						break;
 	
-					if (eachExampleModelHasElementsInstance.GetType() != typeofExampleModelHasElements)
+					if (eachExampleModelHasMyButtonInstance.GetType() != typeofExampleModelHasMyButton)
 					{	// Derived relationships will be serialized in full-form.
-						DslModeling::DomainClassXmlSerializer derivedRelSerializer = serializationContext.Directory.GetSerializer(eachExampleModelHasElementsInstance.GetDomainClass().Id);
-						global::System.Diagnostics.Debug.Assert(derivedRelSerializer != null, "Cannot find serializer for " + eachExampleModelHasElementsInstance.GetDomainClass().Name + "!");			
-						derivedRelSerializer.Write(serializationContext, eachExampleModelHasElementsInstance, writer);
+						DslModeling::DomainClassXmlSerializer derivedRelSerializer = serializationContext.Directory.GetSerializer(eachExampleModelHasMyButtonInstance.GetDomainClass().Id);
+						global::System.Diagnostics.Debug.Assert(derivedRelSerializer != null, "Cannot find serializer for " + eachExampleModelHasMyButtonInstance.GetDomainClass().Name + "!");			
+						derivedRelSerializer.Write(serializationContext, eachExampleModelHasMyButtonInstance, writer);
 					}
 					else
 					{	// No need to serialize the relationship itself, just serialize the role-player directly.
-						DslModeling::ModelElement targetElement = eachExampleModelHasElementsInstance.Element;
+						DslModeling::ModelElement targetElement = eachExampleModelHasMyButtonInstance.Element;
 						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
 						global::System.Diagnostics.Debug.Assert(targetSerializer != null, "Cannot find serializer for " + targetElement.GetDomainClass().Name + "!");			
 						targetSerializer.Write(serializationContext, targetElement, writer);
@@ -3403,15 +3403,15 @@ namespace Company.MyDslComponents
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// Serializer ExampleModelHasElementsSerializer for DomainClass ExampleModelHasElements.
+	/// Serializer ExampleModelHasMyButtonSerializer for DomainClass ExampleModelHasMyButton.
 	/// </summary>
-	public partial class ExampleModelHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	public partial class ExampleModelHasMyButtonSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// ExampleModelHasElementsSerializer Constructor
+		/// ExampleModelHasMyButtonSerializer Constructor
 		/// </summary>
-		public ExampleModelHasElementsSerializer ()
+		public ExampleModelHasMyButtonSerializer ()
 			: base ()
 		{
 		}
@@ -3437,25 +3437,25 @@ namespace Company.MyDslComponents
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of ExampleModelHasElements.
+		/// This is the XML tag name used to serialize an instance of ExampleModelHasMyButton.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"exampleModelHasElements"; }
+			get { return @"exampleModelHasMyButton"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of ExampleModelHasElements.
+		/// This is the XML tag name used to serialize a monikerized instance of ExampleModelHasMyButton.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"exampleModelHasElementsMoniker"; }
+			get { return @"exampleModelHasMyButtonMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of ExampleModelHasElements in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of ExampleModelHasMyButton in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -3466,16 +3466,16 @@ namespace Company.MyDslComponents
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one ExampleModelHasElements instance from XML.
+		/// Public Read() method that deserializes one ExampleModelHasMyButton instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the ExampleModelHasElements element that is about to be deserialized. 
+		/// of the ExampleModelHasMyButton element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ExampleModelHasElements instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory ExampleModelHasMyButton instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -3523,7 +3523,7 @@ namespace Company.MyDslComponents
 				}
 				else
 				{
-					MyDslComponentsSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "ExampleModelHasElements");
+					MyDslComponentsSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "ExampleModelHasMyButton");
 				}
 			}
 	
@@ -3547,7 +3547,7 @@ namespace Company.MyDslComponents
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ExampleModelHasElements instance that will link to the target MyButton instance.</param>
+		/// <param name="element">In-memory ExampleModelHasMyButton instance that will link to the target MyButton instance.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected virtual void ReadTargetRolePlayer(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -3574,7 +3574,7 @@ namespace Company.MyDslComponents
 				if (targetRolePlayer != null)
 				{
 					// Attach the target role-player.
-					DslModeling::DomainRoleInfo.SetRolePlayer(element as DslModeling::ElementLink, ExampleModelHasElements.ElementDomainRoleId, targetRolePlayer);
+					DslModeling::DomainRoleInfo.SetRolePlayer(element as DslModeling::ElementLink, ExampleModelHasMyButton.ElementDomainRoleId, targetRolePlayer);
 					// Read target role-player.
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (targetRolePlayer.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + targetRolePlayer.GetDomainClass().Name + "!");
@@ -3587,7 +3587,7 @@ namespace Company.MyDslComponents
 			}
 			if (targetRolePlayer == null)
 			{
-				MyDslComponentsSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "ExampleModelHasElements");
+				MyDslComponentsSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "ExampleModelHasMyButton");
 			}
 		}
 	
@@ -3599,7 +3599,7 @@ namespace Company.MyDslComponents
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ExampleModelHasElements instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory ExampleModelHasMyButton instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -3624,7 +3624,7 @@ namespace Company.MyDslComponents
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory ExampleModelHasElements instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory ExampleModelHasMyButton instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -3635,8 +3635,8 @@ namespace Company.MyDslComponents
 	
 		#region TryCreateInstance & TryCreateDerivedInstance
 		/// <summary>
-		/// This method creates a correct instance of ExampleModelHasElements based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized ExampleModelHasElements, a new ExampleModelHasElements instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of ExampleModelHasMyButton based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized ExampleModelHasMyButton, a new ExampleModelHasMyButton instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -3646,7 +3646,7 @@ namespace Company.MyDslComponents
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created ExampleModelHasElements instance, or null if the reader is not pointing to a serialized ExampleModelHasElements instance.</returns>
+		/// <returns>Created ExampleModelHasMyButton instance, or null if the reader is not pointing to a serialized ExampleModelHasMyButton instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -3665,9 +3665,9 @@ namespace Company.MyDslComponents
 		}
 	
 		/// <summary>
-		/// This method creates a correct derived instance of ExampleModelHasElements based on the tag currently pointed by the reader.
+		/// This method creates a correct derived instance of ExampleModelHasMyButton based on the tag currently pointed by the reader.
 		/// Note that the difference between this method and the above one is that this method will never create an instance of the
-		/// ExampleModelHasElements type itself, only derived types are checked.
+		/// ExampleModelHasMyButton type itself, only derived types are checked.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -3676,7 +3676,7 @@ namespace Company.MyDslComponents
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>
-		/// <returns>Created instance that derives from ExampleModelHasElements, or null if the reader is not pointing to such a serialized instance.</returns>
+		/// <returns>Created instance that derives from ExampleModelHasMyButton, or null if the reader is not pointing to such a serialized instance.</returns>
 		public override DslModeling::ElementLink TryCreateDerivedInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -3708,18 +3708,18 @@ namespace Company.MyDslComponents
 			{
 				string localName = reader.LocalName;
 				if (!derivedTypesOnly && string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ExampleModelHasElements" instance.
+				{	// New "ExampleModelHasMyButton" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "ExampleModelHasElements".
+				{	// Check for derived classes of "ExampleModelHasMyButton".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived relationship instance.
-						ExampleModelHasElementsSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ExampleModelHasElementsSerializer;
+						ExampleModelHasMyButtonSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ExampleModelHasMyButtonSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -3730,8 +3730,8 @@ namespace Company.MyDslComponents
 		}
 	
 		/// <summary>
-		/// This method creates an instance of ExampleModelHasElements based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of ExampleModelHasElements.
+		/// This method creates an instance of ExampleModelHasMyButton based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of ExampleModelHasMyButton.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -3739,8 +3739,8 @@ namespace Company.MyDslComponents
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new ExampleModelHasElements instance should be created.</param>	
-		/// <returns>Created ExampleModelHasElements instance.</returns>
+		/// <param name="partition">Partition in which new ExampleModelHasMyButton instance should be created.</param>	
+		/// <returns>Created ExampleModelHasMyButton instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -3757,11 +3757,11 @@ namespace Company.MyDslComponents
 					id = new global::System.Guid (idStr);
 				}
 				// Create the link with place-holder role-players.
-				return new ExampleModelHasElements(
+				return new ExampleModelHasMyButton(
 					partition,
 					new DslModeling::RoleAssignment[] {
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (ExampleModelHasElements.ExampleModelDomainRoleId), 
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (ExampleModelHasElements.ElementDomainRoleId)
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (ExampleModelHasMyButton.ExampleModelDomainRoleId), 
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (ExampleModelHasMyButton.ElementDomainRoleId)
 					},
 					new DslModeling::PropertyAssignment[] {
 						new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id)
@@ -3784,12 +3784,12 @@ namespace Company.MyDslComponents
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ExampleModelHasElements, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from ExampleModelHasMyButton, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ExampleModelHasElements.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from ExampleModelHasMyButton.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -3798,7 +3798,7 @@ namespace Company.MyDslComponents
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ExampleModelHasElements.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ExampleModelHasMyButton.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -3830,7 +3830,7 @@ namespace Company.MyDslComponents
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including ExampleModelHasElements itself) instance of ExampleModelHasElements based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including ExampleModelHasMyButton itself) instance of ExampleModelHasMyButton based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -3864,18 +3864,18 @@ namespace Company.MyDslComponents
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "ExampleModelHasElements" moniker instance.
+				{	// New "ExampleModelHasMyButton" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "ExampleModelHasElements".
+				{	// Check for derived classes of "ExampleModelHasMyButton".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						ExampleModelHasElementsSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ExampleModelHasElementsSerializer;
+						ExampleModelHasMyButtonSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as ExampleModelHasMyButtonSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -3886,7 +3886,7 @@ namespace Company.MyDslComponents
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of ExampleModelHasElements based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of ExampleModelHasMyButton based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -3911,7 +3911,7 @@ namespace Company.MyDslComponents
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ExampleModelHasElements.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, ExampleModelHasMyButton.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -3935,12 +3935,12 @@ namespace Company.MyDslComponents
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ExampleModelHasElements, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from ExampleModelHasMyButton, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ExampleModelHasElements.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from ExampleModelHasMyButton.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -3949,7 +3949,7 @@ namespace Company.MyDslComponents
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ExampleModelHasElements.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(ExampleModelHasMyButton.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -3975,13 +3975,13 @@ namespace Company.MyDslComponents
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized ExampleModelHasElements instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized ExampleModelHasMyButton instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ExampleModelHasElements instance to be monikerized.</param>
+		/// <param name="element">ExampleModelHasMyButton instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the ExampleModelHasElements instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ExampleModelHasElements instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the ExampleModelHasMyButton instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the ExampleModelHasMyButton instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -4010,10 +4010,10 @@ namespace Company.MyDslComponents
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one ExampleModelHasElements instance into XML.
+		/// Public Write() method that serializes one ExampleModelHasMyButton instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ExampleModelHasElements instance to be serialized.</param>
+		/// <param name="element">ExampleModelHasMyButton instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -4030,7 +4030,7 @@ namespace Company.MyDslComponents
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ExampleModelHasElements instance to be serialized.</param>
+		/// <param name="element">ExampleModelHasMyButton instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -4045,7 +4045,7 @@ namespace Company.MyDslComponents
 		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">ExampleModelHasElements instance to be serialized.</param>
+		/// <param name="element">ExampleModelHasMyButton instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>        
 		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
 		{
@@ -4058,11 +4058,11 @@ namespace Company.MyDslComponents
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given ExampleModelHasElements instance.
+		/// This method calculates a moniker to a given ExampleModelHasMyButton instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ExampleModelHasElements instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the ExampleModelHasElements instance.</returns>
+		/// <param name="element">ExampleModelHasMyButton instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the ExampleModelHasMyButton instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -4074,8 +4074,8 @@ namespace Company.MyDslComponents
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			ExampleModelHasElements instance = element as ExampleModelHasElements;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ExampleModelHasElements!");
+			ExampleModelHasMyButton instance = element as ExampleModelHasMyButton;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of ExampleModelHasMyButton!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -4086,7 +4086,7 @@ namespace Company.MyDslComponents
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">ExampleModelHasElements instance to get moniker qualifier from.</param>
+		/// <param name="element">ExampleModelHasMyButton instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -8024,7 +8024,7 @@ namespace Company.MyDslComponents
 					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MyTextbox.DomainClassId, typeof(MyTextboxSerializer)));
 					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MyGauge.DomainClassId, typeof(MyGaugeSerializer)));
 					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MyComponent.DomainClassId, typeof(MyComponentSerializer)));
-					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ExampleModelHasElements.DomainClassId, typeof(ExampleModelHasElementsSerializer)));
+					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ExampleModelHasMyButton.DomainClassId, typeof(ExampleModelHasMyButtonSerializer)));
 					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ExampleModelHasMyTextbox.DomainClassId, typeof(ExampleModelHasMyTextboxSerializer)));
 					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ExampleModelHasMyGauge.DomainClassId, typeof(ExampleModelHasMyGaugeSerializer)));
 					MyDslComponentsSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MyButtonShape.DomainClassId, typeof(MyButtonShapeSerializer)));

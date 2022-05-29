@@ -221,37 +221,37 @@
     <value>My Component</value>
     <comment>DisplayName for DomainClass &apos;MyComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements.Description" xml:space="preserve">
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton.Description" xml:space="preserve">
     <value>Embedding relationship between the Model and Elements</value>
-    <comment>Description for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+    <comment>Description for DomainClass &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements.DisplayName" xml:space="preserve">
-    <value>Example Model Has Elements</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModelHasElements&apos;</comment>
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton.DisplayName" xml:space="preserve">
+    <value>Example Model Has My Button</value>
+    <comment>DisplayName for DomainClass &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements/ExampleModel.Description" xml:space="preserve">
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.Description" xml:space="preserve">
     <value></value>
-    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements/ExampleModel.DisplayName" xml:space="preserve">
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.DisplayName" xml:space="preserve">
     <value>Example Model</value>
-    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements/ExampleModel.PropertyDisplayName" xml:space="preserve">
-    <value>Elements</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.PropertyDisplayName" xml:space="preserve">
+    <value>My Button</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements/Element.Description" xml:space="preserve">
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton/Element.Description" xml:space="preserve">
     <value></value>
-    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements/Element.DisplayName" xml:space="preserve">
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton/Element.DisplayName" xml:space="preserve">
     <value>Element</value>
-    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasElements/Element.PropertyDisplayName" xml:space="preserve">
+  <data name="Company.MyDslComponents.ExampleModelHasMyButton/Element.PropertyDisplayName" xml:space="preserve">
     <value>Example Model</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasElements&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
   </data>
   <data name="Company.MyDslComponents.ExampleModelHasMyTextbox.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.ExampleModelHasMyTextbox</value>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1" xmlns="http://schemas.microsoft.com/dsltools/MyDslComponents">
-  <elements>
-    <myButton Id="eac6f420-79c2-4a97-a60a-3ef6329d5aaa" name="MyButton1" text="CLICCAMI!" />
-    <myButton Id="145441b8-ffb4-4bec-bd4e-5f9c9a5c69b3" name="MyButton2" text="CLIC CLIC" />
-  </elements>
+  <myButton>
+    <myButton Id="6f94561b-a307-4df9-992b-bfa66a37d2ed" name="MyButton1" text="cliccami" />
+    <myButton Id="4ba99b7e-2f7a-4521-8319-0beeb320b906" name="MyButton2" text="cliccami2" />
+  </myButton>
   <myTextbox>
     <exampleModelHasMyTextbox Id="69edf40d-5137-4bc1-a71f-0728f5c9a4e3">
       <myTextbox Id="9cde84e6-1ee5-41a2-bb70-4e8be67e3dde" name="MyTextbox1" text="questo è testo personalizzabile dentro l'attributo Text della texbox" />

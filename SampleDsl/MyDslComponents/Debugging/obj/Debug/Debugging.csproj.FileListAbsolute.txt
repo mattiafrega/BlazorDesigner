@@ -1,0 +1,6 @@
+C:\Users\matti\source\repos\MyDslComponents\Debugging\bin\Debug\Debugging.dll
+C:\Users\matti\source\repos\MyDslComponents\Debugging\bin\Debug\Debugging.pdb
+C:\Users\matti\source\repos\MyDslComponents\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\matti\source\repos\MyDslComponents\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\matti\source\repos\MyDslComponents\Debugging\obj\Debug\Debugging.dll
+C:\Users\matti\source\repos\MyDslComponents\Debugging\obj\Debug\Debugging.pdb

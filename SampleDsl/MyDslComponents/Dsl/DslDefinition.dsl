@@ -9,7 +9,7 @@
             <DomainClassMoniker Name="MyButton" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ExampleModelHasElements.Elements</DomainPath>
+            <DomainPath>ExampleModelHasMyButton.MyButton</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
         <ElementMergeDirective>
@@ -89,9 +89,9 @@
     <DomainClass Id="5fa966a9-84fb-467e-9189-06278eaecfba" Description="Description for Company.MyDslComponents.MyComponent" Name="MyComponent" DisplayName="My Component" InheritanceModifier="Abstract" Namespace="Company.MyDslComponents" />
   </Classes>
   <Relationships>
-    <DomainRelationship Id="47dccd67-a58d-4a32-a17d-b214354dc8b1" Description="Embedding relationship between the Model and Elements" Name="ExampleModelHasElements" DisplayName="Example Model Has Elements" Namespace="Company.MyDslComponents" IsEmbedding="true">
+    <DomainRelationship Id="47dccd67-a58d-4a32-a17d-b214354dc8b1" Description="Embedding relationship between the Model and Elements" Name="ExampleModelHasMyButton" DisplayName="Example Model Has My Button" Namespace="Company.MyDslComponents" IsEmbedding="true">
       <Source>
-        <DomainRole Id="e2991666-69ee-4198-aa74-58b7491119d5" Description="" Name="ExampleModel" DisplayName="Example Model" PropertyName="Elements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Elements">
+        <DomainRole Id="e2991666-69ee-4198-aa74-58b7491119d5" Description="" Name="ExampleModel" DisplayName="Example Model" PropertyName="MyButton" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="My Button">
           <RolePlayer>
             <DomainClassMoniker Name="ExampleModel" />
           </RolePlayer>
@@ -189,8 +189,8 @@
       <XmlClassData TypeName="ExampleModel" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelMoniker" ElementName="exampleModel" MonikerTypeName="ExampleModelMoniker">
         <DomainClassMoniker Name="ExampleModel" />
         <ElementData>
-          <XmlRelationshipData RoleElementName="elements">
-            <DomainRelationshipMoniker Name="ExampleModelHasElements" />
+          <XmlRelationshipData RoleElementName="myButton">
+            <DomainRelationshipMoniker Name="ExampleModelHasMyButton" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="myTextbox">
             <DomainRelationshipMoniker Name="ExampleModelHasMyTextbox" />
@@ -211,8 +211,8 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ExampleModelHasElements" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasElementsMoniker" ElementName="exampleModelHasElements" MonikerTypeName="ExampleModelHasElementsMoniker">
-        <DomainRelationshipMoniker Name="ExampleModelHasElements" />
+      <XmlClassData TypeName="ExampleModelHasMyButton" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasMyButtonMoniker" ElementName="exampleModelHasMyButton" MonikerTypeName="ExampleModelHasMyButtonMoniker">
+        <DomainRelationshipMoniker Name="ExampleModelHasMyButton" />
       </XmlClassData>
       <XmlClassData TypeName="MyDslComponentsDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="myDslComponentsDiagramMoniker" ElementName="myDslComponentsDiagram" MonikerTypeName="MyDslComponentsDiagramMoniker">
         <DiagramMoniker Name="MyDslComponentsDiagram" />
@@ -271,7 +271,7 @@
       <ShapeMap>
         <DomainClassMoniker Name="MyButton" />
         <ParentElementPath>
-          <DomainPath>ExampleModelHasElements.ExampleModel/!ExampleModel</DomainPath>
+          <DomainPath>ExampleModelHasMyButton.ExampleModel/!ExampleModel</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="MyButtonShape/NameDecor" />

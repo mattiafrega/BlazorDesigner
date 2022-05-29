@@ -1,16 +1,28 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".txt" #>
+<#@ output extension=".razor" #>
 <#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents'" #>
 
-Generated material. Generating code in C#.
-
 <#
-  // When you change the DSL Definition, some of the code below may not work.
-
-  foreach (ExampleElement element in this.ExampleModel.Elements)
+  foreach (MyButton button in this.ExampleModel.MyButton)
   {
 #>
-	<#= element.Name #>
+	<MyButton Name: "<#= button.Name #>" Text: "<#= button.Text #>" />
+<#    
+  }
+#>
+<#
+  foreach (MyTextbox textbox in this.ExampleModel.MyTextbox)
+  {
+#>
+	<MyTextBox Name ":<#= textbox.Name #>" Text: "<#= textbox.Text #>" />
+<#    
+  }
+#>
+<#
+  foreach (MyGauge gauge in this.ExampleModel.MyGauge)
+  {
+#>
+	<MyGauge Name: "<#= gauge.Name #>" RangeStart: <#= gauge.RangeStart #> RangeEnd: <#= gauge.RangeEnd #> />
 <#    
   }
 #>

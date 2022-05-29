@@ -10,11 +10,11 @@
       <myTextboxMoniker Id="9cde84e6-1ee5-41a2-bb70-4e8be67e3dde" />
       <relativeChildShapes />
     </myTextboxShape>
-    <myButtonShape Id="4fc599ff-9f82-4873-b61d-70c72c470652" absoluteBounds="8.5, 5.125, 2, 1">
+    <myButtonShape Id="0befdc9d-6c45-4842-8b67-812c082209d2" absoluteBounds="8.75, 5.25, 2, 1">
       <myButtonMoniker name="/dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1/MyButton1" />
       <relativeChildShapes />
     </myButtonShape>
-    <myButtonShape Id="035aa887-a742-4b99-b941-40412aa41053" absoluteBounds="8.5, 6.5, 2, 1">
+    <myButtonShape Id="5a141ba2-4d9d-44a8-a523-6e2f396ec6f4" absoluteBounds="8.875, 6.625, 2, 1">
       <myButtonMoniker name="/dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1/MyButton2" />
       <relativeChildShapes />
     </myButtonShape>
