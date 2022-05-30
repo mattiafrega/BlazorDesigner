@@ -28,19 +28,26 @@
 #>
 
 
-//prints only the MyButtonShapes
+//prints only the MyButtonShapes in th diagram, I can access node Attributes
 <#
  Dictionary <string, string> buttonShapes =
         new Dictionary<string, string>();
  foreach (XmlNode node in doc.SelectNodes("//myButtonShape"))
  {
    buttonShapes[node.Name] = "";
+#>
+<#= node.Name #>
+id: <#= node.Attributes["Id"].Value #>
+absoluteBounds: <#= node.Attributes["absoluteBounds"].Value #>
+<#
  }
+#>
+<#
  // Generate the code
  foreach (string nodeName in buttonShapes.Keys)
  {
 #>
-< <#= nodeName #> />
+< <#= nodeName #>/>
 <#
  }
 #>
@@ -52,12 +59,19 @@
  foreach (XmlNode node in doc.SelectNodes("//myTextboxShape"))
  {
    textboxShapes[node.Name] = "";
+#>
+<#= node.Name #>
+id: <#= node.Attributes["Id"].Value #>
+absoluteBounds: <#= node.Attributes["absoluteBounds"].Value #>
+<#
  }
+#>
+<#
  // Generate the code
  foreach (string nodeName in textboxShapes.Keys)
  {
 #>
-< <#= nodeName #> />
+< <#= nodeName #>/>
 <#
  }
 #>
@@ -69,7 +83,14 @@
  foreach (XmlNode node in doc.SelectNodes("//myGaugeShape"))
  {
    gaugeShapes[node.Name] = "";
+#>
+<#= node.Name #>
+id: <#= node.Attributes["Id"].Value #>
+absoluteBounds: <#= node.Attributes["absoluteBounds"].Value #>
+<#
  }
+#>
+<#
  // Generate the code
  foreach (string nodeName in gaugeShapes.Keys)
  {
@@ -78,3 +99,5 @@
 <#
  }
 #>
+
+
