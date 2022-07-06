@@ -67,20 +67,24 @@ namespace Company.MyDslComponents
 		{
 			return new global::System.Type[]
 			{
-				typeof(ExampleModel),
-				typeof(MyButton),
-				typeof(MyTextbox),
-				typeof(MyGauge),
-				typeof(MyComponent),
-				typeof(ExampleModelHasMyButton),
-				typeof(ExampleModelHasMyTextbox),
-				typeof(ExampleModelHasMyGauge),
+				typeof(ITxModel),
+				typeof(ITxComponent),
+				typeof(ITxView),
+				typeof(ITxPanel),
+				typeof(ITxContainer),
+				typeof(ITxTextbox),
+				typeof(ITxButton),
+				typeof(ITxGauge),
+				typeof(ITxModelHasITxComponent),
+				typeof(ITxContainerHasITxComponent),
 				typeof(MyDslComponentsDiagram),
-				typeof(MyButtonShape),
-				typeof(MyTextboxShape),
-				typeof(MyGaugeShape),
+				typeof(BaseShape),
+				typeof(ITxViewShape),
+				typeof(ITxPanelShape),
+				typeof(ITxTextboxShape),
+				typeof(ITxButtonShape),
+				typeof(ITxGaugeShape),
 				typeof(global::Company.MyDslComponents.FixUpDiagram),
-				typeof(global::Company.MyDslComponents.DecoratorPropertyChanged),
 			};
 		}
 		/// <summary>
@@ -92,13 +96,12 @@ namespace Company.MyDslComponents
 		{
 			return new DomainMemberInfo[]
 			{
-				new DomainMemberInfo(typeof(MyButton), "Name", MyButton.NameDomainPropertyId, typeof(MyButton.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(MyButton), "Text", MyButton.TextDomainPropertyId, typeof(MyButton.TextPropertyHandler)),
-				new DomainMemberInfo(typeof(MyTextbox), "Name", MyTextbox.NameDomainPropertyId, typeof(MyTextbox.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(MyTextbox), "Text", MyTextbox.TextDomainPropertyId, typeof(MyTextbox.TextPropertyHandler)),
-				new DomainMemberInfo(typeof(MyGauge), "RangeStart", MyGauge.RangeStartDomainPropertyId, typeof(MyGauge.RangeStartPropertyHandler)),
-				new DomainMemberInfo(typeof(MyGauge), "RangeEnd", MyGauge.RangeEndDomainPropertyId, typeof(MyGauge.RangeEndPropertyHandler)),
-				new DomainMemberInfo(typeof(MyGauge), "Name", MyGauge.NameDomainPropertyId, typeof(MyGauge.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(ITxComponent), "Name", ITxComponent.NameDomainPropertyId, typeof(ITxComponent.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(ITxComponent), "Text", ITxComponent.TextDomainPropertyId, typeof(ITxComponent.TextPropertyHandler)),
+				new DomainMemberInfo(typeof(BaseShape), "Width", BaseShape.WidthDomainPropertyId, typeof(BaseShape.WidthPropertyHandler)),
+				new DomainMemberInfo(typeof(BaseShape), "Height", BaseShape.HeightDomainPropertyId, typeof(BaseShape.HeightPropertyHandler)),
+				new DomainMemberInfo(typeof(BaseShape), "X", BaseShape.XDomainPropertyId, typeof(BaseShape.XPropertyHandler)),
+				new DomainMemberInfo(typeof(BaseShape), "Y", BaseShape.YDomainPropertyId, typeof(BaseShape.YPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -109,12 +112,10 @@ namespace Company.MyDslComponents
 		{
 			return new DomainRolePlayerInfo[]
 			{
-				new DomainRolePlayerInfo(typeof(ExampleModelHasMyButton), "ExampleModel", ExampleModelHasMyButton.ExampleModelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasMyButton), "Element", ExampleModelHasMyButton.ElementDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasMyTextbox), "ExampleModel", ExampleModelHasMyTextbox.ExampleModelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasMyTextbox), "MyTextbox", ExampleModelHasMyTextbox.MyTextboxDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasMyGauge), "ExampleModel", ExampleModelHasMyGauge.ExampleModelDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ExampleModelHasMyGauge), "MyGauge", ExampleModelHasMyGauge.MyGaugeDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ITxModelHasITxComponent), "ITxModel", ITxModelHasITxComponent.ITxModelDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ITxModelHasITxComponent), "ITxComponent", ITxModelHasITxComponent.ITxComponentDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ITxContainerHasITxComponent), "ITxContainer", ITxContainerHasITxComponent.ITxContainerDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ITxContainerHasITxComponent), "ITxComponent", ITxContainerHasITxComponent.ITxComponentDomainRoleId),
 			};
 		}
 		#endregion
@@ -136,15 +137,19 @@ namespace Company.MyDslComponents
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
-				createElementMap.Add(typeof(ExampleModel), 0);
-				createElementMap.Add(typeof(MyButton), 1);
-				createElementMap.Add(typeof(MyTextbox), 2);
-				createElementMap.Add(typeof(MyGauge), 3);
-				createElementMap.Add(typeof(MyDslComponentsDiagram), 4);
-				createElementMap.Add(typeof(MyButtonShape), 5);
-				createElementMap.Add(typeof(MyTextboxShape), 6);
-				createElementMap.Add(typeof(MyGaugeShape), 7);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
+				createElementMap.Add(typeof(ITxModel), 0);
+				createElementMap.Add(typeof(ITxView), 1);
+				createElementMap.Add(typeof(ITxPanel), 2);
+				createElementMap.Add(typeof(ITxTextbox), 3);
+				createElementMap.Add(typeof(ITxButton), 4);
+				createElementMap.Add(typeof(ITxGauge), 5);
+				createElementMap.Add(typeof(MyDslComponentsDiagram), 6);
+				createElementMap.Add(typeof(ITxViewShape), 7);
+				createElementMap.Add(typeof(ITxPanelShape), 8);
+				createElementMap.Add(typeof(ITxTextboxShape), 9);
+				createElementMap.Add(typeof(ITxButtonShape), 10);
+				createElementMap.Add(typeof(ITxGaugeShape), 11);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -158,14 +163,18 @@ namespace Company.MyDslComponents
 			}
 			switch (index)
 			{
-				case 0: return new ExampleModel(partition, propertyAssignments);
-				case 1: return new MyButton(partition, propertyAssignments);
-				case 2: return new MyTextbox(partition, propertyAssignments);
-				case 3: return new MyGauge(partition, propertyAssignments);
-				case 4: return new MyDslComponentsDiagram(partition, propertyAssignments);
-				case 5: return new MyButtonShape(partition, propertyAssignments);
-				case 6: return new MyTextboxShape(partition, propertyAssignments);
-				case 7: return new MyGaugeShape(partition, propertyAssignments);
+				case 0: return new ITxModel(partition, propertyAssignments);
+				case 1: return new ITxView(partition, propertyAssignments);
+				case 2: return new ITxPanel(partition, propertyAssignments);
+				case 3: return new ITxTextbox(partition, propertyAssignments);
+				case 4: return new ITxButton(partition, propertyAssignments);
+				case 5: return new ITxGauge(partition, propertyAssignments);
+				case 6: return new MyDslComponentsDiagram(partition, propertyAssignments);
+				case 7: return new ITxViewShape(partition, propertyAssignments);
+				case 8: return new ITxPanelShape(partition, propertyAssignments);
+				case 9: return new ITxTextboxShape(partition, propertyAssignments);
+				case 10: return new ITxButtonShape(partition, propertyAssignments);
+				case 11: return new ITxGaugeShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -188,10 +197,9 @@ namespace Company.MyDslComponents
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
-				createElementLinkMap.Add(typeof(ExampleModelHasMyButton), 0);
-				createElementLinkMap.Add(typeof(ExampleModelHasMyTextbox), 1);
-				createElementLinkMap.Add(typeof(ExampleModelHasMyGauge), 2);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
+				createElementLinkMap.Add(typeof(ITxModelHasITxComponent), 0);
+				createElementLinkMap.Add(typeof(ITxContainerHasITxComponent), 1);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -206,9 +214,8 @@ namespace Company.MyDslComponents
 			}
 			switch (index)
 			{
-				case 0: return new ExampleModelHasMyButton(partition, roleAssignments, propertyAssignments);
-				case 1: return new ExampleModelHasMyTextbox(partition, roleAssignments, propertyAssignments);
-				case 2: return new ExampleModelHasMyGauge(partition, roleAssignments, propertyAssignments);
+				case 0: return new ITxModelHasITxComponent(partition, roleAssignments, propertyAssignments);
+				case 1: return new ITxContainerHasITxComponent(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -329,7 +336,6 @@ namespace Company.MyDslComponents
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::Company.MyDslComponents.FixUpDiagram));
-			ruleManager.EnableRule(typeof(global::Company.MyDslComponents.DecoratorPropertyChanged));
 		}
 		
 		/// <summary>
@@ -341,7 +347,6 @@ namespace Company.MyDslComponents
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::Company.MyDslComponents.FixUpDiagram));
-			ruleManager.DisableRule(typeof(global::Company.MyDslComponents.DecoratorPropertyChanged));
 		}
 		#endregion
 	}
@@ -377,9 +382,8 @@ namespace Company.MyDslComponents
 		public MyDslComponentsDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId, true);
-			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasMyTextbox.MyTextboxDomainRoleId, true);
-			DomainRoles.Add(global::Company.MyDslComponents.ExampleModelHasMyGauge.MyGaugeDomainRoleId, true);
+			DomainRoles.Add(global::Company.MyDslComponents.ITxModelHasITxComponent.ITxComponentDomainRoleId, true);
+			DomainRoles.Add(global::Company.MyDslComponents.ITxContainerHasITxComponent.ITxComponentDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

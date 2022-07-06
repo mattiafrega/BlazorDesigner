@@ -14,15 +14,321 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// DomainClass MyButtonShape
-	/// Description for Company.MyDslComponents.MyButtonShape
+	/// DomainClass BaseShape
+	/// Description for Company.MyDslComponents.BaseShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.MyButtonShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.MyButtonShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.BaseShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.BaseShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d96f9636-4f48-4cc1-8761-bfbb40e1e3f5")]
-	public partial class MyButtonShape : DslDiagrams::ImageShape
+	[DslModeling::DomainObjectId("47936b8a-6c27-4c0c-ab70-86418e93fe42")]
+	public abstract partial class BaseShape : DslDiagrams::ImageShape
+	{
+		#region Shape size
+		#endregion
+		#region Shape styles
+		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("BaseShapeImage"));
+			}
+		}
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// BaseShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x47936b8a, 0x6c27, 0x4c0c, 0xab, 0x70, 0x86, 0x41, 0x8e, 0x93, 0xfe, 0x42);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected BaseShape(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Width domain property code
+		
+		/// <summary>
+		/// Width domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid WidthDomainPropertyId = new global::System.Guid(0xe285f9fe, 0x4e75, 0x4323, 0x88, 0xe5, 0xbe, 0x73, 0x9d, 0xc3, 0xe6, 0x01);
+		
+		/// <summary>
+		/// Gets or sets the value of Width domain property.
+		/// Description for Company.MyDslComponents.BaseShape.Width
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.BaseShape/Width.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.BaseShape/Width.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("e285f9fe-4e75-4323-88e5-be739dc3e601")]
+		public global::System.Double Width
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return WidthPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the BaseShape.Width domain property.
+		/// </summary>
+		internal sealed partial class WidthPropertyHandler : DslModeling::CalculatedPropertyValueHandler<BaseShape, global::System.Double>
+		{
+			private WidthPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the BaseShape.Width domain property value handler.
+			/// </summary>
+			public static readonly WidthPropertyHandler Instance = new WidthPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the BaseShape.Width domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return WidthDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(BaseShape element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for Width because its Kind is
+				// set to Calculated. Please provide the GetWidthValue()
+				// method on the domain class.
+				return element.GetWidthValue();
+			}
+		
+		}
+		
+		#endregion
+		#region Height domain property code
+		
+		/// <summary>
+		/// Height domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid HeightDomainPropertyId = new global::System.Guid(0xc1f5b2b7, 0xeb5e, 0x4833, 0x90, 0x4f, 0xa9, 0xf5, 0x0f, 0x2a, 0x25, 0xc7);
+		
+		/// <summary>
+		/// Gets or sets the value of Height domain property.
+		/// Description for Company.MyDslComponents.BaseShape.Height
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.BaseShape/Height.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.BaseShape/Height.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("c1f5b2b7-eb5e-4833-904f-a9f50f2a25c7")]
+		public global::System.Double Height
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return HeightPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the BaseShape.Height domain property.
+		/// </summary>
+		internal sealed partial class HeightPropertyHandler : DslModeling::CalculatedPropertyValueHandler<BaseShape, global::System.Double>
+		{
+			private HeightPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the BaseShape.Height domain property value handler.
+			/// </summary>
+			public static readonly HeightPropertyHandler Instance = new HeightPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the BaseShape.Height domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return HeightDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(BaseShape element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for Height because its Kind is
+				// set to Calculated. Please provide the GetHeightValue()
+				// method on the domain class.
+				return element.GetHeightValue();
+			}
+		
+		}
+		
+		#endregion
+		#region X domain property code
+		
+		/// <summary>
+		/// X domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid XDomainPropertyId = new global::System.Guid(0x1582776e, 0x78c8, 0x4993, 0x96, 0xe8, 0x64, 0x36, 0x89, 0xd5, 0xb6, 0x7b);
+		
+		/// <summary>
+		/// Gets or sets the value of X domain property.
+		/// Description for Company.MyDslComponents.BaseShape.X
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.BaseShape/X.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.BaseShape/X.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("1582776e-78c8-4993-96e8-643689d5b67b")]
+		public global::System.Double X
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return XPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the BaseShape.X domain property.
+		/// </summary>
+		internal sealed partial class XPropertyHandler : DslModeling::CalculatedPropertyValueHandler<BaseShape, global::System.Double>
+		{
+			private XPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the BaseShape.X domain property value handler.
+			/// </summary>
+			public static readonly XPropertyHandler Instance = new XPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the BaseShape.X domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return XDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(BaseShape element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for X because its Kind is
+				// set to Calculated. Please provide the GetXValue()
+				// method on the domain class.
+				return element.GetXValue();
+			}
+		
+		}
+		
+		#endregion
+		#region Y domain property code
+		
+		/// <summary>
+		/// Y domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid YDomainPropertyId = new global::System.Guid(0x7dbaa66b, 0x7bd7, 0x4b5b, 0x81, 0x21, 0x32, 0x7c, 0x1e, 0x74, 0xdc, 0xcb);
+		
+		/// <summary>
+		/// Gets or sets the value of Y domain property.
+		/// Description for Company.MyDslComponents.BaseShape.Y
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.BaseShape/Y.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.BaseShape/Y.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("7dbaa66b-7bd7-4b5b-8121-327c1e74dccb")]
+		public global::System.Double Y
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return YPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the BaseShape.Y domain property.
+		/// </summary>
+		internal sealed partial class YPropertyHandler : DslModeling::CalculatedPropertyValueHandler<BaseShape, global::System.Double>
+		{
+			private YPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the BaseShape.Y domain property value handler.
+			/// </summary>
+			public static readonly YPropertyHandler Instance = new YPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the BaseShape.Y domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return YDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(BaseShape element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for Y because its Kind is
+				// set to Calculated. Please provide the GetYValue()
+				// method on the domain class.
+				return element.GetYValue();
+			}
+		
+		}
+		
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass ITxViewShape
+	/// Description for Company.MyDslComponents.ITxViewShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxViewShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxViewShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("230a469f-b8c6-40d5-b97c-8217e3d43e16")]
+	public partial class ITxViewShape : BaseShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -87,9 +393,488 @@ namespace Company.MyDslComponents
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MyButtonShape.
+		/// Finds a decorator associated with ITxViewShape.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMyButtonShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindITxViewShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		#region Shape styles
+		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxViewShapeImage"));
+			}
+		}
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ITxViewShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x230a469f, 0xb8c6, 0x40d5, 0xb9, 0x7c, 0x82, 0x17, 0xe3, 0xd4, 0x3e, 0x16);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ITxViewShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ITxViewShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass ITxPanelShape
+	/// Description for Company.MyDslComponents.ITxPanelShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxPanelShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxPanelShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("c4d822ec-9533-4f52-8b0e-b255ba024615")]
+	public partial class ITxPanelShape : BaseShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ITxPanelShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindITxPanelShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		#region Shape styles
+		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxPanelShapeImage"));
+			}
+		}
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ITxPanelShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc4d822ec, 0x9533, 0x4f52, 0x8b, 0x0e, 0xb2, 0x55, 0xba, 0x02, 0x46, 0x15);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ITxPanelShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ITxPanelShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass ITxTextboxShape
+	/// Description for Company.MyDslComponents.ITxTextboxShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxTextboxShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxTextboxShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("e975b6bb-b5b8-4fde-a748-fb602ba9f54c")]
+	public partial class ITxTextboxShape : BaseShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ITxTextboxShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindITxTextboxShapeDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		
+		/// <summary>
+		/// Shape instance initialization.
+		/// </summary>
+		public override void OnInitialize()
+		{
+			base.OnInitialize();
+			
+			// Create host shapes for outer decorators.
+			foreach(DslDiagrams::Decorator decorator in this.Decorators)
+			{
+				if(decorator.RequiresHost)
+				{
+					decorator.ConfigureHostShape(this);
+				}
+			}
+			
+		}
+		#endregion
+		#region Shape size
+		
+		/// <summary>
+		/// Default size for this shape.
+		/// </summary>
+		public override DslDiagrams::SizeD DefaultSize
+		{
+			get
+			{
+				return new DslDiagrams::SizeD(4, 1);
+			}
+		}
+		#endregion
+		#region Shape styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
+			fontSettings.Size = 12/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular12"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+		}
+		
+		#endregion
+		#region Decorators
+		/// <summary>
+		/// Initialize the collection of shape fields associated with this shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("TextDecor");
+			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("ITxTextboxShapeTextDecorDefaultText");
+			field1.DefaultFocusable = true;
+			field1.DefaultAutoSize = true;
+			field1.AnchoringBehavior.MinimumHeightInLines = 1;
+			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular12");			
+			shapeFields.Add(field1);
+			
+		}
+		
+		/// <summary>
+		/// Initialize the collection of decorators associated with this shape type.  This method also
+		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
+		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
+		/// </summary>
+		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
+		{
+			base.InitializeDecorators(shapeFields, decorators);
+			
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TextDecor");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerMiddleLeft, DslDiagrams::PointD.Empty);
+			decorators.Add(decorator1);
+				
+		}
+		
+		/// <summary>
+		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
+		/// after the shape has been associated with the model element.
+		/// </summary>
+		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
+		{
+			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
+			
+			if(iteration == 0)
+			{
+				foreach(DslDiagrams::Decorator decorator in this.Decorators)
+				{
+					if(decorator.RequiresHost)
+					{
+						decorator.RepositionHostShape(decorator.GetHostShape(this));
+					}
+				}
+			}
+		}
+		#endregion
+		/// <summary>
+		/// Provide the specific Image for this Shape class
+		/// </summary>
+		protected override global::System.Drawing.Image Image
+		{
+			get
+			{
+				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxTextboxShapeImage"));
+			}
+		}
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ITxTextboxShape domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe975b6bb, 0xb5b8, 0x4fde, 0xa7, 0x48, 0xfb, 0x60, 0x2b, 0xa9, 0xf5, 0x4c);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ITxTextboxShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ITxTextboxShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass ITxButtonShape
+	/// Description for Company.MyDslComponents.ITxButtonShape
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxButtonShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxButtonShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("4016431d-6562-4885-b497-ce39b63a7320")]
+	public partial class ITxButtonShape : BaseShape
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with ITxButtonShape.
+		/// </summary>
+		public static DslDiagrams::Decorator FindITxButtonShapeDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -136,12 +921,17 @@ namespace Company.MyDslComponents
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Text brush settings for this shape.
+			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
+			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
+		
 			// Custom font styles
 			DslDiagrams::FontSettings fontSettings;
 			fontSettings = new DslDiagrams::FontSettings();
 			fontSettings.Style =  global::System.Drawing.FontStyle.Bold ;
-			fontSettings.Size = 10/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold10"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
+			fontSettings.Size = 14/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold14"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		#endregion
@@ -153,13 +943,13 @@ namespace Company.MyDslComponents
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("TextDecor");
-			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyButtonShapeTextDecorDefaultText");
+			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("ITxButtonShapeTextDecorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold10");			
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold14");			
 			shapeFields.Add(field1);
 			
 		}
@@ -173,19 +963,9 @@ namespace Company.MyDslComponents
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecor");
-			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyButtonShapeNameDecorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.OuterTopCenter, DslDiagrams::PointD.Empty);
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TextDecor");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
-				
-			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TextDecor");
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
 				
 		}
 		
@@ -217,21 +997,21 @@ namespace Company.MyDslComponents
 			get
 			{
 				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
-				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MyButtonShapeImage"));
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxButtonShapeImage"));
 			}
 		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MyButtonShape domain class Id.
+		/// ITxButtonShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd96f9636, 0x4f48, 0x4cc1, 0x87, 0x61, 0xbf, 0xbb, 0x40, 0xe1, 0xe3, 0xf5);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x4016431d, 0x6562, 0x4885, 0xb4, 0x97, 0xce, 0x39, 0xb6, 0x3a, 0x73, 0x20);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MyButtonShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxButtonShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -241,7 +1021,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MyButtonShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxButtonShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -251,15 +1031,15 @@ namespace Company.MyDslComponents
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// DomainClass MyTextboxShape
-	/// Description for Company.MyDslComponents.MyTextboxShape
+	/// DomainClass ITxGaugeShape
+	/// Description for Company.MyDslComponents.ITxGaugeShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.MyTextboxShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.MyTextboxShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxGaugeShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxGaugeShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d489b876-122a-47ca-a665-ee2677c482d7")]
-	public partial class MyTextboxShape : DslDiagrams::ImageShape
+	[DslModeling::DomainObjectId("6d711054-bfd0-4968-84eb-6efc84794653")]
+	public partial class ITxGaugeShape : BaseShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -324,32 +1104,14 @@ namespace Company.MyDslComponents
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MyTextboxShape.
+		/// Finds a decorator associated with ITxGaugeShape.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMyTextboxShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindITxGaugeShapeDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
 		}
 		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
 		#endregion
 		#region Shape size
 		
@@ -360,91 +1122,11 @@ namespace Company.MyDslComponents
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(2, 1);
+				return new DslDiagrams::SizeD(1, 1);
 			}
 		}
 		#endregion
 		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Custom font styles
-			DslDiagrams::FontSettings fontSettings;
-			fontSettings = new DslDiagrams::FontSettings();
-			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
-			fontSettings.Size = 10/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
-		}
-		
-		#endregion
-		#region Decorators
-		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
-		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
-		{
-			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("TextDecor");
-			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyTextboxShapeTextDecorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10");			
-			shapeFields.Add(field1);
-			
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecor");
-			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyTextboxShapeNameDecorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.OuterTopCenter, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TextDecor");
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
-				
-		}
-		
-		/// <summary>
-		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
-		/// after the shape has been associated with the model element.
-		/// </summary>
-		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
-		{
-			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
-			
-			if(iteration == 0)
-			{
-				foreach(DslDiagrams::Decorator decorator in this.Decorators)
-				{
-					if(decorator.RequiresHost)
-					{
-						decorator.RepositionHostShape(decorator.GetHostShape(this));
-					}
-				}
-			}
-		}
 		#endregion
 		/// <summary>
 		/// Provide the specific Image for this Shape class
@@ -454,21 +1136,21 @@ namespace Company.MyDslComponents
 			get
 			{
 				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
-				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MyTextboxShapeImage"));
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxGaugeShapeImage"));
 			}
 		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MyTextboxShape domain class Id.
+		/// ITxGaugeShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd489b876, 0x122a, 0x47ca, 0xa6, 0x65, 0xee, 0x26, 0x77, 0xc4, 0x82, 0xd7);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6d711054, 0xbfd0, 0x4968, 0x84, 0xeb, 0x6e, 0xfc, 0x84, 0x79, 0x46, 0x53);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MyTextboxShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxGaugeShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -478,258 +1160,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MyTextboxShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-	}
-}
-namespace Company.MyDslComponents
-{
-	/// <summary>
-	/// DomainClass MyGaugeShape
-	/// Description for Company.MyDslComponents.MyGaugeShape
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.MyGaugeShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.MyGaugeShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("eb5a07be-74ed-448f-bd10-2f5524d5d0e2")]
-	public partial class MyGaugeShape : DslDiagrams::ImageShape
-	{
-		#region DiagramElement boilerplate
-		private static DslDiagrams::StyleSet classStyleSet;
-		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
-		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
-		
-		/// <summary>
-		/// Per-class style set for this shape.
-		/// </summary>
-		protected override DslDiagrams::StyleSet ClassStyleSet
-		{
-			get
-			{
-				if (classStyleSet == null)
-				{
-					classStyleSet = CreateClassStyleSet();
-				}
-				return classStyleSet;
-			}
-		}
-		
-		/// <summary>
-		/// Per-class ShapeFields for this shape.
-		/// </summary>
-		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
-		{
-			get
-			{
-				if (shapeFields == null)
-				{
-					shapeFields = CreateShapeFields();
-				}
-				return shapeFields;
-			}
-		}
-		
-		/// <summary>
-		/// Event fired when decorator initialization is complete for this shape type.
-		/// </summary>
-		public static event global::System.EventHandler DecoratorsInitialized;
-		
-		/// <summary>
-		/// List containing decorators used by this type.
-		/// </summary>
-		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
-		{
-			get 
-			{
-				if(decorators == null)
-				{
-					decorators = CreateDecorators();
-					
-					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
-					if(DecoratorsInitialized != null)
-					{
-						DecoratorsInitialized(this, global::System.EventArgs.Empty);
-					}
-				}
-				
-				return decorators; 
-			}
-		}
-		
-		/// <summary>
-		/// Finds a decorator associated with MyGaugeShape.
-		/// </summary>
-		public static DslDiagrams::Decorator FindMyGaugeShapeDecorator(string decoratorName)
-		{	
-			if(decorators == null) return null;
-			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
-		}
-		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
-		#endregion
-		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(2, 2);
-			}
-		}
-		#endregion
-		#region Shape styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Custom font styles
-			DslDiagrams::FontSettings fontSettings;
-			fontSettings = new DslDiagrams::FontSettings();
-			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
-			fontSettings.Size = 10/72.0F;
-			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
-		}
-		
-		#endregion
-		#region Decorators
-		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
-		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
-		{
-			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("RangeStartDecor");
-			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyGaugeShapeRangeStartDecorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10");			
-			shapeFields.Add(field1);
-			
-			DslDiagrams::TextField field2 = new DslDiagrams::TextField("RangeEndDecor");
-			field2.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyGaugeShapeRangeEndDecorDefaultText");
-			field2.DefaultFocusable = true;
-			field2.DefaultAutoSize = true;
-			field2.AnchoringBehavior.MinimumHeightInLines = 1;
-			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			field2.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular10");			
-			shapeFields.Add(field2);
-			
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "RangeStartDecor");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "RangeEndDecor");
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopRight, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
-				
-			DslDiagrams::TextField field3 = new DslDiagrams::TextField("NameDecor");
-			field3.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("MyGaugeShapeNameDecorDefaultText");
-			field3.DefaultFocusable = true;
-			field3.DefaultAutoSize = true;
-			field3.AnchoringBehavior.MinimumHeightInLines = 1;
-			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator3 = new DslDiagrams::ShapeDecorator(field3, DslDiagrams::ShapeDecoratorPosition.OuterTopCenter, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator3);
-				
-		}
-		
-		/// <summary>
-		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
-		/// after the shape has been associated with the model element.
-		/// </summary>
-		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
-		{
-			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
-			
-			if(iteration == 0)
-			{
-				foreach(DslDiagrams::Decorator decorator in this.Decorators)
-				{
-					if(decorator.RequiresHost)
-					{
-						decorator.RepositionHostShape(decorator.GetHostShape(this));
-					}
-				}
-			}
-		}
-		#endregion
-		/// <summary>
-		/// Provide the specific Image for this Shape class
-		/// </summary>
-		protected override global::System.Drawing.Image Image
-		{
-			get
-			{
-				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
-				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MyGaugeShapeImage"));
-			}
-		}
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// MyGaugeShape domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xeb5a07be, 0x74ed, 0x448f, 0xbd, 0x10, 0x2f, 0x55, 0x24, 0xd5, 0xd0, 0xe2);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MyGaugeShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MyGaugeShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxGaugeShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

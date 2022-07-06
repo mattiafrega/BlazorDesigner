@@ -1,138 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="38476d44-74a2-4891-bdf5-b5d2b9c42dcb" Description="Description for Company.MyDslComponents.MyDslComponents" Name="MyDslComponents" DisplayName="MyDslComponents" Namespace="Company.MyDslComponents" ProductName="MyDslComponents" CompanyName="Company" PackageGuid="8bf03763-7a37-44f3-8516-11ef3578ac6f" PackageNamespace="Company.MyDslComponents" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="d0496c9f-ce81-4d80-8eea-fd8d9e5b8006" Description="The root in which all other elements are embedded. Appears as a diagram." Name="ExampleModel" DisplayName="Example Model" Namespace="Company.MyDslComponents">
+    <DomainClass Id="d0496c9f-ce81-4d80-8eea-fd8d9e5b8006" Description="The root in which all other elements are embedded. Appears as a diagram." Name="ITxModel" DisplayName="ITx Model" Namespace="Company.MyDslComponents">
       <ElementMergeDirectives>
         <ElementMergeDirective>
-          <Notes>Creates an embedding link when an element is dropped onto a model. </Notes>
           <Index>
-            <DomainClassMoniker Name="MyButton" />
+            <DomainClassMoniker Name="ITxComponent" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>ExampleModelHasMyButton.MyButton</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="MyTextbox" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>ExampleModelHasMyTextbox.MyTextbox</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="MyGauge" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>ExampleModelHasMyGauge.MyGauge</DomainPath>
+            <DomainPath>ITxModelHasITxComponent.ITxComponent</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="0b0a9e8b-6ee9-48ad-b086-d9c4a0eba137" Description="Elements embedded in the model. Appear as boxes on the diagram." Name="MyButton" DisplayName="My Button" Namespace="Company.MyDslComponents">
-      <BaseClass>
-        <DomainClassMoniker Name="MyComponent" />
-      </BaseClass>
+    <DomainClass Id="5fa966a9-84fb-467e-9189-06278eaecfba" Description="Description for Company.MyDslComponents.ITxComponent" Name="ITxComponent" DisplayName="ITx Component" InheritanceModifier="Abstract" Namespace="Company.MyDslComponents">
       <Properties>
-        <DomainProperty Id="05b92620-fe5d-4ce7-b613-1960866b200c" Description="Description for Company.MyDslComponents.MyButton.Name" Name="Name" DisplayName="Name" DefaultValue="" IsElementName="true">
+        <DomainProperty Id="777a72ba-9429-4f9f-8d75-851dd6ca7707" Description="Description for Company.MyDslComponents.ITxComponent.Name" Name="Name" DisplayName="Name" IsElementName="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="28783485-1b33-4e59-8fca-3c5272e6528b" Description="Description for Company.MyDslComponents.MyButton.Text" Name="Text" DisplayName="Text">
+        <DomainProperty Id="f2d72306-1f0e-41b6-acd7-52e3957051e2" Description="Description for Company.MyDslComponents.ITxComponent.Text" Name="Text" DisplayName="Text">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="3e4bc35c-11f6-4f95-92d6-0ec304383641" Description="Description for Company.MyDslComponents.MyTextbox" Name="MyTextbox" DisplayName="My Textbox" Namespace="Company.MyDslComponents">
+    <DomainClass Id="216871ad-163e-4f6f-9826-66287ae3c1fe" Description="Description for Company.MyDslComponents.ITxView" Name="ITxView" DisplayName="ITx View" Namespace="Company.MyDslComponents">
       <BaseClass>
-        <DomainClassMoniker Name="MyComponent" />
+        <DomainClassMoniker Name="ITxContainer" />
       </BaseClass>
-      <Properties>
-        <DomainProperty Id="c5f27e70-f554-497b-a22e-aeb8dc69228a" Description="Description for Company.MyDslComponents.MyTextbox.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="608bc7ff-4934-4944-9884-0d8f2daa6bbf" Description="Description for Company.MyDslComponents.MyTextbox.Text" Name="Text" DisplayName="Text">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
     </DomainClass>
-    <DomainClass Id="9a2e1c4e-7437-492e-8fcf-325e93b8a3a8" Description="Description for Company.MyDslComponents.MyGauge" Name="MyGauge" DisplayName="My Gauge" Namespace="Company.MyDslComponents">
+    <DomainClass Id="61874ad0-26d4-4ae7-a3e0-7c4b246424a0" Description="Description for Company.MyDslComponents.ITxPanel" Name="ITxPanel" DisplayName="ITx Panel" Namespace="Company.MyDslComponents">
       <BaseClass>
-        <DomainClassMoniker Name="MyComponent" />
+        <DomainClassMoniker Name="ITxContainer" />
       </BaseClass>
-      <Properties>
-        <DomainProperty Id="52f9f926-79c9-446e-a370-a4c696419319" Description="Description for Company.MyDslComponents.MyGauge.Range Start" Name="RangeStart" DisplayName="Range Start">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int32" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="e2d7dd5d-3fc2-4b38-839e-cddb2a6bfe7a" Description="Description for Company.MyDslComponents.MyGauge.Range End" Name="RangeEnd" DisplayName="Range End">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Int32" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="b4a03819-d372-45ea-9cab-e1ec202f6105" Description="Description for Company.MyDslComponents.MyGauge.Name" Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
     </DomainClass>
-    <DomainClass Id="5fa966a9-84fb-467e-9189-06278eaecfba" Description="Description for Company.MyDslComponents.MyComponent" Name="MyComponent" DisplayName="My Component" InheritanceModifier="Abstract" Namespace="Company.MyDslComponents" />
+    <DomainClass Id="75c7370e-5033-4389-a6ef-a365805c18c9" Description="Description for Company.MyDslComponents.ITxContainer" Name="ITxContainer" DisplayName="ITx Container" InheritanceModifier="Abstract" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="ITxComponent" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ITxContainerHasITxComponent.ITxComponent</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="748d96cf-6a07-410d-a1a3-4cfe2df90e70" Description="Description for Company.MyDslComponents.ITxTextbox" Name="ITxTextbox" DisplayName="ITx Textbox" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="d6080ae1-53c4-4fd1-b702-13d59675d06d" Description="Description for Company.MyDslComponents.ITxButton" Name="ITxButton" DisplayName="ITx Button" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="5f9765f2-2c0c-4cf6-8a39-47e770baab96" Description="Description for Company.MyDslComponents.ITxGauge" Name="ITxGauge" DisplayName="ITx Gauge" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+    </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="47dccd67-a58d-4a32-a17d-b214354dc8b1" Description="Embedding relationship between the Model and Elements" Name="ExampleModelHasMyButton" DisplayName="Example Model Has My Button" Namespace="Company.MyDslComponents" IsEmbedding="true">
+    <DomainRelationship Id="c949fabb-8e5e-43a9-9ccc-7374401c4628" Description="Description for Company.MyDslComponents.ITxModelHasITxComponent" Name="ITxModelHasITxComponent" DisplayName="ITx Model Has ITx Component" Namespace="Company.MyDslComponents" IsEmbedding="true">
       <Source>
-        <DomainRole Id="e2991666-69ee-4198-aa74-58b7491119d5" Description="" Name="ExampleModel" DisplayName="Example Model" PropertyName="MyButton" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="My Button">
+        <DomainRole Id="74e74376-6693-480d-8fd9-4ea6a2658b9b" Description="Description for Company.MyDslComponents.ITxModelHasITxComponent.ITxModel" Name="ITxModel" DisplayName="ITx Model" PropertyName="ITxComponent" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="ITx Component">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleModel" />
+            <DomainClassMoniker Name="ITxModel" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="3f31746e-f47c-4609-ad2b-68587bdeea78" Description="" Name="Element" DisplayName="Element" PropertyName="ExampleModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Example Model">
+        <DomainRole Id="5f9e1926-1be8-493e-a3f5-2ce85797416b" Description="Description for Company.MyDslComponents.ITxModelHasITxComponent.ITxComponent" Name="ITxComponent" DisplayName="ITx Component" PropertyName="ITxModel" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="ITx Model">
           <RolePlayer>
-            <DomainClassMoniker Name="MyButton" />
+            <DomainClassMoniker Name="ITxComponent" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="5e70a1f5-bb3f-4c63-9e68-a703280841a8" Description="Description for Company.MyDslComponents.ExampleModelHasMyTextbox" Name="ExampleModelHasMyTextbox" DisplayName="Example Model Has My Textbox" Namespace="Company.MyDslComponents" IsEmbedding="true">
+    <DomainRelationship Id="6bf93da7-f403-43e7-8be3-17201722f99e" Description="Description for Company.MyDslComponents.ITxContainerHasITxComponent" Name="ITxContainerHasITxComponent" DisplayName="ITx Container Has ITx Component" Namespace="Company.MyDslComponents" IsEmbedding="true">
       <Source>
-        <DomainRole Id="71edb545-64db-4cdf-b07a-b9788febc656" Description="Description for Company.MyDslComponents.ExampleModelHasMyTextbox.ExampleModel" Name="ExampleModel" DisplayName="Example Model" PropertyName="MyTextbox" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="My Textbox">
+        <DomainRole Id="49f0e289-5b4e-4993-b1bd-f84dfcbd0d16" Description="Description for Company.MyDslComponents.ITxContainerHasITxComponent.ITxContainer" Name="ITxContainer" DisplayName="ITx Container" PropertyName="ITxComponent" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="ITx Component">
           <RolePlayer>
-            <DomainClassMoniker Name="ExampleModel" />
+            <DomainClassMoniker Name="ITxContainer" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="140de811-94d0-40b0-8841-5e75585f757d" Description="Description for Company.MyDslComponents.ExampleModelHasMyTextbox.MyTextbox" Name="MyTextbox" DisplayName="My Textbox" PropertyName="ExampleModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Example Model">
+        <DomainRole Id="09471b21-df0e-4c68-b008-e03fa0cd4521" Description="Description for Company.MyDslComponents.ITxContainerHasITxComponent.ITxComponent" Name="ITxComponent" DisplayName="ITx Component" PropertyName="ITxContainer" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="ITx Container">
           <RolePlayer>
-            <DomainClassMoniker Name="MyTextbox" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="e84b9f4e-9720-4c0b-9d9d-76cca2df366d" Description="Description for Company.MyDslComponents.ExampleModelHasMyGauge" Name="ExampleModelHasMyGauge" DisplayName="Example Model Has My Gauge" Namespace="Company.MyDslComponents" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="73c88474-c94b-44bf-9a8a-1de5b622c691" Description="Description for Company.MyDslComponents.ExampleModelHasMyGauge.ExampleModel" Name="ExampleModel" DisplayName="Example Model" PropertyName="MyGauge" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="My Gauge">
-          <RolePlayer>
-            <DomainClassMoniker Name="ExampleModel" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="8e2c5289-a743-4d4a-b7bd-c36517eb5710" Description="Description for Company.MyDslComponents.ExampleModelHasMyGauge.MyGauge" Name="MyGauge" DisplayName="My Gauge" PropertyName="ExampleModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Example Model">
-          <RolePlayer>
-            <DomainClassMoniker Name="MyGauge" />
+            <DomainClassMoniker Name="ITxComponent" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -154,215 +118,233 @@
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
+    <ExternalType Name="Color" Namespace="System.Drawing" />
   </Types>
   <Shapes>
-    <ImageShape Id="d96f9636-4f48-4cc1-8761-bfbb40e1e3f5" Description="Description for Company.MyDslComponents.MyButtonShape" Name="MyButtonShape" DisplayName="My Button Shape" Namespace="Company.MyDslComponents" FixedTooltipText="My Button Shape" InitialWidth="2" InitialHeight="1" Image="Resources\buttonImage.png">
-      <ShapeHasDecorators Position="OuterTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecor" DisplayName="Name Decor" DefaultText="NameDecor" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="TextDecor" FontStyle="Bold" FontSize="10" />
+    <ImageShape Id="47936b8a-6c27-4c0c-ab70-86418e93fe42" Description="Description for Company.MyDslComponents.BaseShape" Name="BaseShape" DisplayName="Base Shape" InheritanceModifier="Abstract" Namespace="Company.MyDslComponents" FixedTooltipText="Base Shape" InitialHeight="1" Image="Resources\textboxImage.png">
+      <Properties>
+        <DomainProperty Id="e285f9fe-4e75-4323-88e5-be739dc3e601" Description="Description for Company.MyDslComponents.BaseShape.Width" Name="Width" DisplayName="Width" Kind="Calculated">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="c1f5b2b7-eb5e-4833-904f-a9f50f2a25c7" Description="Description for Company.MyDslComponents.BaseShape.Height" Name="Height" DisplayName="Height" Kind="Calculated">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="1582776e-78c8-4993-96e8-643689d5b67b" Description="Description for Company.MyDslComponents.BaseShape.X" Name="X" DisplayName="X" Kind="Calculated">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7dbaa66b-7bd7-4b5b-8121-327c1e74dccb" Description="Description for Company.MyDslComponents.BaseShape.Y" Name="Y" DisplayName="Y" Kind="Calculated">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </ImageShape>
+    <ImageShape Id="230a469f-b8c6-40d5-b97c-8217e3d43e16" Description="Description for Company.MyDslComponents.ITxViewShape" Name="ITxViewShape" DisplayName="ITx View Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx View Shape" InitialHeight="1" Image="Resources\viewImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
+    </ImageShape>
+    <ImageShape Id="c4d822ec-9533-4f52-8b0e-b255ba024615" Description="Description for Company.MyDslComponents.ITxPanelShape" Name="ITxPanelShape" DisplayName="ITx Panel Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx Panel Shape" InitialHeight="1" Image="Resources\panelImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
+    </ImageShape>
+    <ImageShape Id="e975b6bb-b5b8-4fde-a748-fb602ba9f54c" Description="Description for Company.MyDslComponents.ITxTextboxShape" Name="ITxTextboxShape" DisplayName="ITx Textbox Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx Textbox Shape" InitialWidth="4" InitialHeight="1" Image="Resources\textboxImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
+      <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="TextDecor" FontSize="12" />
       </ShapeHasDecorators>
     </ImageShape>
-    <ImageShape Id="d489b876-122a-47ca-a665-ee2677c482d7" Description="Description for Company.MyDslComponents.MyTextboxShape" Name="MyTextboxShape" DisplayName="My Textbox Shape" Namespace="Company.MyDslComponents" FixedTooltipText="My Textbox Shape" InitialWidth="2" InitialHeight="1" Image="Resources\textboxImage.png">
-      <ShapeHasDecorators Position="OuterTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecor" DisplayName="Name Decor" DefaultText="NameDecor" />
-      </ShapeHasDecorators>
+    <ImageShape Id="4016431d-6562-4885-b497-ce39b63a7320" Description="Description for Company.MyDslComponents.ITxButtonShape" Name="ITxButtonShape" DisplayName="ITx Button Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx Button Shape" TextColor="White" InitialWidth="2" InitialHeight="1" Image="Resources\buttonImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="TextDecor" FontSize="10" />
+        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="TextDecor" FontStyle="Bold" FontSize="14" />
       </ShapeHasDecorators>
     </ImageShape>
-    <ImageShape Id="eb5a07be-74ed-448f-bd10-2f5524d5d0e2" Description="Description for Company.MyDslComponents.MyGaugeShape" Name="MyGaugeShape" DisplayName="My Gauge Shape" Namespace="Company.MyDslComponents" FixedTooltipText="My Gauge Shape" InitialWidth="2" InitialHeight="2" Image="Resources\gaugeImage.png">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="RangeStartDecor" DisplayName="Range Start Decor" DefaultText="RangeStartDecor" FontSize="10" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="RangeEndDecor" DisplayName="Range End Decor" DefaultText="RangeEndDecor" FontSize="10" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="OuterTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecor" DisplayName="Name Decor" DefaultText="NameDecor" />
-      </ShapeHasDecorators>
+    <ImageShape Id="6d711054-bfd0-4968-84eb-6efc84794653" Description="Description for Company.MyDslComponents.ITxGaugeShape" Name="ITxGaugeShape" DisplayName="ITx Gauge Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx Gauge Shape" InitialWidth="1" InitialHeight="1" Image="Resources\gaugeImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
     </ImageShape>
   </Shapes>
   <XmlSerializationBehavior Name="MyDslComponentsSerializationBehavior" Namespace="Company.MyDslComponents">
     <ClassData>
-      <XmlClassData TypeName="ExampleModel" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelMoniker" ElementName="exampleModel" MonikerTypeName="ExampleModelMoniker">
-        <DomainClassMoniker Name="ExampleModel" />
+      <XmlClassData TypeName="ITxModel" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxModelMoniker" ElementName="iTxModel" MonikerTypeName="ITxModelMoniker">
+        <DomainClassMoniker Name="ITxModel" />
         <ElementData>
-          <XmlRelationshipData RoleElementName="myButton">
-            <DomainRelationshipMoniker Name="ExampleModelHasMyButton" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="myTextbox">
-            <DomainRelationshipMoniker Name="ExampleModelHasMyTextbox" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="myGauge">
-            <DomainRelationshipMoniker Name="ExampleModelHasMyGauge" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="iTxComponent">
+            <DomainRelationshipMoniker Name="ITxModelHasITxComponent" />
           </XmlRelationshipData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="MyButton" MonikerAttributeName="name" SerializeId="true" MonikerElementName="myButtonMoniker" ElementName="myButton" MonikerTypeName="MyButtonMoniker">
-        <DomainClassMoniker Name="MyButton" />
-        <ElementData>
-          <XmlPropertyData XmlName="name" IsMonikerKey="true">
-            <DomainPropertyMoniker Name="MyButton/Name" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="text">
-            <DomainPropertyMoniker Name="MyButton/Text" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ExampleModelHasMyButton" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasMyButtonMoniker" ElementName="exampleModelHasMyButton" MonikerTypeName="ExampleModelHasMyButtonMoniker">
-        <DomainRelationshipMoniker Name="ExampleModelHasMyButton" />
       </XmlClassData>
       <XmlClassData TypeName="MyDslComponentsDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="myDslComponentsDiagramMoniker" ElementName="myDslComponentsDiagram" MonikerTypeName="MyDslComponentsDiagramMoniker">
         <DiagramMoniker Name="MyDslComponentsDiagram" />
       </XmlClassData>
-      <XmlClassData TypeName="ExampleModelHasMyTextbox" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasMyTextboxMoniker" ElementName="exampleModelHasMyTextbox" MonikerTypeName="ExampleModelHasMyTextboxMoniker">
-        <DomainRelationshipMoniker Name="ExampleModelHasMyTextbox" />
-      </XmlClassData>
-      <XmlClassData TypeName="MyTextbox" MonikerAttributeName="" SerializeId="true" MonikerElementName="myTextboxMoniker" ElementName="myTextbox" MonikerTypeName="MyTextboxMoniker">
-        <DomainClassMoniker Name="MyTextbox" />
+      <XmlClassData TypeName="ITxComponent" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxComponentMoniker" ElementName="iTxComponent" MonikerTypeName="ITxComponentMoniker">
+        <DomainClassMoniker Name="ITxComponent" />
         <ElementData>
           <XmlPropertyData XmlName="name">
-            <DomainPropertyMoniker Name="MyTextbox/Name" />
+            <DomainPropertyMoniker Name="ITxComponent/Name" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="text">
-            <DomainPropertyMoniker Name="MyTextbox/Text" />
+            <DomainPropertyMoniker Name="ITxComponent/Text" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="ExampleModelHasMyGauge" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelHasMyGaugeMoniker" ElementName="exampleModelHasMyGauge" MonikerTypeName="ExampleModelHasMyGaugeMoniker">
-        <DomainRelationshipMoniker Name="ExampleModelHasMyGauge" />
+      <XmlClassData TypeName="ITxView" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxViewMoniker" ElementName="iTxView" MonikerTypeName="ITxViewMoniker">
+        <DomainClassMoniker Name="ITxView" />
       </XmlClassData>
-      <XmlClassData TypeName="MyGauge" MonikerAttributeName="" SerializeId="true" MonikerElementName="myGaugeMoniker" ElementName="myGauge" MonikerTypeName="MyGaugeMoniker">
-        <DomainClassMoniker Name="MyGauge" />
+      <XmlClassData TypeName="ITxPanel" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxPanelMoniker" ElementName="iTxPanel" MonikerTypeName="ITxPanelMoniker">
+        <DomainClassMoniker Name="ITxPanel" />
+      </XmlClassData>
+      <XmlClassData TypeName="BaseShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="baseShapeMoniker" ElementName="baseShape" MonikerTypeName="BaseShapeMoniker">
+        <ImageShapeMoniker Name="BaseShape" />
         <ElementData>
-          <XmlPropertyData XmlName="rangeStart">
-            <DomainPropertyMoniker Name="MyGauge/RangeStart" />
+          <XmlPropertyData XmlName="width" Representation="Ignore">
+            <DomainPropertyMoniker Name="BaseShape/Width" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="rangeEnd">
-            <DomainPropertyMoniker Name="MyGauge/RangeEnd" />
+          <XmlPropertyData XmlName="height" Representation="Ignore">
+            <DomainPropertyMoniker Name="BaseShape/Height" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="name">
-            <DomainPropertyMoniker Name="MyGauge/Name" />
+          <XmlPropertyData XmlName="x" Representation="Ignore">
+            <DomainPropertyMoniker Name="BaseShape/X" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="y" Representation="Ignore">
+            <DomainPropertyMoniker Name="BaseShape/Y" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="MyComponent" MonikerAttributeName="" SerializeId="true" MonikerElementName="myComponentMoniker" ElementName="myComponent" MonikerTypeName="MyComponentMoniker">
-        <DomainClassMoniker Name="MyComponent" />
+      <XmlClassData TypeName="ITxViewShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxViewShapeMoniker" ElementName="iTxViewShape" MonikerTypeName="ITxViewShapeMoniker">
+        <ImageShapeMoniker Name="ITxViewShape" />
       </XmlClassData>
-      <XmlClassData TypeName="MyButtonShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="myButtonShapeMoniker" ElementName="myButtonShape" MonikerTypeName="MyButtonShapeMoniker">
-        <ImageShapeMoniker Name="MyButtonShape" />
+      <XmlClassData TypeName="ITxPanelShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxPanelShapeMoniker" ElementName="iTxPanelShape" MonikerTypeName="ITxPanelShapeMoniker">
+        <ImageShapeMoniker Name="ITxPanelShape" />
       </XmlClassData>
-      <XmlClassData TypeName="MyTextboxShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="myTextboxShapeMoniker" ElementName="myTextboxShape" MonikerTypeName="MyTextboxShapeMoniker">
-        <ImageShapeMoniker Name="MyTextboxShape" />
+      <XmlClassData TypeName="ITxContainer" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxContainerMoniker" ElementName="iTxContainer" MonikerTypeName="ITxContainerMoniker">
+        <DomainClassMoniker Name="ITxContainer" />
+        <ElementData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="iTxComponent">
+            <DomainRelationshipMoniker Name="ITxContainerHasITxComponent" />
+          </XmlRelationshipData>
+        </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="MyGaugeShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="myGaugeShapeMoniker" ElementName="myGaugeShape" MonikerTypeName="MyGaugeShapeMoniker">
-        <ImageShapeMoniker Name="MyGaugeShape" />
+      <XmlClassData TypeName="ITxTextbox" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxTextboxMoniker" ElementName="iTxTextbox" MonikerTypeName="ITxTextboxMoniker">
+        <DomainClassMoniker Name="ITxTextbox" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxButton" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxButtonMoniker" ElementName="iTxButton" MonikerTypeName="ITxButtonMoniker">
+        <DomainClassMoniker Name="ITxButton" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxGauge" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxGaugeMoniker" ElementName="iTxGauge" MonikerTypeName="ITxGaugeMoniker">
+        <DomainClassMoniker Name="ITxGauge" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxTextboxShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxTextboxShapeMoniker" ElementName="iTxTextboxShape" MonikerTypeName="ITxTextboxShapeMoniker">
+        <ImageShapeMoniker Name="ITxTextboxShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxButtonShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxButtonShapeMoniker" ElementName="iTxButtonShape" MonikerTypeName="ITxButtonShapeMoniker">
+        <ImageShapeMoniker Name="ITxButtonShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxGaugeShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxGaugeShapeMoniker" ElementName="iTxGaugeShape" MonikerTypeName="ITxGaugeShapeMoniker">
+        <ImageShapeMoniker Name="ITxGaugeShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxModelHasITxComponent" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxModelHasITxComponentMoniker" ElementName="iTxModelHasITxComponent" MonikerTypeName="ITxModelHasITxComponentMoniker">
+        <DomainRelationshipMoniker Name="ITxModelHasITxComponent" />
+      </XmlClassData>
+      <XmlClassData TypeName="ITxContainerHasITxComponent" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxContainerHasITxComponentMoniker" ElementName="iTxContainerHasITxComponent" MonikerTypeName="ITxContainerHasITxComponentMoniker">
+        <DomainRelationshipMoniker Name="ITxContainerHasITxComponent" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="MyDslComponentsExplorer" />
   <Diagram Id="784f2278-41ee-4cd9-aa77-6008803f3a83" Description="Description for Company.MyDslComponents.MyDslComponentsDiagram" Name="MyDslComponentsDiagram" DisplayName="Minimal Language Diagram" Namespace="Company.MyDslComponents">
     <Class>
-      <DomainClassMoniker Name="ExampleModel" />
+      <DomainClassMoniker Name="ITxModel" />
     </Class>
     <ShapeMaps>
-      <ShapeMap>
-        <DomainClassMoniker Name="MyButton" />
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ITxPanel" />
         <ParentElementPath>
-          <DomainPath>ExampleModelHasMyButton.ExampleModel/!ExampleModel</DomainPath>
+          <DomainPath />
         </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MyButtonShape/NameDecor" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="MyButton/Name" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MyButtonShape/TextDecor" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="MyButton/Text" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <ImageShapeMoniker Name="MyButtonShape" />
+        <ImageShapeMoniker Name="ITxPanelShape" />
       </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="MyTextbox" />
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ITxTextbox" />
         <ParentElementPath>
-          <DomainPath>ExampleModelHasMyTextbox.ExampleModel/!ExampleModel</DomainPath>
+          <DomainPath />
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MyTextboxShape/NameDecor" />
+          <TextDecoratorMoniker Name="ITxTextboxShape/TextDecor" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="MyTextbox/Name" />
+              <DomainPropertyMoniker Name="ITxComponent/Text" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MyTextboxShape/TextDecor" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="MyTextbox/Text" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <ImageShapeMoniker Name="MyTextboxShape" />
+        <ImageShapeMoniker Name="ITxTextboxShape" />
       </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="MyGauge" />
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ITxView" />
         <ParentElementPath>
-          <DomainPath>ExampleModelHasMyGauge.ExampleModel/!ExampleModel</DomainPath>
+          <DomainPath />
+        </ParentElementPath>
+        <ImageShapeMoniker Name="ITxViewShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ITxGauge" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <ImageShapeMoniker Name="ITxGaugeShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ITxButton" />
+        <ParentElementPath>
+          <DomainPath />
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MyTextboxShape/NameDecor" />
+          <TextDecoratorMoniker Name="ITxButtonShape/TextDecor" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="MyGauge/Name" />
+              <DomainPropertyMoniker Name="ITxComponent/Text" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MyGaugeShape/RangeEndDecor" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="MyGauge/RangeEnd" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MyGaugeShape/RangeStartDecor" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="MyGauge/RangeStart" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <ImageShapeMoniker Name="MyGaugeShape" />
+        <ImageShapeMoniker Name="ITxButtonShape" />
       </ShapeMap>
     </ShapeMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="MyDslComponents" EditorGuid="76753c16-6eca-44c9-a1dc-72ec21a12449">
     <RootClass>
-      <DomainClassMoniker Name="ExampleModel" />
+      <DomainClassMoniker Name="ITxModel" />
     </RootClass>
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="MyDslComponentsSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="MyDslComponents">
-      <ElementTool Name="MyButton" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="MyButton" Tooltip="My Button" HelpKeyword="MyButton">
-        <DomainClassMoniker Name="MyButton" />
+      <ElementTool Name="ITxView" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxView" Tooltip="ITx View" HelpKeyword="ITxView">
+        <DomainClassMoniker Name="ITxView" />
       </ElementTool>
-      <ElementTool Name="MyTextbox" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="MyTextbox" Tooltip="My Textbox" HelpKeyword="MyTextbox">
-        <DomainClassMoniker Name="MyTextbox" />
+      <ElementTool Name="ITxPanel" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxPanel" Tooltip="ITx Panel" HelpKeyword="ITxPanel">
+        <DomainClassMoniker Name="ITxPanel" />
       </ElementTool>
-      <ElementTool Name="MyGauge" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="MyGauge" Tooltip="My Gauge" HelpKeyword="MyGauge">
-        <DomainClassMoniker Name="MyGauge" />
+      <ElementTool Name="ITxButton" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxButton" Tooltip="ITx Button" HelpKeyword="ITxButton">
+        <DomainClassMoniker Name="ITxButton" />
+      </ElementTool>
+      <ElementTool Name="ITxGauge" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxGauge" Tooltip="ITx Gauge" HelpKeyword="ITxGauge">
+        <DomainClassMoniker Name="ITxGauge" />
+      </ElementTool>
+      <ElementTool Name="ITxTextbox" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxTextbox" Tooltip="ITx Textbox" HelpKeyword="ITxTextbox">
+        <DomainClassMoniker Name="ITxTextbox" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

@@ -125,249 +125,237 @@
     <value>MyDslComponents</value>
     <comment>DisplayName for DslLibrary &apos;MyDslComponents&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModel.Description" xml:space="preserve">
+  <data name="Company.MyDslComponents.ITxModel.Description" xml:space="preserve">
     <value>The root in which all other elements are embedded. Appears as a diagram.</value>
-    <comment>Description for DomainClass &apos;ExampleModel&apos;</comment>
+    <comment>Description for DomainClass &apos;ITxModel&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModel&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModel.DisplayName" xml:space="preserve">
+    <value>ITx Model</value>
+    <comment>DisplayName for DomainClass &apos;ITxModel&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButton.Description" xml:space="preserve">
-    <value>Elements embedded in the model. Appear as boxes on the diagram.</value>
-    <comment>Description for DomainClass &apos;MyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxComponent.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxComponent</value>
+    <comment>Description for DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButton.DisplayName" xml:space="preserve">
-    <value>My Button</value>
-    <comment>DisplayName for DomainClass &apos;MyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxComponent.DisplayName" xml:space="preserve">
+    <value>ITx Component</value>
+    <comment>DisplayName for DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButton/Name.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyButton.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxComponent/Name.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxComponent.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButton/Name.DisplayName" xml:space="preserve">
+  <data name="Company.MyDslComponents.ITxComponent/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyButton&apos;</comment>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButton/Text.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyButton.Text</value>
-    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;MyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxComponent/Text.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxComponent.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButton/Text.DisplayName" xml:space="preserve">
+  <data name="Company.MyDslComponents.ITxComponent/Text.DisplayName" xml:space="preserve">
     <value>Text</value>
-    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;MyButton&apos;</comment>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextbox.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyTextbox</value>
-    <comment>Description for DomainClass &apos;MyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxView.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxView</value>
+    <comment>Description for DomainClass &apos;ITxView&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextbox.DisplayName" xml:space="preserve">
-    <value>My Textbox</value>
-    <comment>DisplayName for DomainClass &apos;MyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxView.DisplayName" xml:space="preserve">
+    <value>ITx View</value>
+    <comment>DisplayName for DomainClass &apos;ITxView&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextbox/Name.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyTextbox.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxPanel.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxPanel</value>
+    <comment>Description for DomainClass &apos;ITxPanel&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextbox/Name.DisplayName" xml:space="preserve">
-    <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxPanel.DisplayName" xml:space="preserve">
+    <value>ITx Panel</value>
+    <comment>DisplayName for DomainClass &apos;ITxPanel&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextbox/Text.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyTextbox.Text</value>
-    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;MyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainer.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxContainer</value>
+    <comment>Description for DomainClass &apos;ITxContainer&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextbox/Text.DisplayName" xml:space="preserve">
-    <value>Text</value>
-    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;MyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainer.DisplayName" xml:space="preserve">
+    <value>ITx Container</value>
+    <comment>DisplayName for DomainClass &apos;ITxContainer&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyGauge</value>
-    <comment>Description for DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxTextbox.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxTextbox</value>
+    <comment>Description for DomainClass &apos;ITxTextbox&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge.DisplayName" xml:space="preserve">
-    <value>My Gauge</value>
-    <comment>DisplayName for DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxTextbox.DisplayName" xml:space="preserve">
+    <value>ITx Textbox</value>
+    <comment>DisplayName for DomainClass &apos;ITxTextbox&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge/RangeStart.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyGauge.Range Start</value>
-    <comment>Description for DomainProperty &apos;RangeStart&apos; on DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxButton.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxButton</value>
+    <comment>Description for DomainClass &apos;ITxButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge/RangeStart.DisplayName" xml:space="preserve">
-    <value>Range Start</value>
-    <comment>DisplayName for DomainProperty &apos;RangeStart&apos; on DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxButton.DisplayName" xml:space="preserve">
+    <value>ITx Button</value>
+    <comment>DisplayName for DomainClass &apos;ITxButton&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge/RangeEnd.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyGauge.Range End</value>
-    <comment>Description for DomainProperty &apos;RangeEnd&apos; on DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxGauge.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxGauge</value>
+    <comment>Description for DomainClass &apos;ITxGauge&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge/RangeEnd.DisplayName" xml:space="preserve">
-    <value>Range End</value>
-    <comment>DisplayName for DomainProperty &apos;RangeEnd&apos; on DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxGauge.DisplayName" xml:space="preserve">
+    <value>ITx Gauge</value>
+    <comment>DisplayName for DomainClass &apos;ITxGauge&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge/Name.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyGauge.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxModelHasITxComponent</value>
+    <comment>Description for DomainClass &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGauge/Name.DisplayName" xml:space="preserve">
-    <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;MyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent.DisplayName" xml:space="preserve">
+    <value>ITx Model Has ITx Component</value>
+    <comment>DisplayName for DomainClass &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyComponent.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyComponent</value>
-    <comment>Description for DomainClass &apos;MyComponent&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent/ITxModel.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxModelHasITxComponent.ITxModel</value>
+    <comment>Description for DomainRole &apos;ITxModel&apos; on DomainRelationship &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyComponent.DisplayName" xml:space="preserve">
-    <value>My Component</value>
-    <comment>DisplayName for DomainClass &apos;MyComponent&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent/ITxModel.DisplayName" xml:space="preserve">
+    <value>ITx Model</value>
+    <comment>DisplayName for DomainRole &apos;ITxModel&apos; on DomainRelationship &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton.Description" xml:space="preserve">
-    <value>Embedding relationship between the Model and Elements</value>
-    <comment>Description for DomainClass &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent/ITxModel.PropertyDisplayName" xml:space="preserve">
+    <value>ITx Component</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ITxModel&apos; on DomainRelationship &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton.DisplayName" xml:space="preserve">
-    <value>Example Model Has My Button</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent/ITxComponent.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxModelHasITxComponent.ITxComponent</value>
+    <comment>Description for DomainRole &apos;ITxComponent&apos; on DomainRelationship &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent/ITxComponent.DisplayName" xml:space="preserve">
+    <value>ITx Component</value>
+    <comment>DisplayName for DomainRole &apos;ITxComponent&apos; on DomainRelationship &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxModelHasITxComponent/ITxComponent.PropertyDisplayName" xml:space="preserve">
+    <value>ITx Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ITxComponent&apos; on DomainRelationship &apos;ITxModelHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.PropertyDisplayName" xml:space="preserve">
-    <value>My Button</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxContainerHasITxComponent</value>
+    <comment>Description for DomainClass &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton/Element.Description" xml:space="preserve">
-    <value></value>
-    <comment>Description for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent.DisplayName" xml:space="preserve">
+    <value>ITx Container Has ITx Component</value>
+    <comment>DisplayName for DomainClass &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton/Element.DisplayName" xml:space="preserve">
-    <value>Element</value>
-    <comment>DisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent/ITxContainer.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxContainerHasITxComponent.ITxContainer</value>
+    <comment>Description for DomainRole &apos;ITxContainer&apos; on DomainRelationship &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyButton/Element.PropertyDisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Element&apos; on DomainRelationship &apos;ExampleModelHasMyButton&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent/ITxContainer.DisplayName" xml:space="preserve">
+    <value>ITx Container</value>
+    <comment>DisplayName for DomainRole &apos;ITxContainer&apos; on DomainRelationship &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ExampleModelHasMyTextbox</value>
-    <comment>Description for DomainClass &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent/ITxContainer.PropertyDisplayName" xml:space="preserve">
+    <value>ITx Component</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ITxContainer&apos; on DomainRelationship &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox.DisplayName" xml:space="preserve">
-    <value>Example Model Has My Textbox</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent/ITxComponent.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxContainerHasITxComponent.ITxComponent</value>
+    <comment>Description for DomainRole &apos;ITxComponent&apos; on DomainRelationship &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox/ExampleModel.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ExampleModelHasMyTextbox.ExampleModel</value>
-    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent/ITxComponent.DisplayName" xml:space="preserve">
+    <value>ITx Component</value>
+    <comment>DisplayName for DomainRole &apos;ITxComponent&apos; on DomainRelationship &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox/ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.ITxContainerHasITxComponent/ITxComponent.PropertyDisplayName" xml:space="preserve">
+    <value>ITx Container</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ITxComponent&apos; on DomainRelationship &apos;ITxContainerHasITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox/ExampleModel.PropertyDisplayName" xml:space="preserve">
-    <value>My Textbox</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.BaseShape</value>
+    <comment>Description for DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox/MyTextbox.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ExampleModelHasMyTextbox.MyTextbox</value>
-    <comment>Description for DomainRole &apos;MyTextbox&apos; on DomainRelationship &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape.DisplayName" xml:space="preserve">
+    <value>Base Shape</value>
+    <comment>DisplayName for DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox/MyTextbox.DisplayName" xml:space="preserve">
-    <value>My Textbox</value>
-    <comment>DisplayName for DomainRole &apos;MyTextbox&apos; on DomainRelationship &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/Width.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.BaseShape.Width</value>
+    <comment>Description for DomainProperty &apos;Width&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyTextbox/MyTextbox.PropertyDisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>PropertyDisplayName for DomainRole &apos;MyTextbox&apos; on DomainRelationship &apos;ExampleModelHasMyTextbox&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/Width.DisplayName" xml:space="preserve">
+    <value>Width</value>
+    <comment>DisplayName for DomainProperty &apos;Width&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ExampleModelHasMyGauge</value>
-    <comment>Description for DomainClass &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/Height.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.BaseShape.Height</value>
+    <comment>Description for DomainProperty &apos;Height&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge.DisplayName" xml:space="preserve">
-    <value>Example Model Has My Gauge</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/Height.DisplayName" xml:space="preserve">
+    <value>Height</value>
+    <comment>DisplayName for DomainProperty &apos;Height&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge/ExampleModel.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ExampleModelHasMyGauge.ExampleModel</value>
-    <comment>Description for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/X.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.BaseShape.X</value>
+    <comment>Description for DomainProperty &apos;X&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge/ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/X.DisplayName" xml:space="preserve">
+    <value>X</value>
+    <comment>DisplayName for DomainProperty &apos;X&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge/ExampleModel.PropertyDisplayName" xml:space="preserve">
-    <value>My Gauge</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ExampleModel&apos; on DomainRelationship &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/Y.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.BaseShape.Y</value>
+    <comment>Description for DomainProperty &apos;Y&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge/MyGauge.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ExampleModelHasMyGauge.MyGauge</value>
-    <comment>Description for DomainRole &apos;MyGauge&apos; on DomainRelationship &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.BaseShape/Y.DisplayName" xml:space="preserve">
+    <value>Y</value>
+    <comment>DisplayName for DomainProperty &apos;Y&apos; on DomainClass &apos;BaseShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge/MyGauge.DisplayName" xml:space="preserve">
-    <value>My Gauge</value>
-    <comment>DisplayName for DomainRole &apos;MyGauge&apos; on DomainRelationship &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxViewShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxViewShape</value>
+    <comment>Description for DomainClass &apos;ITxViewShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ExampleModelHasMyGauge/MyGauge.PropertyDisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>PropertyDisplayName for DomainRole &apos;MyGauge&apos; on DomainRelationship &apos;ExampleModelHasMyGauge&apos;</comment>
+  <data name="Company.MyDslComponents.ITxViewShape.DisplayName" xml:space="preserve">
+    <value>ITx View Shape</value>
+    <comment>DisplayName for DomainClass &apos;ITxViewShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButtonShape.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyButtonShape</value>
-    <comment>Description for DomainClass &apos;MyButtonShape&apos;</comment>
+  <data name="Company.MyDslComponents.ITxPanelShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxPanelShape</value>
+    <comment>Description for DomainClass &apos;ITxPanelShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyButtonShape.DisplayName" xml:space="preserve">
-    <value>My Button Shape</value>
-    <comment>DisplayName for DomainClass &apos;MyButtonShape&apos;</comment>
+  <data name="Company.MyDslComponents.ITxPanelShape.DisplayName" xml:space="preserve">
+    <value>ITx Panel Shape</value>
+    <comment>DisplayName for DomainClass &apos;ITxPanelShape&apos;</comment>
   </data>
-  <data name="MyButtonShapeNameDecorDefaultText" xml:space="preserve">
-    <value>NameDecor</value>
-    <comment>Text decorator default text</comment>
+  <data name="Company.MyDslComponents.ITxTextboxShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxTextboxShape</value>
+    <comment>Description for DomainClass &apos;ITxTextboxShape&apos;</comment>
   </data>
-  <data name="MyButtonShapeTextDecorDefaultText" xml:space="preserve">
+  <data name="Company.MyDslComponents.ITxTextboxShape.DisplayName" xml:space="preserve">
+    <value>ITx Textbox Shape</value>
+    <comment>DisplayName for DomainClass &apos;ITxTextboxShape&apos;</comment>
+  </data>
+  <data name="ITxTextboxShapeTextDecorDefaultText" xml:space="preserve">
     <value>TextDecor</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextboxShape.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyTextboxShape</value>
-    <comment>Description for DomainClass &apos;MyTextboxShape&apos;</comment>
+  <data name="Company.MyDslComponents.ITxButtonShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxButtonShape</value>
+    <comment>Description for DomainClass &apos;ITxButtonShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyTextboxShape.DisplayName" xml:space="preserve">
-    <value>My Textbox Shape</value>
-    <comment>DisplayName for DomainClass &apos;MyTextboxShape&apos;</comment>
+  <data name="Company.MyDslComponents.ITxButtonShape.DisplayName" xml:space="preserve">
+    <value>ITx Button Shape</value>
+    <comment>DisplayName for DomainClass &apos;ITxButtonShape&apos;</comment>
   </data>
-  <data name="MyTextboxShapeNameDecorDefaultText" xml:space="preserve">
-    <value>NameDecor</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="MyTextboxShapeTextDecorDefaultText" xml:space="preserve">
+  <data name="ITxButtonShapeTextDecorDefaultText" xml:space="preserve">
     <value>TextDecor</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGaugeShape.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.MyGaugeShape</value>
-    <comment>Description for DomainClass &apos;MyGaugeShape&apos;</comment>
+  <data name="Company.MyDslComponents.ITxGaugeShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxGaugeShape</value>
+    <comment>Description for DomainClass &apos;ITxGaugeShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.MyGaugeShape.DisplayName" xml:space="preserve">
-    <value>My Gauge Shape</value>
-    <comment>DisplayName for DomainClass &apos;MyGaugeShape&apos;</comment>
-  </data>
-  <data name="MyGaugeShapeRangeStartDecorDefaultText" xml:space="preserve">
-    <value>RangeStartDecor</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="MyGaugeShapeRangeEndDecorDefaultText" xml:space="preserve">
-    <value>RangeEndDecor</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="MyGaugeShapeNameDecorDefaultText" xml:space="preserve">
-    <value>NameDecor</value>
-    <comment>Text decorator default text</comment>
+  <data name="Company.MyDslComponents.ITxGaugeShape.DisplayName" xml:space="preserve">
+    <value>ITx Gauge Shape</value>
+    <comment>DisplayName for DomainClass &apos;ITxGaugeShape&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>MyDslComponents (*.MyDslComponents)|*.MyDslComponents</value>
@@ -389,28 +377,44 @@
     <value>MyDslComponents</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="MyButtonToolboxItem" xml:space="preserve">
-    <value>MyButton</value>
+  <data name="ITxViewToolboxItem" xml:space="preserve">
+    <value>ITxView</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="MyButtonToolboxTooltip" xml:space="preserve">
-    <value>My Button</value>
+  <data name="ITxViewToolboxTooltip" xml:space="preserve">
+    <value>ITx View</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="MyTextboxToolboxItem" xml:space="preserve">
-    <value>MyTextbox</value>
+  <data name="ITxPanelToolboxItem" xml:space="preserve">
+    <value>ITxPanel</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="MyTextboxToolboxTooltip" xml:space="preserve">
-    <value>My Textbox</value>
+  <data name="ITxPanelToolboxTooltip" xml:space="preserve">
+    <value>ITx Panel</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="MyGaugeToolboxItem" xml:space="preserve">
-    <value>MyGauge</value>
+  <data name="ITxButtonToolboxItem" xml:space="preserve">
+    <value>ITxButton</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="MyGaugeToolboxTooltip" xml:space="preserve">
-    <value>My Gauge</value>
+  <data name="ITxButtonToolboxTooltip" xml:space="preserve">
+    <value>ITx Button</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ITxGaugeToolboxItem" xml:space="preserve">
+    <value>ITxGauge</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ITxGaugeToolboxTooltip" xml:space="preserve">
+    <value>ITx Gauge</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ITxTextboxToolboxItem" xml:space="preserve">
+    <value>ITxTextbox</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ITxTextboxToolboxTooltip" xml:space="preserve">
+    <value>ITx Textbox</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -538,27 +542,47 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MyButtonShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\buttonImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>MyButtonShape shape image</comment>
-  </data>
-  <data name="MyTextboxShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="BaseShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\textboxImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>MyTextboxShape shape image</comment>
+    <comment>BaseShape shape image</comment>
   </data>
-  <data name="MyGaugeShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="ITxViewShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\viewImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>ITxViewShape shape image</comment>
+  </data>
+  <data name="ITxPanelShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\panelImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>ITxPanelShape shape image</comment>
+  </data>
+  <data name="ITxTextboxShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\textboxImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>ITxTextboxShape shape image</comment>
+  </data>
+  <data name="ITxButtonShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\buttonImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>ITxButtonShape shape image</comment>
+  </data>
+  <data name="ITxGaugeShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\gaugeImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>MyGaugeShape shape image</comment>
+    <comment>ITxGaugeShape shape image</comment>
   </data>
-  <data name="MyButtonToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="ITxViewToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="MyTextboxToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="ITxPanelToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="MyGaugeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="ITxButtonToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ITxGaugeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ITxTextboxToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

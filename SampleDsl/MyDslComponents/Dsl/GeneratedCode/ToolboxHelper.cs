@@ -94,7 +94,7 @@ namespace Company.MyDslComponents
 		{
 			get
 			{
-				return 3;
+				return 5;
 			}
 		}
 		
@@ -143,50 +143,82 @@ namespace Company.MyDslComponents
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 			switch(itemId)
 			{
-				case "Company.MyDslComponents.MyButtonToolboxItem":
-					// Add MyButton shape tool.
+				case "Company.MyDslComponents.ITxViewToolboxItem":
+					// Add ITxView shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Company.MyDslComponents.MyButtonToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"Company.MyDslComponents.ITxViewToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						1, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("MyButtonToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MyButtonToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("ITxViewToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxViewToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MyDslComponents.MyDslComponentsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("MyDslComponentsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"MyButton", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("MyButtonToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.MyDslComponents.MyButton.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						"ITxView", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ITxViewToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MyDslComponents.ITxView.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Company.MyDslComponents.MyTextboxToolboxItem":
-					// Add MyTextbox shape tool.
+				case "Company.MyDslComponents.ITxPanelToolboxItem":
+					// Add ITxPanel shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Company.MyDslComponents.MyTextboxToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"Company.MyDslComponents.ITxPanelToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						2, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("MyTextboxToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MyTextboxToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("ITxPanelToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxPanelToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MyDslComponents.MyDslComponentsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("MyDslComponentsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"MyTextbox", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("MyTextboxToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.MyDslComponents.MyTextbox.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						"ITxPanel", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ITxPanelToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MyDslComponents.ITxPanel.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "Company.MyDslComponents.MyGaugeToolboxItem":
-					// Add MyGauge shape tool.
+				case "Company.MyDslComponents.ITxButtonToolboxItem":
+					// Add ITxButton shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Company.MyDslComponents.MyGaugeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"Company.MyDslComponents.ITxButtonToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						3, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("MyGaugeToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MyGaugeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("ITxButtonToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxButtonToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"Company.MyDslComponents.MyDslComponentsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("MyDslComponentsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"MyGauge", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("MyGaugeToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Company.MyDslComponents.MyGauge.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						"ITxButton", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ITxButtonToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MyDslComponents.ITxButton.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.MyDslComponents.ITxGaugeToolboxItem":
+					// Add ITxGauge shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MyDslComponents.ITxGaugeToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						4, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ITxGaugeToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxGaugeToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.MyDslComponents.MyDslComponentsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MyDslComponentsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ITxGauge", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ITxGaugeToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MyDslComponents.ITxGauge.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.MyDslComponents.ITxTextboxToolboxItem":
+					// Add ITxTextbox shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MyDslComponents.ITxTextboxToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						5, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ITxTextboxToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ITxTextboxToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.MyDslComponents.MyDslComponentsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MyDslComponentsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ITxTextbox", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ITxTextboxToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MyDslComponents.ITxTextbox.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

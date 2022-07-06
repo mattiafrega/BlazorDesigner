@@ -1,28 +1,51 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".razor" #>
 <#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents'" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#//Recursive T4 to generate razor Markup from del DSL model#>
+<#
+  foreach (ITxComponent itxcomponent in this.ITxModel.ITxComponent)
+  {
+#>
+<# ClearIndent(); #>
+<# explore(itxcomponent); #>
+<#
+}
+#>
 
+
+
+<#  
+	void explore(ITxComponent e){
+#>
+<# PushIndent("    "); #>
+<#		
+		//base case
+		//the explored element is not a container
+		if(!(e is ITxContainer c)){
+#>
+<# WriteLine(e.GetOpeningTag()); #>
+<# WriteLine(e.GetClosingTag()); #>
+<# PopIndent(); #>
 <#
-  foreach (MyButton button in this.ExampleModel.MyButton)
-  {
+		}
+		//recursive case
+		//the explored element is a container -> call explore on every child
+		else{
 #>
-	<MyButton Name: "<#= button.Name #>" Text: "<#= button.Text #>" />
-<#    
-  }
+<# WriteLine(e.GetOpeningTag()); #>
+<#
+			foreach (ITxComponent itxchild in c.ITxComponent){
+				explore(itxchild);
+			}
+#>
+<# WriteLine(e.GetClosingTag()); #>
+<# PopIndent(); #>
+<#
+		}
 #>
 <#
-  foreach (MyTextbox textbox in this.ExampleModel.MyTextbox)
-  {
+	}
 #>
-	<MyTextBox Name: ":<#= textbox.Name #>" Text: "<#= textbox.Text #>" />
-<#    
-  }
-#>
-<#
-  foreach (MyGauge gauge in this.ExampleModel.MyGauge)
-  {
-#>
-	<MyGauge Name: "<#= gauge.Name #>" RangeStart: <#= gauge.RangeStart #> RangeEnd: <#= gauge.RangeEnd #> />
-<#    
-  }
-#>
+

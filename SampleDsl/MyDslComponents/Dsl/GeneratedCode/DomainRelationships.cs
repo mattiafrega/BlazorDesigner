@@ -12,33 +12,33 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// DomainRelationship ExampleModelHasMyButton
-	/// Embedding relationship between the Model and Elements
+	/// DomainRelationship ITxModelHasITxComponent
+	/// Description for Company.MyDslComponents.ITxModelHasITxComponent
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyButton.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyButton.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxModelHasITxComponent.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxModelHasITxComponent.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("47dccd67-a58d-4a32-a17d-b214354dc8b1")]
-	public partial class ExampleModelHasMyButton : DslModeling::ElementLink
+	[DslModeling::DomainObjectId("c949fabb-8e5e-43a9-9ccc-7374401c4628")]
+	public partial class ITxModelHasITxComponent : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ExampleModelHasMyButton domain class Id.
+		/// ITxModelHasITxComponent domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x47dccd67, 0xa58d, 0x4a32, 0xa1, 0x7d, 0xb2, 0x14, 0x35, 0x4d, 0xc8, 0xb1);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc949fabb, 0x8e5e, 0x43a9, 0x9c, 0xcc, 0x73, 0x74, 0x40, 0x1c, 0x46, 0x28);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ExampleModelHasMyButton link in the same Partition as the given ExampleModel
+		/// Creates a ITxModelHasITxComponent link in the same Partition as the given ITxModel
 		/// </summary>
-		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
-		/// <param name="target">MyButton to use as the target of the relationship.</param>
-		public ExampleModelHasMyButton(ExampleModel source, MyButton target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasMyButton.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasMyButton.ElementDomainRoleId, target)}, null)
+		/// <param name="source">ITxModel to use as the source of the relationship.</param>
+		/// <param name="target">ITxComponent to use as the target of the relationship.</param>
+		public ITxModelHasITxComponent(ITxModel source, ITxComponent target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ITxModelHasITxComponent.ITxModelDomainRoleId, source), new DslModeling::RoleAssignment(ITxModelHasITxComponent.ITxComponentDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -47,7 +47,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasMyButton(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ITxModelHasITxComponent(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -58,7 +58,7 @@ namespace Company.MyDslComponents
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasMyButton(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxModelHasITxComponent(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -68,7 +68,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasMyButton(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ITxModelHasITxComponent(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -79,122 +79,124 @@ namespace Company.MyDslComponents
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasMyButton(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxModelHasITxComponent(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
 		#endregion
-		#region ExampleModel domain role code
+		#region ITxModel domain role code
 		
 		/// <summary>
-		/// ExampleModel domain role Id.
+		/// ITxModel domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid ExampleModelDomainRoleId = new global::System.Guid(0xe2991666, 0x69ee, 0x4198, 0xaa, 0x74, 0x58, 0xb7, 0x49, 0x11, 0x19, 0xd5);
+		public static readonly global::System.Guid ITxModelDomainRoleId = new global::System.Guid(0x74e74376, 0x6693, 0x480d, 0x8f, 0xd9, 0x4e, 0xa6, 0xa2, 0x65, 0x8b, 0x9b);
 		
 		/// <summary>
-		/// DomainRole ExampleModel
+		/// DomainRole ITxModel
+		/// Description for Company.MyDslComponents.ITxModelHasITxComponent.ITxModel
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "MyButton", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyButton/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("e2991666-69ee-4198-aa74-58b7491119d5")]
-		public virtual ExampleModel ExampleModel
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxModelHasITxComponent/ITxModel.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxModelHasITxComponent/ITxModel.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ITxComponent", PropertyDisplayNameKey="Company.MyDslComponents.ITxModelHasITxComponent/ITxModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("74e74376-6693-480d-8fd9-4ea6a2658b9b")]
+		public virtual ITxModel ITxModel
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ExampleModelDomainRoleId);
+				return (ITxModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ITxModelDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ExampleModelDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ITxModelDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access ExampleModel of a MyButton
+		#region Static methods to access ITxModel of a ITxComponent
 		/// <summary>
-		/// Gets ExampleModel.
+		/// Gets ITxModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ExampleModel GetExampleModel(MyButton element)
+		public static ITxModel GetITxModel(ITxComponent element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ElementDomainRoleId) as ExampleModel;
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ITxComponentDomainRoleId) as ITxModel;
 		}
 		
 		/// <summary>
-		/// Sets ExampleModel.
+		/// Sets ITxModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetExampleModel(MyButton element, ExampleModel newExampleModel)
+		public static void SetITxModel(ITxComponent element, ITxModel newITxModel)
 		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, ElementDomainRoleId, newExampleModel);
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ITxComponentDomainRoleId, newITxModel);
 		}
 		#endregion
-		#region Element domain role code
+		#region ITxComponent domain role code
 		
 		/// <summary>
-		/// Element domain role Id.
+		/// ITxComponent domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid ElementDomainRoleId = new global::System.Guid(0x3f31746e, 0xf47c, 0x4609, 0xad, 0x2b, 0x68, 0x58, 0x7b, 0xde, 0xea, 0x78);
+		public static readonly global::System.Guid ITxComponentDomainRoleId = new global::System.Guid(0x5f9e1926, 0x1be8, 0x493e, 0xa3, 0xf5, 0x2c, 0xe8, 0x57, 0x97, 0x41, 0x6b);
 		
 		/// <summary>
-		/// DomainRole Element
+		/// DomainRole ITxComponent
+		/// Description for Company.MyDslComponents.ITxModelHasITxComponent.ITxComponent
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyButton/Element.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyButton/Element.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyButton/Element.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("3f31746e-f47c-4609-ad2b-68587bdeea78")]
-		public virtual MyButton Element
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxModelHasITxComponent/ITxComponent.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxModelHasITxComponent/ITxComponent.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ITxModel", PropertyDisplayNameKey="Company.MyDslComponents.ITxModelHasITxComponent/ITxComponent.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("5f9e1926-1be8-493e-a3f5-2ce85797416b")]
+		public virtual ITxComponent ITxComponent
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (MyButton)DslModeling::DomainRoleInfo.GetRolePlayer(this, ElementDomainRoleId);
+				return (ITxComponent)DslModeling::DomainRoleInfo.GetRolePlayer(this, ITxComponentDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ITxComponentDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access MyButton of a ExampleModel
+		#region Static methods to access ITxComponent of a ITxModel
 		/// <summary>
-		/// Gets a list of MyButton.
+		/// Gets a list of ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<MyButton> GetMyButton(ExampleModel element)
+		public static DslModeling::LinkedElementCollection<ITxComponent> GetITxComponent(ITxModel element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<MyButton>, MyButton>(element, ExampleModelDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ITxComponent>, ITxComponent>(element, ITxModelDomainRoleId);
 		}
 		#endregion
-		#region ExampleModel link accessor
+		#region ITxModel link accessor
 		/// <summary>
-		/// Get the list of ExampleModelHasMyButton links to a ExampleModel.
+		/// Get the list of ITxModelHasITxComponent links to a ITxModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyButton> GetLinksToMyButton ( global::Company.MyDslComponents.ExampleModel exampleModelInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ITxModelHasITxComponent> GetLinksToITxComponent ( global::Company.MyDslComponents.ITxModel iTxModelInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(exampleModelInstance, global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxModelHasITxComponent>(iTxModelInstance, global::Company.MyDslComponents.ITxModelHasITxComponent.ITxModelDomainRoleId);
 		}
 		#endregion
-		#region Element link accessor
+		#region ITxComponent link accessor
 		/// <summary>
-		/// Get the ExampleModelHasMyButton link to a MyButton.
+		/// Get the ITxModelHasITxComponent link to a ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasMyButton GetLinkToExampleModel (global::Company.MyDslComponents.MyButton elementInstance)
+		public static global::Company.MyDslComponents.ITxModelHasITxComponent GetLinkToITxModel (global::Company.MyDslComponents.ITxComponent iTxComponentInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyButton> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(elementInstance, global::Company.MyDslComponents.ExampleModelHasMyButton.ElementDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Element not obeyed.");
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ITxModelHasITxComponent> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxModelHasITxComponent>(iTxComponentInstance, global::Company.MyDslComponents.ITxModelHasITxComponent.ITxComponentDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ITxComponent not obeyed.");
 			if ( links.Count == 0 )
 			{
 				return null;
@@ -205,20 +207,20 @@ namespace Company.MyDslComponents
 			}
 		}
 		#endregion
-		#region ExampleModelHasMyButton instance accessors
+		#region ITxModelHasITxComponent instance accessors
 		
 		/// <summary>
-		/// Get any ExampleModelHasMyButton links between a given ExampleModel and a MyButton.
+		/// Get any ITxModelHasITxComponent links between a given ITxModel and a ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyButton> GetLinks( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyButton target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ITxModelHasITxComponent> GetLinks( global::Company.MyDslComponents.ITxModel source, global::Company.MyDslComponents.ITxComponent target )
 		{
-			global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyButton> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyButton>();
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyButton> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(source, global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasMyButton link in links )
+			global::System.Collections.Generic.List<global::Company.MyDslComponents.ITxModelHasITxComponent> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ITxModelHasITxComponent>();
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ITxModelHasITxComponent> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxModelHasITxComponent>(source, global::Company.MyDslComponents.ITxModelHasITxComponent.ITxModelDomainRoleId);
+			foreach ( global::Company.MyDslComponents.ITxModelHasITxComponent link in links )
 			{
-				if ( target.Equals(link.Element) )
+				if ( target.Equals(link.ITxComponent) )
 				{
 					outLinks.Add(link);
 				}
@@ -226,16 +228,16 @@ namespace Company.MyDslComponents
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ExampleModelHasMyButton link between a given ExampleModeland a MyButton.
+		/// Get the one ITxModelHasITxComponent link between a given ITxModeland a ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasMyButton GetLink( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyButton target )
+		public static global::Company.MyDslComponents.ITxModelHasITxComponent GetLink( global::Company.MyDslComponents.ITxModel source, global::Company.MyDslComponents.ITxComponent target )
 		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyButton> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyButton>(source, global::Company.MyDslComponents.ExampleModelHasMyButton.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasMyButton link in links )
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ITxModelHasITxComponent> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxModelHasITxComponent>(source, global::Company.MyDslComponents.ITxModelHasITxComponent.ITxModelDomainRoleId);
+			foreach ( global::Company.MyDslComponents.ITxModelHasITxComponent link in links )
 			{
-				if ( target.Equals(link.Element) )
+				if ( target.Equals(link.ITxComponent) )
 				{
 					return link;
 				}
@@ -249,33 +251,33 @@ namespace Company.MyDslComponents
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// DomainRelationship ExampleModelHasMyTextbox
-	/// Description for Company.MyDslComponents.ExampleModelHasMyTextbox
+	/// DomainRelationship ITxContainerHasITxComponent
+	/// Description for Company.MyDslComponents.ITxContainerHasITxComponent
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyTextbox.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyTextbox.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxContainerHasITxComponent.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.ITxContainerHasITxComponent.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("5e70a1f5-bb3f-4c63-9e68-a703280841a8")]
-	public partial class ExampleModelHasMyTextbox : DslModeling::ElementLink
+	[DslModeling::DomainObjectId("6bf93da7-f403-43e7-8be3-17201722f99e")]
+	public partial class ITxContainerHasITxComponent : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
 		/// <summary>
-		/// ExampleModelHasMyTextbox domain class Id.
+		/// ITxContainerHasITxComponent domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5e70a1f5, 0xbb3f, 0x4c63, 0x9e, 0x68, 0xa7, 0x03, 0x28, 0x08, 0x41, 0xa8);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x6bf93da7, 0xf403, 0x43e7, 0x8b, 0xe3, 0x17, 0x20, 0x17, 0x22, 0xf9, 0x9e);
 	
 				
 		/// <summary>
 		/// Constructor
-		/// Creates a ExampleModelHasMyTextbox link in the same Partition as the given ExampleModel
+		/// Creates a ITxContainerHasITxComponent link in the same Partition as the given ITxContainer
 		/// </summary>
-		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
-		/// <param name="target">MyTextbox to use as the target of the relationship.</param>
-		public ExampleModelHasMyTextbox(ExampleModel source, MyTextbox target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasMyTextbox.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasMyTextbox.MyTextboxDomainRoleId, target)}, null)
+		/// <param name="source">ITxContainer to use as the source of the relationship.</param>
+		/// <param name="target">ITxComponent to use as the target of the relationship.</param>
+		public ITxContainerHasITxComponent(ITxContainer source, ITxComponent target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ITxContainerHasITxComponent.ITxContainerDomainRoleId, source), new DslModeling::RoleAssignment(ITxContainerHasITxComponent.ITxComponentDomainRoleId, target)}, null)
 		{
 		}
 		
@@ -284,7 +286,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasMyTextbox(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+		public ITxContainerHasITxComponent(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
 		{
 		}
@@ -295,7 +297,7 @@ namespace Company.MyDslComponents
 		/// <param name="store">Store where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasMyTextbox(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxContainerHasITxComponent(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
 		{
 		}
@@ -305,7 +307,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasMyTextbox(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+		public ITxContainerHasITxComponent(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
 			: base(partition, roleAssignments, null)
 		{
 		}
@@ -316,124 +318,124 @@ namespace Company.MyDslComponents
 		/// <param name="partition">Partition where new link is to be created.</param>
 		/// <param name="roleAssignments">List of relationship role assignments.</param>
 		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasMyTextbox(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+		public ITxContainerHasITxComponent(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, roleAssignments, propertyAssignments)
 		{
 		}
 		#endregion
-		#region ExampleModel domain role code
+		#region ITxContainer domain role code
 		
 		/// <summary>
-		/// ExampleModel domain role Id.
+		/// ITxContainer domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid ExampleModelDomainRoleId = new global::System.Guid(0x71edb545, 0x64db, 0x4cdf, 0xb0, 0x7a, 0xb9, 0x78, 0x8f, 0xeb, 0xc6, 0x56);
+		public static readonly global::System.Guid ITxContainerDomainRoleId = new global::System.Guid(0x49f0e289, 0x5b4e, 0x4993, 0xb1, 0xbd, 0xf8, 0x4d, 0xfc, 0xbd, 0x0d, 0x16);
 		
 		/// <summary>
-		/// DomainRole ExampleModel
-		/// Description for Company.MyDslComponents.ExampleModelHasMyTextbox.ExampleModel
+		/// DomainRole ITxContainer
+		/// Description for Company.MyDslComponents.ITxContainerHasITxComponent.ITxContainer
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyTextbox/ExampleModel.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyTextbox/ExampleModel.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "MyTextbox", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyTextbox/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("71edb545-64db-4cdf-b07a-b9788febc656")]
-		public virtual ExampleModel ExampleModel
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxContainerHasITxComponent/ITxContainer.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxContainerHasITxComponent/ITxContainer.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ITxComponent", PropertyDisplayNameKey="Company.MyDslComponents.ITxContainerHasITxComponent/ITxContainer.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("49f0e289-5b4e-4993-b1bd-f84dfcbd0d16")]
+		public virtual ITxContainer ITxContainer
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (ExampleModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ExampleModelDomainRoleId);
+				return (ITxContainer)DslModeling::DomainRoleInfo.GetRolePlayer(this, ITxContainerDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ExampleModelDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ITxContainerDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access ExampleModel of a MyTextbox
+		#region Static methods to access ITxContainer of a ITxComponent
 		/// <summary>
-		/// Gets ExampleModel.
+		/// Gets ITxContainer.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ExampleModel GetExampleModel(MyTextbox element)
+		public static ITxContainer GetITxContainer(ITxComponent element)
 		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, MyTextboxDomainRoleId) as ExampleModel;
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ITxComponentDomainRoleId) as ITxContainer;
 		}
 		
 		/// <summary>
-		/// Sets ExampleModel.
+		/// Sets ITxContainer.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetExampleModel(MyTextbox element, ExampleModel newExampleModel)
+		public static void SetITxContainer(ITxComponent element, ITxContainer newITxContainer)
 		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, MyTextboxDomainRoleId, newExampleModel);
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ITxComponentDomainRoleId, newITxContainer);
 		}
 		#endregion
-		#region MyTextbox domain role code
+		#region ITxComponent domain role code
 		
 		/// <summary>
-		/// MyTextbox domain role Id.
+		/// ITxComponent domain role Id.
 		/// </summary>
-		public static readonly global::System.Guid MyTextboxDomainRoleId = new global::System.Guid(0x140de811, 0x94d0, 0x40b0, 0x88, 0x41, 0x5e, 0x75, 0x58, 0x5f, 0x75, 0x7d);
+		public static readonly global::System.Guid ITxComponentDomainRoleId = new global::System.Guid(0x09471b21, 0xdf0e, 0x4c68, 0xb0, 0x08, 0xe0, 0x3f, 0xa0, 0xcd, 0x45, 0x21);
 		
 		/// <summary>
-		/// DomainRole MyTextbox
-		/// Description for Company.MyDslComponents.ExampleModelHasMyTextbox.MyTextbox
+		/// DomainRole ITxComponent
+		/// Description for Company.MyDslComponents.ITxContainerHasITxComponent.ITxComponent
 		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyTextbox/MyTextbox.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyTextbox/MyTextbox.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyTextbox/MyTextbox.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("140de811-94d0-40b0-8841-5e75585f757d")]
-		public virtual MyTextbox MyTextbox
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxContainerHasITxComponent/ITxComponent.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxContainerHasITxComponent/ITxComponent.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ITxContainer", PropertyDisplayNameKey="Company.MyDslComponents.ITxContainerHasITxComponent/ITxComponent.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("09471b21-df0e-4c68-b008-e03fa0cd4521")]
+		public virtual ITxComponent ITxComponent
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return (MyTextbox)DslModeling::DomainRoleInfo.GetRolePlayer(this, MyTextboxDomainRoleId);
+				return (ITxComponent)DslModeling::DomainRoleInfo.GetRolePlayer(this, ITxComponentDomainRoleId);
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, MyTextboxDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ITxComponentDomainRoleId, value);
 			}
 		}
 				
 		#endregion
-		#region Static methods to access MyTextbox of a ExampleModel
+		#region Static methods to access ITxComponent of a ITxContainer
 		/// <summary>
-		/// Gets a list of MyTextbox.
+		/// Gets a list of ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<MyTextbox> GetMyTextbox(ExampleModel element)
+		public static DslModeling::LinkedElementCollection<ITxComponent> GetITxComponent(ITxContainer element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<MyTextbox>, MyTextbox>(element, ExampleModelDomainRoleId);
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ITxComponent>, ITxComponent>(element, ITxContainerDomainRoleId);
 		}
 		#endregion
-		#region ExampleModel link accessor
+		#region ITxContainer link accessor
 		/// <summary>
-		/// Get the list of ExampleModelHasMyTextbox links to a ExampleModel.
+		/// Get the list of ITxContainerHasITxComponent links to a ITxContainer.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyTextbox> GetLinksToMyTextbox ( global::Company.MyDslComponents.ExampleModel exampleModelInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ITxContainerHasITxComponent> GetLinksToITxComponent ( global::Company.MyDslComponents.ITxContainer iTxContainerInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyTextbox>(exampleModelInstance, global::Company.MyDslComponents.ExampleModelHasMyTextbox.ExampleModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxContainerHasITxComponent>(iTxContainerInstance, global::Company.MyDslComponents.ITxContainerHasITxComponent.ITxContainerDomainRoleId);
 		}
 		#endregion
-		#region MyTextbox link accessor
+		#region ITxComponent link accessor
 		/// <summary>
-		/// Get the ExampleModelHasMyTextbox link to a MyTextbox.
+		/// Get the ITxContainerHasITxComponent link to a ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasMyTextbox GetLinkToExampleModel (global::Company.MyDslComponents.MyTextbox myTextboxInstance)
+		public static global::Company.MyDslComponents.ITxContainerHasITxComponent GetLinkToITxContainer (global::Company.MyDslComponents.ITxComponent iTxComponentInstance)
 		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyTextbox> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyTextbox>(myTextboxInstance, global::Company.MyDslComponents.ExampleModelHasMyTextbox.MyTextboxDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of MyTextbox not obeyed.");
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ITxContainerHasITxComponent> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxContainerHasITxComponent>(iTxComponentInstance, global::Company.MyDslComponents.ITxContainerHasITxComponent.ITxComponentDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ITxComponent not obeyed.");
 			if ( links.Count == 0 )
 			{
 				return null;
@@ -444,20 +446,20 @@ namespace Company.MyDslComponents
 			}
 		}
 		#endregion
-		#region ExampleModelHasMyTextbox instance accessors
+		#region ITxContainerHasITxComponent instance accessors
 		
 		/// <summary>
-		/// Get any ExampleModelHasMyTextbox links between a given ExampleModel and a MyTextbox.
+		/// Get any ITxContainerHasITxComponent links between a given ITxContainer and a ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyTextbox> GetLinks( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyTextbox target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ITxContainerHasITxComponent> GetLinks( global::Company.MyDslComponents.ITxContainer source, global::Company.MyDslComponents.ITxComponent target )
 		{
-			global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyTextbox> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyTextbox>();
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyTextbox> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyTextbox>(source, global::Company.MyDslComponents.ExampleModelHasMyTextbox.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasMyTextbox link in links )
+			global::System.Collections.Generic.List<global::Company.MyDslComponents.ITxContainerHasITxComponent> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ITxContainerHasITxComponent>();
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ITxContainerHasITxComponent> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxContainerHasITxComponent>(source, global::Company.MyDslComponents.ITxContainerHasITxComponent.ITxContainerDomainRoleId);
+			foreach ( global::Company.MyDslComponents.ITxContainerHasITxComponent link in links )
 			{
-				if ( target.Equals(link.MyTextbox) )
+				if ( target.Equals(link.ITxComponent) )
 				{
 					outLinks.Add(link);
 				}
@@ -465,255 +467,16 @@ namespace Company.MyDslComponents
 			return outLinks.AsReadOnly();
 		}
 		/// <summary>
-		/// Get the one ExampleModelHasMyTextbox link between a given ExampleModeland a MyTextbox.
+		/// Get the one ITxContainerHasITxComponent link between a given ITxContainerand a ITxComponent.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasMyTextbox GetLink( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyTextbox target )
+		public static global::Company.MyDslComponents.ITxContainerHasITxComponent GetLink( global::Company.MyDslComponents.ITxContainer source, global::Company.MyDslComponents.ITxComponent target )
 		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyTextbox> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyTextbox>(source, global::Company.MyDslComponents.ExampleModelHasMyTextbox.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasMyTextbox link in links )
+			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ITxContainerHasITxComponent> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ITxContainerHasITxComponent>(source, global::Company.MyDslComponents.ITxContainerHasITxComponent.ITxContainerDomainRoleId);
+			foreach ( global::Company.MyDslComponents.ITxContainerHasITxComponent link in links )
 			{
-				if ( target.Equals(link.MyTextbox) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace Company.MyDslComponents
-{
-	/// <summary>
-	/// DomainRelationship ExampleModelHasMyGauge
-	/// Description for Company.MyDslComponents.ExampleModelHasMyGauge
-	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyGauge.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyGauge.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("e84b9f4e-9720-4c0b-9d9d-76cca2df366d")]
-	public partial class ExampleModelHasMyGauge : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ExampleModelHasMyGauge domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe84b9f4e, 0x9720, 0x4c0b, 0x9d, 0x9d, 0x76, 0xcc, 0xa2, 0xdf, 0x36, 0x6d);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ExampleModelHasMyGauge link in the same Partition as the given ExampleModel
-		/// </summary>
-		/// <param name="source">ExampleModel to use as the source of the relationship.</param>
-		/// <param name="target">MyGauge to use as the target of the relationship.</param>
-		public ExampleModelHasMyGauge(ExampleModel source, MyGauge target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ExampleModelHasMyGauge.ExampleModelDomainRoleId, source), new DslModeling::RoleAssignment(ExampleModelHasMyGauge.MyGaugeDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasMyGauge(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasMyGauge(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ExampleModelHasMyGauge(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ExampleModelHasMyGauge(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ExampleModel domain role code
-		
-		/// <summary>
-		/// ExampleModel domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ExampleModelDomainRoleId = new global::System.Guid(0x73c88474, 0xc94b, 0x44bf, 0x9a, 0x8a, 0x1d, 0xe5, 0xb6, 0x22, 0xc6, 0x91);
-		
-		/// <summary>
-		/// DomainRole ExampleModel
-		/// Description for Company.MyDslComponents.ExampleModelHasMyGauge.ExampleModel
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyGauge/ExampleModel.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyGauge/ExampleModel.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "MyGauge", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyGauge/ExampleModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("73c88474-c94b-44bf-9a8a-1de5b622c691")]
-		public virtual ExampleModel ExampleModel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ExampleModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, ExampleModelDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ExampleModelDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ExampleModel of a MyGauge
-		/// <summary>
-		/// Gets ExampleModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ExampleModel GetExampleModel(MyGauge element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, MyGaugeDomainRoleId) as ExampleModel;
-		}
-		
-		/// <summary>
-		/// Sets ExampleModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetExampleModel(MyGauge element, ExampleModel newExampleModel)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, MyGaugeDomainRoleId, newExampleModel);
-		}
-		#endregion
-		#region MyGauge domain role code
-		
-		/// <summary>
-		/// MyGauge domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid MyGaugeDomainRoleId = new global::System.Guid(0x8e2c5289, 0xa743, 0x4d4a, 0xb7, 0xbd, 0xc3, 0x65, 0x17, 0xeb, 0x57, 0x10);
-		
-		/// <summary>
-		/// DomainRole MyGauge
-		/// Description for Company.MyDslComponents.ExampleModelHasMyGauge.MyGauge
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ExampleModelHasMyGauge/MyGauge.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ExampleModelHasMyGauge/MyGauge.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ExampleModel", PropertyDisplayNameKey="Company.MyDslComponents.ExampleModelHasMyGauge/MyGauge.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("8e2c5289-a743-4d4a-b7bd-c36517eb5710")]
-		public virtual MyGauge MyGauge
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (MyGauge)DslModeling::DomainRoleInfo.GetRolePlayer(this, MyGaugeDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, MyGaugeDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access MyGauge of a ExampleModel
-		/// <summary>
-		/// Gets a list of MyGauge.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<MyGauge> GetMyGauge(ExampleModel element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<MyGauge>, MyGauge>(element, ExampleModelDomainRoleId);
-		}
-		#endregion
-		#region ExampleModel link accessor
-		/// <summary>
-		/// Get the list of ExampleModelHasMyGauge links to a ExampleModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyGauge> GetLinksToMyGauge ( global::Company.MyDslComponents.ExampleModel exampleModelInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyGauge>(exampleModelInstance, global::Company.MyDslComponents.ExampleModelHasMyGauge.ExampleModelDomainRoleId);
-		}
-		#endregion
-		#region MyGauge link accessor
-		/// <summary>
-		/// Get the ExampleModelHasMyGauge link to a MyGauge.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasMyGauge GetLinkToExampleModel (global::Company.MyDslComponents.MyGauge myGaugeInstance)
-		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyGauge> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyGauge>(myGaugeInstance, global::Company.MyDslComponents.ExampleModelHasMyGauge.MyGaugeDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of MyGauge not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ExampleModelHasMyGauge instance accessors
-		
-		/// <summary>
-		/// Get any ExampleModelHasMyGauge links between a given ExampleModel and a MyGauge.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Company.MyDslComponents.ExampleModelHasMyGauge> GetLinks( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyGauge target )
-		{
-			global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyGauge> outLinks = new global::System.Collections.Generic.List<global::Company.MyDslComponents.ExampleModelHasMyGauge>();
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyGauge> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyGauge>(source, global::Company.MyDslComponents.ExampleModelHasMyGauge.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasMyGauge link in links )
-			{
-				if ( target.Equals(link.MyGauge) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ExampleModelHasMyGauge link between a given ExampleModeland a MyGauge.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Company.MyDslComponents.ExampleModelHasMyGauge GetLink( global::Company.MyDslComponents.ExampleModel source, global::Company.MyDslComponents.MyGauge target )
-		{
-			global::System.Collections.Generic.IList<global::Company.MyDslComponents.ExampleModelHasMyGauge> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Company.MyDslComponents.ExampleModelHasMyGauge>(source, global::Company.MyDslComponents.ExampleModelHasMyGauge.ExampleModelDomainRoleId);
-			foreach ( global::Company.MyDslComponents.ExampleModelHasMyGauge link in links )
-			{
-				if ( target.Equals(link.MyGauge) )
+				if ( target.Equals(link.ITxComponent) )
 				{
 					return link;
 				}

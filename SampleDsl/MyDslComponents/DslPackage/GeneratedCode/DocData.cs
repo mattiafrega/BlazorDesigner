@@ -305,7 +305,7 @@ namespace Company.MyDslComponents
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.MyDslComponents.ExampleModel modelRoot = null;
+			global::Company.MyDslComponents.ITxModel modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
@@ -410,7 +410,7 @@ namespace Company.MyDslComponents
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Company.MyDslComponents.ExampleModel modelRoot = (global::Company.MyDslComponents.ExampleModel)this.RootElement;
+			global::Company.MyDslComponents.ITxModel modelRoot = (global::Company.MyDslComponents.ITxModel)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -556,7 +556,7 @@ namespace Company.MyDslComponents
 		{
 			get
 			{
-				global::Company.MyDslComponents.ExampleModel modelRoot = this.RootElement as global::Company.MyDslComponents.ExampleModel;
+				global::Company.MyDslComponents.ITxModel modelRoot = this.RootElement as global::Company.MyDslComponents.ITxModel;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{

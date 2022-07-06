@@ -67,7 +67,7 @@ namespace Company.MyDslComponents
 		///</summary>
 		protected override global::System.Guid RootElementDomainClassId
 		{
-			get { return global::Company.MyDslComponents.ExampleModel.DomainClassId; }
+			get { return global::Company.MyDslComponents.ITxModel.DomainClassId; }
 		}
 		
 		/// <summary>

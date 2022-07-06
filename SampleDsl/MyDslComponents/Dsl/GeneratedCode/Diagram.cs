@@ -106,21 +106,33 @@ namespace Company.MyDslComponents
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Company.MyDslComponents.MyButton)
+			if(element is global::Company.MyDslComponents.ITxPanel)
 			{
-				global::Company.MyDslComponents.MyButtonShape newShape = new global::Company.MyDslComponents.MyButtonShape(this.Partition);
+				global::Company.MyDslComponents.ITxPanelShape newShape = new global::Company.MyDslComponents.ITxPanelShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.MyDslComponents.MyTextbox)
+			if(element is global::Company.MyDslComponents.ITxView)
 			{
-				global::Company.MyDslComponents.MyTextboxShape newShape = new global::Company.MyDslComponents.MyTextboxShape(this.Partition);
+				global::Company.MyDslComponents.ITxViewShape newShape = new global::Company.MyDslComponents.ITxViewShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Company.MyDslComponents.MyGauge)
+			if(element is global::Company.MyDslComponents.ITxTextbox)
 			{
-				global::Company.MyDslComponents.MyGaugeShape newShape = new global::Company.MyDslComponents.MyGaugeShape(this.Partition);
+				global::Company.MyDslComponents.ITxTextboxShape newShape = new global::Company.MyDslComponents.ITxTextboxShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.MyDslComponents.ITxGauge)
+			{
+				global::Company.MyDslComponents.ITxGaugeShape newShape = new global::Company.MyDslComponents.ITxGaugeShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.MyDslComponents.ITxButton)
+			{
+				global::Company.MyDslComponents.ITxButtonShape newShape = new global::Company.MyDslComponents.ITxButtonShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -135,74 +147,43 @@ namespace Company.MyDslComponents
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Company.MyDslComponents.MyButtonShape.DecoratorsInitialized += MyButtonShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Company.MyDslComponents.MyTextboxShape.DecoratorsInitialized += MyTextboxShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Company.MyDslComponents.MyGaugeShape.DecoratorsInitialized += MyGaugeShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.MyDslComponents.ITxTextboxShape.DecoratorsInitialized += ITxTextboxShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.MyDslComponents.ITxButtonShape.DecoratorsInitialized += ITxButtonShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for MyButtonShape.
+		/// Class containing decorator path traversal methods for ITxTextboxShape.
 		/// </summary>
-		internal static partial class MyButtonShapeDecoratorMap
+		internal static partial class ITxTextboxShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for MyButtonShape.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for ITxTextboxShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyButton.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecor").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyButton.TextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxComponent.TextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecor").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for MyTextboxShape.
+		/// Class containing decorator path traversal methods for ITxButtonShape.
 		/// </summary>
-		internal static partial class MyTextboxShapeDecoratorMap
+		internal static partial class ITxButtonShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for MyTextboxShape.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for ITxButtonShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyTextbox.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecor").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyTextbox.TextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxComponent.TextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecor").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MyGaugeShape.
-		/// </summary>
-		internal static partial class MyGaugeShapeDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MyGaugeShape.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyGauge.NameDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecor").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyGauge.RangeEndDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "RangeEndDecor").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.MyGauge.RangeStartDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "RangeStartDecor").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -253,9 +234,11 @@ namespace Company.MyDslComponents
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.MyButton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.MyTextbox), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.MyGauge), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxPanel), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxView), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxTextbox), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxGauge), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxButton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -267,17 +250,60 @@ namespace Company.MyDslComponents
 				if (this.SkipFixup(childElement))
 					return;
 				DslModeling::ModelElement parentElement;
-				if(childElement is global::Company.MyDslComponents.MyButton)
+				if(childElement is global::Company.MyDslComponents.ITxPanel)
 				{
-					parentElement = GetParentForMyButton((global::Company.MyDslComponents.MyButton)childElement);
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForITxPanel(ITxPanel childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForITxPanel((global::Company.MyDslComponents.ITxPanel)childElement);
 				} else
-				if(childElement is global::Company.MyDslComponents.MyTextbox)
+				if(childElement is global::Company.MyDslComponents.ITxView)
 				{
-					parentElement = GetParentForMyTextbox((global::Company.MyDslComponents.MyTextbox)childElement);
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForITxView(ITxView childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForITxView((global::Company.MyDslComponents.ITxView)childElement);
 				} else
-				if(childElement is global::Company.MyDslComponents.MyGauge)
+				if(childElement is global::Company.MyDslComponents.ITxTextbox)
 				{
-					parentElement = GetParentForMyGauge((global::Company.MyDslComponents.MyGauge)childElement);
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForITxTextbox(ITxTextbox childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForITxTextbox((global::Company.MyDslComponents.ITxTextbox)childElement);
+				} else
+				if(childElement is global::Company.MyDslComponents.ITxGauge)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForITxGauge(ITxGauge childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForITxGauge((global::Company.MyDslComponents.ITxGauge)childElement);
+				} else
+				if(childElement is global::Company.MyDslComponents.ITxButton)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForITxButton(ITxButton childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForITxButton((global::Company.MyDslComponents.ITxButton)childElement);
 				} else
 				{
 					parentElement = null;
@@ -288,69 +314,7 @@ namespace Company.MyDslComponents
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Company.MyDslComponents.ExampleModel GetParentForMyButton( global::Company.MyDslComponents.MyButton root )
-			{
-				// Segments 0 and 1
-				global::Company.MyDslComponents.ExampleModel result = root.ExampleModel;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::Company.MyDslComponents.ExampleModel GetParentForMyTextbox( global::Company.MyDslComponents.MyTextbox root )
-			{
-				// Segments 0 and 1
-				global::Company.MyDslComponents.ExampleModel result = root.ExampleModel;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::Company.MyDslComponents.ExampleModel GetParentForMyGauge( global::Company.MyDslComponents.MyGauge root )
-			{
-				// Segments 0 and 1
-				global::Company.MyDslComponents.ExampleModel result = root.ExampleModel;
-				if ( result == null ) return null;
-				return result;
-			}
 		}
 		
-	
-		/// <summary>
-		/// A rule which fires when data mapped to outer text decorators has changed,
-		/// so we can update the decorator host's bounds.
-		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.MyButton), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.MyTextbox), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.MyGauge), InitiallyDisabled=true)]
-		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
-		{
-			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
-			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
-			{
-				if(e == null) throw new global::System.ArgumentNullException("e");
-				
-				if (e.DomainProperty.Id == global::Company.MyDslComponents.MyButton.NameDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::Company.MyDslComponents.MyButtonShape.FindMyButtonShapeDecorator("NameDecor");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Company.MyDslComponents.MyButton.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::Company.MyDslComponents.MyTextbox.NameDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::Company.MyDslComponents.MyTextboxShape.FindMyTextboxShapeDecorator("NameDecor");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Company.MyDslComponents.MyTextbox.DomainClassId);
-					}
-				}
-				else if (e.DomainProperty.Id == global::Company.MyDslComponents.MyGauge.NameDomainPropertyId)
-				{
-					DslDiagrams::Decorator decorator = global::Company.MyDslComponents.MyGaugeShape.FindMyGaugeShapeDecorator("NameDecor");
-					if(decorator != null)
-					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Company.MyDslComponents.MyGauge.DomainClassId);
-					}
-				}
-			}
-		}
 	
 	}

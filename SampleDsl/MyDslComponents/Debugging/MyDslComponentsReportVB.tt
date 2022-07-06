@@ -1,103 +1,49 @@
-﻿<#@ template debug="true" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+﻿<#@ template debug = "true" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".razor" #>
-<#@ assembly name="System.Xml.dll" #>
-<#@ import namespace="System.Xml" #>
-<#@ import namespace="System" #>
-<#@ import namespace="System.IO" #>
+<#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents'" #>
+<#@ import namespace="System.Collections" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents.diagram'" #>
 
-//prints all the nodes in the Xml of the DSl Diagram
 <#
- // Read the model file
- XmlDocument doc = new XmlDocument();
- doc.Load(@"C:\Users\matti\source\repos\MyDslComponents\Debugging\Sample.MyDslComponents.diagram");
- Dictionary <string, string> nodeTypes =
-        new Dictionary<string, string>();
- foreach (XmlNode node in doc.SelectNodes("//*"))
- {
-   nodeTypes[node.Name] = "";
- }
- // Generate the code
- foreach (string nodeName in nodeTypes.Keys)
- {
+  foreach (ITxView itxview in this.ExampleModel.ITxView)
+  {
 #>
-< <#= nodeName #> />
+<#= itxview.Markup #>
 <#
- }
+	List<ITxAbstractComponent> itxchildren = itxview.GetChildren();
+	foreach (ITxAbstractComponent itxchild in itxchildren)
+	{
+		explore(itxchild);
+	}
 #>
-
-
-//prints only the MyButtonShapes in th diagram, I can access node Attributes
+<#= itxview.ClosingTag #>
 <#
- Dictionary <string, string> buttonShapes =
-        new Dictionary<string, string>();
- foreach (XmlNode node in doc.SelectNodes("//myButtonShape"))
- {
-   buttonShapes[node.Name] = "";
+}
 #>
-<#= node.Name #>
-id: <#= node.Attributes["Id"].Value #>
-absoluteBounds: <#= node.Attributes["absoluteBounds"].Value #>
-<#
- }
+<#  
+	void explore(ITxAbstractComponent element){
 #>
-<#
- // Generate the code
- foreach (string nodeName in buttonShapes.Keys)
- {
+<#		
+		//base case
+		if(element.GetChildren() == null){
 #>
-< <#= nodeName #>/>
+		<#= element.Markup #> <#= element.ClosingTag #>
 <#
- }
+		}
+		//recursive case
+		else{
 #>
-
-//prints only the MyTextBoxShapes
+	<#= element.Markup #>
 <#
- Dictionary <string, string> textboxShapes =
-        new Dictionary<string, string>();
- foreach (XmlNode node in doc.SelectNodes("//myTextboxShape"))
- {
-   textboxShapes[node.Name] = "";
+			List<ITxAbstractComponent> itxchildren = element.GetChildren();
+			foreach (ITxAbstractComponent itxchild in itxchildren){
+				explore(itxchild);
+			}
 #>
-<#= node.Name #>
-id: <#= node.Attributes["Id"].Value #>
-absoluteBounds: <#= node.Attributes["absoluteBounds"].Value #>
+	<#= element.ClosingTag #>
 <#
- }
+		}
 #>
 <#
- // Generate the code
- foreach (string nodeName in textboxShapes.Keys)
- {
+	}
 #>
-< <#= nodeName #>/>
-<#
- }
-#>
-
-//prints only the MyGaugeShapes
-<#
- Dictionary <string, string> gaugeShapes =
-        new Dictionary<string, string>();
- foreach (XmlNode node in doc.SelectNodes("//myGaugeShape"))
- {
-   gaugeShapes[node.Name] = "";
-#>
-<#= node.Name #>
-id: <#= node.Attributes["Id"].Value #>
-absoluteBounds: <#= node.Attributes["absoluteBounds"].Value #>
-<#
- }
-#>
-<#
- // Generate the code
- foreach (string nodeName in gaugeShapes.Keys)
- {
-#>
-< <#= nodeName #>/>
-<#
- }
-#>
-
-

@@ -1,62 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsd:schema id="MyDslComponentsSchema" targetNamespace="http://schemas.microsoft.com/dsltools/MyDslComponents" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/dsltools/MyDslComponents" xmlns:core="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:import id="CoreSchema" namespace="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" />
-  <!-- ExampleModel -->
-  <xsd:element name="exampleModel" type="ExampleModel" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleModel">
+  <!-- ITxModel -->
+  <xsd:element name="iTxModel" type="ITxModel" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ITxModel">
     <xsd:annotation>
       <xsd:documentation>The root in which all other elements are embedded. Appears as a diagram.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: ExampleModelHasMyButton -->
-          <xsd:element name="myButton" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ITxModelHasITxComponent -->
+          <xsd:element name="iTxComponent" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ExampleModelHasMyButton</xsd:documentation>
+              <xsd:documentation>Instances of ITxModelHasITxComponent</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:choice minOccurs="0" maxOccurs="unbounded" >
-                  <xsd:element ref="exampleModelHasMyButton">
-                    <xsd:annotation>
-                      <xsd:documentation>[Relationship deriving from ExampleModelHasMyButton needs to be serialized in full-form]</xsd:documentation>
-                    </xsd:annotation>
-                  </xsd:element>
-                  <xsd:element ref="myButton" >
-                    <xsd:annotation>
-                      <xsd:documentation>[Target role-player]</xsd:documentation>
-                    </xsd:annotation>
-                  </xsd:element>
-                </xsd:choice>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ExampleModelHasMyTextbox -->
-          <xsd:element name="myTextbox" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of ExampleModelHasMyTextbox</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="exampleModelHasMyTextbox" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="iTxModelHasITxComponent" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ExampleModelHasMyTextbox needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
-          <!-- Relationship: ExampleModelHasMyGauge -->
-          <xsd:element name="myGauge" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instances of ExampleModelHasMyGauge</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="exampleModelHasMyGauge" minOccurs="0" maxOccurs="unbounded">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of ExampleModelHasMyGauge needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ITxModelHasITxComponent needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -79,11 +42,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModel Moniker -->
-  <xsd:element name="exampleModelMoniker" type="ExampleModelMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleModelMoniker">
+  <!-- ITxModel Moniker -->
+  <xsd:element name="iTxModelMoniker" type="ITxModelMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ITxModelMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleModel instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ITxModel instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -96,50 +59,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- MyButton -->
-  <xsd:element name="myButton" type="MyButton" substitutionGroup="myComponent" />
-  <xsd:complexType name="MyButton">
-    <xsd:annotation>
-      <xsd:documentation>Elements embedded in the model. Appear as boxes on the diagram.</xsd:documentation>
-    </xsd:annotation>
+  <!-- ITxComponent -->
+  <xsd:element name="iTxComponent" abstract="true" type="ITxComponent" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ITxComponent" abstract="true" >
     <xsd:complexContent>
-      <xsd:extension base="MyComponent">
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: Name -->
-        <xsd:attribute name="name" type="xsd:string" use="required" />
-        <!-- Property: Text -->
-        <xsd:attribute name="text" type="xsd:string" />
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- MyButton Moniker -->
-  <xsd:element name="myButtonMoniker" type="MyButtonMoniker" substitutionGroup="myComponentMoniker" />
-  <xsd:complexType name="MyButtonMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for MyButton instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="MyComponentMoniker">
-        <xsd:attribute name="name" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- MyTextbox -->
-  <xsd:element name="myTextbox" type="MyTextbox" substitutionGroup="myComponent" />
-  <xsd:complexType name="MyTextbox">
-    <xsd:complexContent>
-      <xsd:extension base="MyComponent">
+      <xsd:extension base="core:ModelElement">
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -154,71 +78,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- MyTextbox Moniker -->
-  <xsd:element name="myTextboxMoniker" type="MyTextboxMoniker" substitutionGroup="myComponentMoniker" />
-  <xsd:complexType name="MyTextboxMoniker">
+  <!-- ITxComponent Moniker -->
+  <xsd:element name="iTxComponentMoniker" abstract="true" type="ITxComponentMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ITxComponentMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for MyTextbox instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="MyComponentMoniker">
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- MyGauge -->
-  <xsd:element name="myGauge" type="MyGauge" substitutionGroup="myComponent" />
-  <xsd:complexType name="MyGauge">
-    <xsd:complexContent>
-      <xsd:extension base="MyComponent">
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-        <!-- Property: RangeStart -->
-        <xsd:attribute name="rangeStart" type="xsd:integer" />
-        <!-- Property: RangeEnd -->
-        <xsd:attribute name="rangeEnd" type="xsd:integer" />
-        <!-- Property: Name -->
-        <xsd:attribute name="name" type="xsd:string" />
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- MyGauge Moniker -->
-  <xsd:element name="myGaugeMoniker" type="MyGaugeMoniker" substitutionGroup="myComponentMoniker" />
-  <xsd:complexType name="MyGaugeMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for MyGauge instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="MyComponentMoniker">
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- MyComponent -->
-  <xsd:element name="myComponent" abstract="true" type="MyComponent" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="MyComponent" abstract="true" >
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- MyComponent Moniker -->
-  <xsd:element name="myComponentMoniker" abstract="true" type="MyComponentMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="MyComponentMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for MyComponent instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ITxComponent instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -231,17 +95,193 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModelHasMyButton -->
-  <xsd:element name="exampleModelHasMyButton" abstract="true" type="ExampleModelHasMyButton" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleModelHasMyButton" abstract="true" >
+  <!-- ITxView -->
+  <xsd:element name="iTxView" type="ITxView" substitutionGroup="iTxContainer" />
+  <xsd:complexType name="ITxView">
+    <xsd:complexContent>
+      <xsd:extension base="ITxContainer">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxView Moniker -->
+  <xsd:element name="iTxViewMoniker" type="ITxViewMoniker" substitutionGroup="iTxContainerMoniker" />
+  <xsd:complexType name="ITxViewMoniker">
     <xsd:annotation>
-      <xsd:documentation>Embedding relationship between the Model and Elements</xsd:documentation>
+      <xsd:documentation>Moniker for ITxView instance.</xsd:documentation>
     </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxContainerMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxPanel -->
+  <xsd:element name="iTxPanel" type="ITxPanel" substitutionGroup="iTxContainer" />
+  <xsd:complexType name="ITxPanel">
+    <xsd:complexContent>
+      <xsd:extension base="ITxContainer">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxPanel Moniker -->
+  <xsd:element name="iTxPanelMoniker" type="ITxPanelMoniker" substitutionGroup="iTxContainerMoniker" />
+  <xsd:complexType name="ITxPanelMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ITxPanel instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxContainerMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxContainer -->
+  <xsd:element name="iTxContainer" abstract="true" type="ITxContainer" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="ITxContainer" abstract="true" >
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ITxContainerHasITxComponent -->
+          <xsd:element name="iTxComponent" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ITxContainerHasITxComponent</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="iTxContainerHasITxComponent" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ITxContainerHasITxComponent needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxContainer Moniker -->
+  <xsd:element name="iTxContainerMoniker" abstract="true" type="ITxContainerMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="ITxContainerMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ITxContainer instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxTextbox -->
+  <xsd:element name="iTxTextbox" type="ITxTextbox" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="ITxTextbox">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxTextbox Moniker -->
+  <xsd:element name="iTxTextboxMoniker" type="ITxTextboxMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="ITxTextboxMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ITxTextbox instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxButton -->
+  <xsd:element name="iTxButton" type="ITxButton" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="ITxButton">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxButton Moniker -->
+  <xsd:element name="iTxButtonMoniker" type="ITxButtonMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="ITxButtonMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ITxButton instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxGauge -->
+  <xsd:element name="iTxGauge" type="ITxGauge" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="ITxGauge">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxGauge Moniker -->
+  <xsd:element name="iTxGaugeMoniker" type="ITxGaugeMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="ITxGaugeMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ITxGauge instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ITxModelHasITxComponent -->
+  <xsd:element name="iTxModelHasITxComponent" type="ITxModelHasITxComponent" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ITxModelHasITxComponent">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end MyButton -->
-          <xsd:element ref="myButton" minOccurs="1" maxOccurs="1">
+          <!-- Target end ITxComponent -->
+          <xsd:element ref="iTxComponent" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -257,11 +297,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModelHasMyButton Moniker -->
-  <xsd:element name="exampleModelHasMyButtonMoniker" type="ExampleModelHasMyButtonMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleModelHasMyButtonMoniker">
+  <!-- ITxModelHasITxComponent Moniker -->
+  <xsd:element name="iTxModelHasITxComponentMoniker" type="ITxModelHasITxComponentMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ITxModelHasITxComponentMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleModelHasMyButton instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ITxModelHasITxComponent instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -274,14 +314,14 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModelHasMyTextbox -->
-  <xsd:element name="exampleModelHasMyTextbox" type="ExampleModelHasMyTextbox" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleModelHasMyTextbox">
+  <!-- ITxContainerHasITxComponent -->
+  <xsd:element name="iTxContainerHasITxComponent" type="ITxContainerHasITxComponent" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ITxContainerHasITxComponent">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end MyTextbox -->
-          <xsd:element ref="myTextbox" minOccurs="1" maxOccurs="1">
+          <!-- Target end ITxComponent -->
+          <xsd:element ref="iTxComponent" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -297,51 +337,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ExampleModelHasMyTextbox Moniker -->
-  <xsd:element name="exampleModelHasMyTextboxMoniker" type="ExampleModelHasMyTextboxMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleModelHasMyTextboxMoniker">
+  <!-- ITxContainerHasITxComponent Moniker -->
+  <xsd:element name="iTxContainerHasITxComponentMoniker" type="ITxContainerHasITxComponentMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ITxContainerHasITxComponentMoniker">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleModelHasMyTextbox instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ExampleModelHasMyGauge -->
-  <xsd:element name="exampleModelHasMyGauge" type="ExampleModelHasMyGauge" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ExampleModelHasMyGauge">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end MyGauge -->
-          <xsd:element ref="myGauge" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ExampleModelHasMyGauge Moniker -->
-  <xsd:element name="exampleModelHasMyGaugeMoniker" type="ExampleModelHasMyGaugeMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="ExampleModelHasMyGaugeMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ExampleModelHasMyGauge instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ITxContainerHasITxComponent instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

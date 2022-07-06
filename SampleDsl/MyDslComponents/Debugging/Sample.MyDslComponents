@@ -1,17 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="dae5474d-b9c8-4da7-a1b9-4e6e60eddaa1" xmlns="http://schemas.microsoft.com/dsltools/MyDslComponents">
-  <myButton>
-    <myButton Id="6f94561b-a307-4df9-992b-bfa66a37d2ed" name="MyButton1" text="cliccami" />
-    <myButton Id="4ba99b7e-2f7a-4521-8319-0beeb320b906" name="MyButton2" text="cliccami2" />
-  </myButton>
-  <myTextbox>
-    <exampleModelHasMyTextbox Id="69edf40d-5137-4bc1-a71f-0728f5c9a4e3">
-      <myTextbox Id="9cde84e6-1ee5-41a2-bb70-4e8be67e3dde" name="MyTextbox1" text="questo è testo personalizzabile dentro l'attributo Text della texbox" />
-    </exampleModelHasMyTextbox>
-  </myTextbox>
-  <myGauge>
-    <exampleModelHasMyGauge Id="ad1e4081-4872-46b7-93b1-ca7158c87533">
-      <myGauge Id="c24870ac-fa01-47a9-b858-2370759cc60d" rangeStart="30" rangeEnd="100" name="MyGauge1" />
-    </exampleModelHasMyGauge>
-  </myGauge>
-</exampleModel>
+<iTxModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bbe50076-a6c2-4bce-9c8d-4894fb573cdb" xmlns="http://schemas.microsoft.com/dsltools/MyDslComponents">
+  <iTxComponent>
+    <iTxModelHasITxComponent Id="ddbd6741-033e-42f7-b669-8fba972d8929">
+      <iTxView Id="d65fcf70-5c80-489c-a21c-90bc384e6557" name="ITxView1">
+        <iTxComponent>
+          <iTxContainerHasITxComponent Id="fb4069ed-e786-4bbe-9874-0b0c86050f9b">
+            <iTxPanel Id="2011d7b3-41d7-4312-b769-d13d771ded6c" name="ITxPanel1">
+              <iTxComponent>
+                <iTxContainerHasITxComponent Id="40c3a4e0-638d-4445-a939-d53454d4498a">
+                  <iTxButton Id="ac419d77-54c3-415b-81f1-95450ae7aa0d" name="ITxButton1" text="Annulla" />
+                </iTxContainerHasITxComponent>
+                <iTxContainerHasITxComponent Id="0feb25b3-97a1-4da6-961a-22a6d7d3a132">
+                  <iTxButton Id="f0f2fcc5-d9d9-4acf-b4a2-22952f02c466" name="ITxButton2" text="Ok" />
+                </iTxContainerHasITxComponent>
+                <iTxContainerHasITxComponent Id="339881e8-0f9e-4ebb-93e0-efeb033992f2">
+                  <iTxGauge Id="88e70d4e-0fb3-4c02-b834-8b54607781e2" name="ITxGauge1" />
+                </iTxContainerHasITxComponent>
+              </iTxComponent>
+            </iTxPanel>
+          </iTxContainerHasITxComponent>
+          <iTxContainerHasITxComponent Id="b2ec883b-d3f9-4e1e-a031-0257c975a3e3">
+            <iTxPanel Id="0707c38c-3784-48b8-8fcb-1e3381b6d9ef" name="ITxPanel2">
+              <iTxComponent>
+                <iTxContainerHasITxComponent Id="1f85f7ab-e5e9-46b2-be1e-981fc578a3f6">
+                  <iTxTextbox Id="d9be6ecc-820c-44e2-b394-2077b8fd8853" name="ITxTextbox1" text="testo prova" />
+                </iTxContainerHasITxComponent>
+                <iTxContainerHasITxComponent Id="28e1ef1c-f52f-4341-abf0-e4a4c27c5c0c">
+                  <iTxPanel Id="e23159cc-2a87-461f-9b3e-b1ecbc9252f8" name="ITxPanel1">
+                    <iTxComponent>
+                      <iTxContainerHasITxComponent Id="783c9641-c339-4e6c-a108-31ac23354e9c">
+                        <iTxButton Id="0c7dd706-50d1-4293-9b13-5e094bce7f33" name="ITxButton1" text="Ok" />
+                      </iTxContainerHasITxComponent>
+                      <iTxContainerHasITxComponent Id="7568ba4d-5916-4e4e-a791-58023bdf1673">
+                        <iTxGauge Id="76d386ba-9139-4ee0-8582-776a687d9cc0" name="ITxGauge1" />
+                      </iTxContainerHasITxComponent>
+                    </iTxComponent>
+                  </iTxPanel>
+                </iTxContainerHasITxComponent>
+                <iTxContainerHasITxComponent Id="c6a81ad3-6c59-43f2-b218-f150d49cacda">
+                  <iTxView Id="d308cc39-1bcc-4381-b308-840f386c803e" name="ITxView1" />
+                </iTxContainerHasITxComponent>
+              </iTxComponent>
+            </iTxPanel>
+          </iTxContainerHasITxComponent>
+        </iTxComponent>
+      </iTxView>
+    </iTxModelHasITxComponent>
+  </iTxComponent>
+</iTxModel>
