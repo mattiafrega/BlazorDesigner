@@ -94,7 +94,7 @@ namespace Company.MyDslComponents
 		{
 			get
 			{
-				return 5;
+				return 6;
 			}
 		}
 		
@@ -219,6 +219,22 @@ namespace Company.MyDslComponents
 						"ITxTextbox", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ITxTextboxToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::Company.MyDslComponents.ITxTextbox.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "Company.MyDslComponents.FetchDataToolboxItem":
+					// Add FetchData shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"Company.MyDslComponents.FetchDataToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						6, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("FetchDataToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FetchDataToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"Company.MyDslComponents.MyDslComponentsToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MyDslComponentsToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"FetchData", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("FetchDataToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::Company.MyDslComponents.FetchData.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

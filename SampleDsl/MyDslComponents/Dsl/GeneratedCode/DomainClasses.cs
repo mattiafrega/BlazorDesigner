@@ -280,93 +280,6 @@ namespace Company.MyDslComponents
 		}
 		
 		#endregion
-		#region Text domain property code
-		
-		/// <summary>
-		/// Text domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0xf2d72306, 0x1f0e, 0x41b6, 0xac, 0xd7, 0x52, 0xe3, 0x95, 0x70, 0x51, 0xe2);
-		
-		/// <summary>
-		/// Storage for Text
-		/// </summary>
-		private global::System.String textPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Text domain property.
-		/// Description for Company.MyDslComponents.ITxComponent.Text
-		/// </summary>
-		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxComponent/Text.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxComponent/Text.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("f2d72306-1f0e-41b6-acd7-52e3957051e2")]
-		public global::System.String Text
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return textPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TextPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ITxComponent.Text domain property.
-		/// </summary>
-		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<ITxComponent, global::System.String>
-		{
-			private TextPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ITxComponent.Text domain property value handler.
-			/// </summary>
-			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ITxComponent.Text domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TextDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ITxComponent element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.textPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ITxComponent element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.textPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
 		#region ITxModel opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ITxModel.
@@ -671,6 +584,93 @@ namespace Company.MyDslComponents
 		{
 		}
 		#endregion
+		#region Text domain property code
+		
+		/// <summary>
+		/// Text domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0xf1bc70fb, 0xf5b9, 0x4ae3, 0xa0, 0x5c, 0x90, 0xa0, 0xb5, 0x21, 0xeb, 0x6c);
+		
+		/// <summary>
+		/// Storage for Text
+		/// </summary>
+		private global::System.String textPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Text domain property.
+		/// Description for Company.MyDslComponents.ITxTextbox.Text
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxTextbox/Text.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxTextbox/Text.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f1bc70fb-f5b9-4ae3-a05c-90a0b521eb6c")]
+		public global::System.String Text
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return textPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TextPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ITxTextbox.Text domain property.
+		/// </summary>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<ITxTextbox, global::System.String>
+		{
+			private TextPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ITxTextbox.Text domain property value handler.
+			/// </summary>
+			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ITxTextbox.Text domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TextDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ITxTextbox element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.textPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ITxTextbox element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.textPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace Company.MyDslComponents
@@ -712,6 +712,93 @@ namespace Company.MyDslComponents
 		{
 		}
 		#endregion
+		#region Text domain property code
+		
+		/// <summary>
+		/// Text domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0x90c7c4a2, 0xdfb8, 0x45a4, 0x85, 0x85, 0x4d, 0x12, 0xb7, 0x57, 0x20, 0x44);
+		
+		/// <summary>
+		/// Storage for Text
+		/// </summary>
+		private global::System.String textPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Text domain property.
+		/// Description for Company.MyDslComponents.ITxButton.Text
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxButton/Text.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxButton/Text.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("90c7c4a2-dfb8-45a4-8585-4d12b7572044")]
+		public global::System.String Text
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return textPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TextPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ITxButton.Text domain property.
+		/// </summary>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<ITxButton, global::System.String>
+		{
+			private TextPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ITxButton.Text domain property value handler.
+			/// </summary>
+			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ITxButton.Text domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TextDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ITxButton element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.textPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ITxButton element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.textPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace Company.MyDslComponents
@@ -749,6 +836,47 @@ namespace Company.MyDslComponents
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
 		public ITxGauge(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass FetchData
+	/// Description for Company.MyDslComponents.FetchData
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.FetchData.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.FetchData.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("541f6787-5773-45c1-b138-1cd03234803e")]
+	public partial class FetchData : ITxComponent
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// FetchData domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x541f6787, 0x5773, 0x45c1, 0xb1, 0x38, 0x1c, 0xd0, 0x32, 0x34, 0x80, 0x3e);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public FetchData(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public FetchData(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

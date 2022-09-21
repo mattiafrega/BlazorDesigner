@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<myDslPropertiesDiagram dslVersion="1.0.0.0" Id="81b438e7-90ee-45ae-9d70-8a842f86e7c3" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="2d763572-9c6e-4834-9ae1-0713c6a15b4e" />
+  <nestedChildShapes>
+    <exampleShape Id="6470cd71-0252-4f2f-949f-ce4a7a850c12" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/2d763572-9c6e-4834-9ae1-0713c6a15b4e/ExampleElement1" />
+    </exampleShape>
+    <exampleShape Id="70bcfc78-f75f-4910-a0d4-fd99a02b2452" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/2d763572-9c6e-4834-9ae1-0713c6a15b4e/ExampleElement2" />
+    </exampleShape>
+    <exampleConnector Id="29f71696-4025-4a4e-b319-a9ed610f5cd1" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="c9b26acd-8a45-43cd-9185-db02e8aac16d">
+      <nodes>
+        <exampleShapeMoniker Id="6470cd71-0252-4f2f-949f-ce4a7a850c12" />
+        <exampleShapeMoniker Id="70bcfc78-f75f-4910-a0d4-fd99a02b2452" />
+      </nodes>
+    </exampleConnector>
+  </nestedChildShapes>
+</myDslPropertiesDiagram>

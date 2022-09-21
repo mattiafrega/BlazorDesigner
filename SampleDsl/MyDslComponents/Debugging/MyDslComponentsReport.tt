@@ -25,6 +25,7 @@
 		//the explored element is not a container
 		if(!(e is ITxContainer c)){
 #>
+<# Convert.ChangeType(e, e.GetType());#>
 <# WriteLine(e.GetOpeningTag()); #>
 <# WriteLine(e.GetClosingTag()); #>
 <# PopIndent(); #>

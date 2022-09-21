@@ -149,14 +149,6 @@
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ITxComponent&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.ITxComponent/Text.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.ITxComponent.Text</value>
-    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxComponent&apos;</comment>
-  </data>
-  <data name="Company.MyDslComponents.ITxComponent/Text.DisplayName" xml:space="preserve">
-    <value>Text</value>
-    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxComponent&apos;</comment>
-  </data>
   <data name="Company.MyDslComponents.ITxView.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.ITxView</value>
     <comment>Description for DomainClass &apos;ITxView&apos;</comment>
@@ -189,6 +181,14 @@
     <value>ITx Textbox</value>
     <comment>DisplayName for DomainClass &apos;ITxTextbox&apos;</comment>
   </data>
+  <data name="Company.MyDslComponents.ITxTextbox/Text.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxTextbox.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxTextbox&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.ITxTextbox/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxTextbox&apos;</comment>
+  </data>
   <data name="Company.MyDslComponents.ITxButton.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.ITxButton</value>
     <comment>Description for DomainClass &apos;ITxButton&apos;</comment>
@@ -197,6 +197,14 @@
     <value>ITx Button</value>
     <comment>DisplayName for DomainClass &apos;ITxButton&apos;</comment>
   </data>
+  <data name="Company.MyDslComponents.ITxButton/Text.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxButton.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxButton&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.ITxButton/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;ITxButton&apos;</comment>
+  </data>
   <data name="Company.MyDslComponents.ITxGauge.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.ITxGauge</value>
     <comment>Description for DomainClass &apos;ITxGauge&apos;</comment>
@@ -204,6 +212,14 @@
   <data name="Company.MyDslComponents.ITxGauge.DisplayName" xml:space="preserve">
     <value>ITx Gauge</value>
     <comment>DisplayName for DomainClass &apos;ITxGauge&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.FetchData.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.FetchData</value>
+    <comment>Description for DomainClass &apos;FetchData&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.FetchData.DisplayName" xml:space="preserve">
+    <value>Fetch Data</value>
+    <comment>DisplayName for DomainClass &apos;FetchData&apos;</comment>
   </data>
   <data name="Company.MyDslComponents.ITxModelHasITxComponent.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.ITxModelHasITxComponent</value>
@@ -357,6 +373,46 @@
     <value>ITx Gauge Shape</value>
     <comment>DisplayName for DomainClass &apos;ITxGaugeShape&apos;</comment>
   </data>
+  <data name="Company.MyDslComponents.FetchDataShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.FetchDataShape</value>
+    <comment>Description for DomainClass &apos;FetchDataShape&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.FetchDataShape.DisplayName" xml:space="preserve">
+    <value>Fetch Data Shape</value>
+    <comment>DisplayName for DomainClass &apos;FetchDataShape&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.CounterShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.CounterShape</value>
+    <comment>Description for DomainClass &apos;CounterShape&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.CounterShape.DisplayName" xml:space="preserve">
+    <value>Counter Shape</value>
+    <comment>DisplayName for DomainClass &apos;CounterShape&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.SurveryPromptShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.SurveryPromptShape</value>
+    <comment>Description for DomainClass &apos;SurveryPromptShape&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.SurveryPromptShape.DisplayName" xml:space="preserve">
+    <value>Survery Prompt Shape</value>
+    <comment>DisplayName for DomainClass &apos;SurveryPromptShape&apos;</comment>
+  </data>
+  <data name="SurveryPromptShapeTextDecorator1DefaultText" xml:space="preserve">
+    <value>TextDecorator1</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="Company.MyDslComponents.InputTypeTextShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.InputTypeTextShape</value>
+    <comment>Description for DomainClass &apos;InputTypeTextShape&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.InputTypeTextShape.DisplayName" xml:space="preserve">
+    <value>Input Type Text Shape</value>
+    <comment>DisplayName for DomainClass &apos;InputTypeTextShape&apos;</comment>
+  </data>
+  <data name="InputTypeTextShapeTextDecorator1DefaultText" xml:space="preserve">
+    <value>TextDecorator1</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>MyDslComponents (*.MyDslComponents)|*.MyDslComponents</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -415,6 +471,14 @@
   </data>
   <data name="ITxTextboxToolboxTooltip" xml:space="preserve">
     <value>ITx Textbox</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="FetchDataToolboxItem" xml:space="preserve">
+    <value>FetchData</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="FetchDataToolboxTooltip" xml:space="preserve">
+    <value>Fetch Data</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -551,7 +615,7 @@ A DomainClass can be serialized as a moniker only if
     <comment>ITxViewShape shape image</comment>
   </data>
   <data name="ITxPanelShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\panelImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\panelnew.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>ITxPanelShape shape image</comment>
   </data>
   <data name="ITxTextboxShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -565,6 +629,22 @@ A DomainClass can be serialized as a moniker only if
   <data name="ITxGaugeShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\gaugeImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>ITxGaugeShape shape image</comment>
+  </data>
+  <data name="FetchDataShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\tableImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>FetchDataShape shape image</comment>
+  </data>
+  <data name="CounterShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\counterImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>CounterShape shape image</comment>
+  </data>
+  <data name="SurveryPromptShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\alertImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>SurveryPromptShape shape image</comment>
+  </data>
+  <data name="InputTypeTextShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\textboxImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>InputTypeTextShape shape image</comment>
   </data>
   <data name="ITxViewToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -583,6 +663,10 @@ A DomainClass can be serialized as a moniker only if
     <comment>Toolbox item image</comment>
   </data>
   <data name="ITxTextboxToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="FetchDataToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

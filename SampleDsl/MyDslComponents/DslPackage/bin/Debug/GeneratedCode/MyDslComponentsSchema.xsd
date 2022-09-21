@@ -72,8 +72,6 @@
         </xsd:attribute>
         <!-- Property: Name -->
         <xsd:attribute name="name" type="xsd:string" />
-        <!-- Property: Text -->
-        <xsd:attribute name="text" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -204,6 +202,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -231,6 +231,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -267,6 +269,33 @@
   <xsd:complexType name="ITxGaugeMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for ITxGauge instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FetchData -->
+  <xsd:element name="fetchData" type="FetchData" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="FetchData">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FetchData Moniker -->
+  <xsd:element name="fetchDataMoniker" type="FetchDataMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="FetchDataMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FetchData instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ITxComponentMoniker">

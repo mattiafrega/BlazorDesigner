@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
+using Microsoft.VisualStudio.Modeling.Diagrams;
 
 namespace Company.MyDslComponents
 {
@@ -20,12 +21,40 @@ namespace Company.MyDslComponents
 
         protected virtual String OnGetOpeningTag()
         {
-            return $"<{GetType().Name} Name= \"{Name}\" >";
+            return $"<{GetType().Name} Name= \"{Name}\" X= {GetX()} Y= {GetY()} Width= {GetWidth()} Height= {GetHeight()}>";
         }
 
         public String GetClosingTag()
         {
             return $"</{GetType().Name} >";
+        }
+
+        public String GetX()
+        {
+            var shape = PresentationViewsSubject.GetPresentation(this).FirstOrDefault() as BaseShape;
+            
+            return shape.AbsoluteBoundingBox.X.ToString();
+        }
+
+        public String GetY()
+        {
+            var shape = PresentationViewsSubject.GetPresentation(this).FirstOrDefault() as BaseShape;
+
+            return shape.AbsoluteBoundingBox.Y.ToString();
+        }
+
+        public String GetWidth()
+        {
+            var shape = PresentationViewsSubject.GetPresentation(this).FirstOrDefault() as BaseShape;
+
+            return shape.AbsoluteBoundingBox.Width.ToString();
+        }
+
+        public String GetHeight()
+        {
+            var shape = PresentationViewsSubject.GetPresentation(this).FirstOrDefault() as BaseShape;
+
+            return shape.AbsoluteBoundingBox.Height.ToString();
         }
 
     }
@@ -38,29 +67,10 @@ namespace Company.MyDslComponents
     public partial class ITxView : ITxContainer
     {
 
-        public String GetOpeningTag()
-        {
-            return $"{OnGetOpeningTag()}";
-        }
-
-        protected virtual String OnGetOpeningTag()
-        {
-            return $"<{GetType().Name} Name= \"{Name}\" >";
-        }
     }
 
     public partial class ITxPanel : ITxContainer
     {
-
-        public String GetMarkup()
-        {
-            return $"{OnGetOpeningTag()}";
-        }
-
-        protected virtual String OnGetOpeningTag()
-        {
-            return $"<{GetType().Name} Name= \"{Name}\" >";
-        }
 
         public List<ITxComponent> GetChildren()
         {
@@ -77,28 +87,45 @@ namespace Company.MyDslComponents
     public partial class ITxButton : ITxComponent
     {
 
-        protected override String OnGetOpeningTag()
+        protected virtual String OnGetOpeningTag()
         {
-            return $"<{GetType().Name} Name= \"{Name}\" Text= \"{Text}\" >";
+            return $"<{base.GetOpeningTag()} Text= \"{Text}\" >";
         }
     }
 
     public partial class ITxTextbox : ITxComponent
     {
 
-        protected override String OnGetOpeningTag()
+        protected virtual String OnGetOpeningTag()
         {
-            return $"<{GetType().Name} Name= \"{Name}\" Text= \"{Text}\" >";
+            return "";
+            //return $"<{base.GetOpeningTag()} Text= \"{Text}\" >";
         }
 
     }
     public partial class ITxGauge : ITxComponent
     {
-        protected override String OnGetOpeningTag()
+        protected virtual String OnGetOpeningTag()
         {
-            return $"<{GetType().Name} Name= \"{Name}\" >";
+            
+            return $"<{base.GetOpeningTag()} >";
         }
 
     }
+
+    //demo components
+    public partial class FetchData : ITxComponent
+    {
+        protected virtual String OnGetOpeningTag()
+        {
+
+            return $"<{base.GetOpeningTag()} >";
+        }
+
+    }
+
+
+
+
 
 }

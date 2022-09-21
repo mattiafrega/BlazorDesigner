@@ -16,17 +16,18 @@ namespace Company.MyDslComponents
 	{
 		//findCustomPathToParent is my custom function to get the correct path to the ITxModel of a component.
 		//It explores, in an iterative way, all the parent ITxContainer until it reaches the ITxModel.
-		private static global::Company.MyDslComponents.ITxModel findCustomPathToParent(global::Company.MyDslComponents.ITxComponent root)
+		//this fixes up the shapes, NOT the hierarchy classes tree.
+		public static global::Company.MyDslComponents.ITxModel findCustomPathToParent(global::Company.MyDslComponents.ITxComponent root)
         {
 			global::Company.MyDslComponents.ITxModel result = null;
-
+			
 			global::Company.MyDslComponents.ITxComponent child = root;
 			while (result == null)
 			{
 				result = child.ITxModel;
 				child = child.ITxContainer;
 			}
-
+			
 			return result;
 		}
 
@@ -62,6 +63,32 @@ namespace Company.MyDslComponents
 			global::Company.MyDslComponents.ITxModel result = findCustomPathToParent(root);
 			return result;
 		}
+
+		//demo components
+		private static global::Company.MyDslComponents.ITxModel GetParentForFetchData(global::Company.MyDslComponents.ITxComponent root)
+		{
+			global::Company.MyDslComponents.ITxModel result = findCustomPathToParent(root);
+			return result;
+		}
+		private static global::Company.MyDslComponents.ITxModel GetParentForInputTypeText(global::Company.MyDslComponents.ITxComponent root)
+		{
+			global::Company.MyDslComponents.ITxModel result = findCustomPathToParent(root);
+			return result;
+		}
+		private static global::Company.MyDslComponents.ITxModel GetParentForCounter(global::Company.MyDslComponents.ITxComponent root)
+		{
+			global::Company.MyDslComponents.ITxModel result = findCustomPathToParent(root);
+			return result;
+		}
+
+		private static global::Company.MyDslComponents.ITxModel GetParentForSurveyPrompt(global::Company.MyDslComponents.ITxComponent root)
+		{
+			global::Company.MyDslComponents.ITxModel result = findCustomPathToParent(root);
+			return result;
+		}
+
+
+
 	}
 }
 

@@ -136,6 +136,12 @@ namespace Company.MyDslComponents
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::Company.MyDslComponents.FetchData)
+			{
+				global::Company.MyDslComponents.FetchDataShape newShape = new global::Company.MyDslComponents.FetchDataShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -164,7 +170,7 @@ namespace Company.MyDslComponents
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxComponent.TextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxTextbox.TextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecor").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -182,7 +188,7 @@ namespace Company.MyDslComponents
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxComponent.TextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxButton.TextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecor").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -239,6 +245,7 @@ namespace Company.MyDslComponents
 		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxTextbox), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxGauge), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxButton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.FetchData), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -304,6 +311,17 @@ namespace Company.MyDslComponents
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForITxButton((global::Company.MyDslComponents.ITxButton)childElement);
+				} else
+				if(childElement is global::Company.MyDslComponents.FetchData)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForFetchData(FetchData childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForFetchData((global::Company.MyDslComponents.FetchData)childElement);
 				} else
 				{
 					parentElement = null;

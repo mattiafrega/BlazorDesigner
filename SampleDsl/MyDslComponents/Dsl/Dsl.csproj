@@ -87,8 +87,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
+    <Compile Include="CustomCode\CustomDirectiveProcessor.cs" />
     <Compile Include="CustomCode\Diagram.cs" />
     <Compile Include="CustomCode\DomainClasses.cs" />
+    <Compile Include="CustomCode\ShapeBoundsRule.cs" />
     <Compile Include="CustomCode\Shapes.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>

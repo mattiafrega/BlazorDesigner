@@ -1,39 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<myDslComponentsDiagram dslVersion="1.0.0.0" Id="bc16ccea-fa32-46f6-a489-a8f5d140a4f2" absoluteBounds="0, 0, 16.75, 10.75" name="Sample">
+<myDslComponentsDiagram dslVersion="1.0.0.0" Id="bc16ccea-fa32-46f6-a489-a8f5d140a4f2" absoluteBounds="0, 0, 11.125, 8.5" name="Sample">
   <iTxModelMoniker Id="bbe50076-a6c2-4bce-9c8d-4894fb573cdb" />
   <nestedChildShapes>
-    <iTxViewShape Id="da9edd53-f6d0-46db-8f53-64ed9fad5ce3" absoluteBounds="5.25, 0.5, 11.25, 10">
-      <iTxViewMoniker Id="d65fcf70-5c80-489c-a21c-90bc384e6557" />
-    </iTxViewShape>
-    <iTxPanelShape Id="7219200e-7332-484e-a5a3-2747a9856f48" absoluteBounds="5.5, 2, 5.25, 7.75">
-      <iTxPanelMoniker Id="2011d7b3-41d7-4312-b769-d13d771ded6c" />
+    <iTxPanelShape Id="aa21ea51-2ab2-45d1-bd0f-0eb43184df29" absoluteBounds="5.25, 2.375, 5.625, 5.625">
+      <iTxPanelMoniker Id="14536881-0614-4002-8b55-e9b65fcaac69" />
     </iTxPanelShape>
-    <iTxPanelShape Id="d9a3fe9f-e563-422c-80cf-8022f2a6332d" absoluteBounds="10.875, 2, 5.25, 7.75">
-      <iTxPanelMoniker Id="0707c38c-3784-48b8-8fcb-1e3381b6d9ef" />
-    </iTxPanelShape>
-    <iTxButtonShape Id="f15c48fa-704f-424b-8ba9-b1414775abc1" absoluteBounds="6, 8, 2, 1">
-      <iTxButtonMoniker Id="ac419d77-54c3-415b-81f1-95450ae7aa0d" />
+    <iTxButtonShape Id="9ee75cd8-03eb-4d57-aa81-75d250e93ce6" absoluteBounds="6.875, 2.875, 2, 1">
+      <iTxButtonMoniker Id="ea1afa77-e60f-450f-9010-f64eb29e1194" />
     </iTxButtonShape>
-    <iTxButtonShape Id="d9e28752-76e7-49eb-bad5-9be33227ad44" absoluteBounds="8.5, 8, 2, 1">
-      <iTxButtonMoniker Id="f0f2fcc5-d9d9-4acf-b4a2-22952f02c466" />
-    </iTxButtonShape>
-    <iTxTextboxShape Id="2be75601-a6da-4822-8f8b-2dbe2975aca3" absoluteBounds="11.625, 8, 4, 1">
-      <iTxTextboxMoniker Id="d9be6ecc-820c-44e2-b394-2077b8fd8853" />
+    <iTxTextboxShape Id="ab9ac009-3626-4009-a203-3ce7938bd047" absoluteBounds="6.375, 4.875, 4, 1">
+      <iTxTextboxMoniker Id="2af9677b-ec1e-4940-96a0-1981b9120346" />
     </iTxTextboxShape>
-    <iTxGaugeShape Id="af26a1a5-43fe-4a7d-8097-643a360de0db" absoluteBounds="6.125, 2.75, 3.625, 3.875">
-      <iTxGaugeMoniker Id="88e70d4e-0fb3-4c02-b834-8b54607781e2" />
-    </iTxGaugeShape>
-    <iTxPanelShape Id="829ae133-41d8-4a42-a04b-f6522ab33691" absoluteBounds="11.5, 5.25, 4.125, 2.5">
-      <iTxPanelMoniker Id="e23159cc-2a87-461f-9b3e-b1ecbc9252f8" />
-    </iTxPanelShape>
-    <iTxButtonShape Id="78e6f44c-55af-4179-8ba2-32147d87f758" absoluteBounds="13.375, 5.875, 2, 1">
-      <iTxButtonMoniker Id="0c7dd706-50d1-4293-9b13-5e094bce7f33" />
-    </iTxButtonShape>
-    <iTxGaugeShape Id="70b6513e-5e21-489b-a2ee-8a20189695f6" absoluteBounds="11.75, 5.75, 1.375, 1.25">
-      <iTxGaugeMoniker Id="76d386ba-9139-4ee0-8582-776a687d9cc0" />
-    </iTxGaugeShape>
-    <iTxViewShape Id="8bd90d82-d110-4e14-85af-8b3910e7aa82" absoluteBounds="11.375, 2.25, 3.25, 2.875">
-      <iTxViewMoniker Id="d308cc39-1bcc-4381-b308-840f386c803e" />
-    </iTxViewShape>
   </nestedChildShapes>
 </myDslComponentsDiagram>

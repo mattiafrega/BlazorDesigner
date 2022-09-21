@@ -75,6 +75,7 @@ namespace Company.MyDslComponents
 				typeof(ITxTextbox),
 				typeof(ITxButton),
 				typeof(ITxGauge),
+				typeof(FetchData),
 				typeof(ITxModelHasITxComponent),
 				typeof(ITxContainerHasITxComponent),
 				typeof(MyDslComponentsDiagram),
@@ -84,6 +85,10 @@ namespace Company.MyDslComponents
 				typeof(ITxTextboxShape),
 				typeof(ITxButtonShape),
 				typeof(ITxGaugeShape),
+				typeof(FetchDataShape),
+				typeof(CounterShape),
+				typeof(SurveryPromptShape),
+				typeof(InputTypeTextShape),
 				typeof(global::Company.MyDslComponents.FixUpDiagram),
 			};
 		}
@@ -97,7 +102,8 @@ namespace Company.MyDslComponents
 			return new DomainMemberInfo[]
 			{
 				new DomainMemberInfo(typeof(ITxComponent), "Name", ITxComponent.NameDomainPropertyId, typeof(ITxComponent.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(ITxComponent), "Text", ITxComponent.TextDomainPropertyId, typeof(ITxComponent.TextPropertyHandler)),
+				new DomainMemberInfo(typeof(ITxTextbox), "Text", ITxTextbox.TextDomainPropertyId, typeof(ITxTextbox.TextPropertyHandler)),
+				new DomainMemberInfo(typeof(ITxButton), "Text", ITxButton.TextDomainPropertyId, typeof(ITxButton.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(BaseShape), "Width", BaseShape.WidthDomainPropertyId, typeof(BaseShape.WidthPropertyHandler)),
 				new DomainMemberInfo(typeof(BaseShape), "Height", BaseShape.HeightDomainPropertyId, typeof(BaseShape.HeightPropertyHandler)),
 				new DomainMemberInfo(typeof(BaseShape), "X", BaseShape.XDomainPropertyId, typeof(BaseShape.XPropertyHandler)),
@@ -137,19 +143,24 @@ namespace Company.MyDslComponents
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(20);
 				createElementMap.Add(typeof(ITxModel), 0);
 				createElementMap.Add(typeof(ITxView), 1);
 				createElementMap.Add(typeof(ITxPanel), 2);
 				createElementMap.Add(typeof(ITxTextbox), 3);
 				createElementMap.Add(typeof(ITxButton), 4);
 				createElementMap.Add(typeof(ITxGauge), 5);
-				createElementMap.Add(typeof(MyDslComponentsDiagram), 6);
-				createElementMap.Add(typeof(ITxViewShape), 7);
-				createElementMap.Add(typeof(ITxPanelShape), 8);
-				createElementMap.Add(typeof(ITxTextboxShape), 9);
-				createElementMap.Add(typeof(ITxButtonShape), 10);
-				createElementMap.Add(typeof(ITxGaugeShape), 11);
+				createElementMap.Add(typeof(FetchData), 6);
+				createElementMap.Add(typeof(MyDslComponentsDiagram), 7);
+				createElementMap.Add(typeof(ITxViewShape), 8);
+				createElementMap.Add(typeof(ITxPanelShape), 9);
+				createElementMap.Add(typeof(ITxTextboxShape), 10);
+				createElementMap.Add(typeof(ITxButtonShape), 11);
+				createElementMap.Add(typeof(ITxGaugeShape), 12);
+				createElementMap.Add(typeof(FetchDataShape), 13);
+				createElementMap.Add(typeof(CounterShape), 14);
+				createElementMap.Add(typeof(SurveryPromptShape), 15);
+				createElementMap.Add(typeof(InputTypeTextShape), 16);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -169,12 +180,17 @@ namespace Company.MyDslComponents
 				case 3: return new ITxTextbox(partition, propertyAssignments);
 				case 4: return new ITxButton(partition, propertyAssignments);
 				case 5: return new ITxGauge(partition, propertyAssignments);
-				case 6: return new MyDslComponentsDiagram(partition, propertyAssignments);
-				case 7: return new ITxViewShape(partition, propertyAssignments);
-				case 8: return new ITxPanelShape(partition, propertyAssignments);
-				case 9: return new ITxTextboxShape(partition, propertyAssignments);
-				case 10: return new ITxButtonShape(partition, propertyAssignments);
-				case 11: return new ITxGaugeShape(partition, propertyAssignments);
+				case 6: return new FetchData(partition, propertyAssignments);
+				case 7: return new MyDslComponentsDiagram(partition, propertyAssignments);
+				case 8: return new ITxViewShape(partition, propertyAssignments);
+				case 9: return new ITxPanelShape(partition, propertyAssignments);
+				case 10: return new ITxTextboxShape(partition, propertyAssignments);
+				case 11: return new ITxButtonShape(partition, propertyAssignments);
+				case 12: return new ITxGaugeShape(partition, propertyAssignments);
+				case 13: return new FetchDataShape(partition, propertyAssignments);
+				case 14: return new CounterShape(partition, propertyAssignments);
+				case 15: return new SurveryPromptShape(partition, propertyAssignments);
+				case 16: return new InputTypeTextShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
