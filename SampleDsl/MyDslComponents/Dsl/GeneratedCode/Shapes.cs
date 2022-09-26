@@ -1304,7 +1304,7 @@ namespace Company.MyDslComponents
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("8979f075-3442-48c6-83e1-4d4bce445ea7")]
-	public partial class CounterShape : DslDiagrams::ImageShape
+	public partial class CounterShape : BaseShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1378,8 +1378,6 @@ namespace Company.MyDslComponents
 		}
 		
 		#endregion
-		#region Shape size
-		#endregion
 		#region Shape styles
 		#endregion
 		/// <summary>
@@ -1424,15 +1422,15 @@ namespace Company.MyDslComponents
 namespace Company.MyDslComponents
 {
 	/// <summary>
-	/// DomainClass SurveryPromptShape
-	/// Description for Company.MyDslComponents.SurveryPromptShape
+	/// DomainClass SurveyPromptShape
+	/// Description for Company.MyDslComponents.SurveyPromptShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Company.MyDslComponents.SurveryPromptShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("Company.MyDslComponents.SurveryPromptShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.SurveyPromptShape.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.SurveyPromptShape.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("fb1a9574-2934-4fa2-9fd3-d97d0ba00bab")]
-	public partial class SurveryPromptShape : DslDiagrams::ImageShape
+	public partial class SurveyPromptShape : BaseShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1497,9 +1495,9 @@ namespace Company.MyDslComponents
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with SurveryPromptShape.
+		/// Finds a decorator associated with SurveyPromptShape.
 		/// </summary>
-		public static DslDiagrams::Decorator FindSurveryPromptShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindSurveyPromptShapeDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -1523,8 +1521,6 @@ namespace Company.MyDslComponents
 			}
 			
 		}
-		#endregion
-		#region Shape size
 		#endregion
 		#region Shape styles
 		/// <summary>
@@ -1552,7 +1548,7 @@ namespace Company.MyDslComponents
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("TextDecorator1");
-			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("SurveryPromptShapeTextDecorator1DefaultText");
+			field1.DefaultText = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager.GetString("SurveyPromptShapeTextDecorator1DefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1573,7 +1569,7 @@ namespace Company.MyDslComponents
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "TextDecorator1");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerMiddleLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -1606,13 +1602,13 @@ namespace Company.MyDslComponents
 			get
 			{
 				global::System.Resources.ResourceManager resourceManager = global::Company.MyDslComponents.MyDslComponentsDomainModel.SingletonResourceManager;
-				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SurveryPromptShapeImage"));
+				return DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SurveyPromptShapeImage"));
 			}
 		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// SurveryPromptShape domain class Id.
+		/// SurveyPromptShape domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfb1a9574, 0x2934, 0x4fa2, 0x9f, 0xd3, 0xd9, 0x7d, 0x0b, 0xa0, 0x0b, 0xab);
 		/// <summary>
@@ -1620,7 +1616,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public SurveryPromptShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public SurveyPromptShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -1630,7 +1626,7 @@ namespace Company.MyDslComponents
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public SurveryPromptShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public SurveyPromptShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -1648,7 +1644,7 @@ namespace Company.MyDslComponents
 	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("eee0d11e-aad7-4c02-ae83-3364db6344f7")]
-	public partial class InputTypeTextShape : DslDiagrams::ImageShape
+	public partial class InputTypeTextShape : BaseShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1739,8 +1735,6 @@ namespace Company.MyDslComponents
 			}
 			
 		}
-		#endregion
-		#region Shape size
 		#endregion
 		#region Shape styles
 		/// <summary>

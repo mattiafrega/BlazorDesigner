@@ -14,14 +14,9 @@ namespace Company.MyDslComponents
     public abstract partial class ITxComponent : DslModeling::ModelElement
     {
         
-        public String GetOpeningTag()
+        public virtual String GetOpeningTag()
         {
-            return $"{OnGetOpeningTag()}";
-        }
-
-        protected virtual String OnGetOpeningTag()
-        {
-            return $"<{GetType().Name} Name= \"{Name}\" X= {GetX()} Y= {GetY()} Width= {GetWidth()} Height= {GetHeight()}>";
+            return $"{GetType().Name} Name= \"{Name}\" X= {GetX()} Y= {GetY()} Width= {GetWidth()} Height= {GetHeight()}";
         }
 
         public String GetClosingTag()
@@ -61,7 +56,17 @@ namespace Company.MyDslComponents
 
     public abstract partial class ITxContainer
     {
-        
+        public List<ITxComponent> GetChildren()
+        {
+            List<ITxComponent> children = new List<ITxComponent>();
+            foreach (ITxComponent child in ITxComponent)
+            {
+                children.Add(child);
+            }
+            return children;
+        }
+
+
     }
 
     public partial class ITxView : ITxContainer
@@ -71,7 +76,7 @@ namespace Company.MyDslComponents
 
     public partial class ITxPanel : ITxContainer
     {
-
+        /*
         public List<ITxComponent> GetChildren()
         {
             List<ITxComponent> children = new List<ITxComponent>();
@@ -81,13 +86,14 @@ namespace Company.MyDslComponents
             }
             return children;
         }
+        */
         
     }
 
     public partial class ITxButton : ITxComponent
     {
 
-        protected virtual String OnGetOpeningTag()
+        public override String GetOpeningTag()
         {
             return $"<{base.GetOpeningTag()} Text= \"{Text}\" >";
         }
@@ -96,19 +102,18 @@ namespace Company.MyDslComponents
     public partial class ITxTextbox : ITxComponent
     {
 
-        protected virtual String OnGetOpeningTag()
+        public override String GetOpeningTag()
         {
-            return "";
-            //return $"<{base.GetOpeningTag()} Text= \"{Text}\" >";
+            return $"<{base.GetOpeningTag()} Text= \"{Text}\" >";
         }
 
     }
     public partial class ITxGauge : ITxComponent
     {
-        protected virtual String OnGetOpeningTag()
+        public override String GetOpeningTag()
         {
             
-            return $"<{base.GetOpeningTag()} >";
+            return $"<{base.GetOpeningTag()} RangeStart={RangeStart} RangeEnd={RangeEnd} >";
         }
 
     }
@@ -116,10 +121,40 @@ namespace Company.MyDslComponents
     //demo components
     public partial class FetchData : ITxComponent
     {
-        protected virtual String OnGetOpeningTag()
+        public override String GetOpeningTag()
         {
 
             return $"<{base.GetOpeningTag()} >";
+        }
+
+    }
+
+    public partial class Counter : ITxComponent
+    {
+        public override String GetOpeningTag()
+        {
+
+            return $"<{base.GetOpeningTag()} >";
+        }
+
+    }
+
+    public partial class SurveyPrompt : ITxComponent
+    {
+        public override String GetOpeningTag()
+        {
+
+            return $"<{base.GetOpeningTag()} Text='{Text}' >";
+        }
+
+    }
+
+    public partial class InputTypeText : ITxComponent
+    {
+        public override String GetOpeningTag()
+        {
+
+            return $"<{base.GetOpeningTag()} Text='{Text}' >";
         }
 
     }

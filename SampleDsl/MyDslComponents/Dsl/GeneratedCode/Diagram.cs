@@ -142,6 +142,24 @@ namespace Company.MyDslComponents
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::Company.MyDslComponents.Counter)
+			{
+				global::Company.MyDslComponents.CounterShape newShape = new global::Company.MyDslComponents.CounterShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.MyDslComponents.SurveyPrompt)
+			{
+				global::Company.MyDslComponents.SurveyPromptShape newShape = new global::Company.MyDslComponents.SurveyPromptShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::Company.MyDslComponents.InputTypeText)
+			{
+				global::Company.MyDslComponents.InputTypeTextShape newShape = new global::Company.MyDslComponents.InputTypeTextShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -155,6 +173,8 @@ namespace Company.MyDslComponents
 			base.InitializeShapeFields(shapeFields);
 			global::Company.MyDslComponents.ITxTextboxShape.DecoratorsInitialized += ITxTextboxShapeDecoratorMap.OnDecoratorsInitialized;
 			global::Company.MyDslComponents.ITxButtonShape.DecoratorsInitialized += ITxButtonShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.MyDslComponents.SurveyPromptShape.DecoratorsInitialized += SurveyPromptShapeDecoratorMap.OnDecoratorsInitialized;
+			global::Company.MyDslComponents.InputTypeTextShape.DecoratorsInitialized += InputTypeTextShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -190,6 +210,42 @@ namespace Company.MyDslComponents
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.ITxButton.TextDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecor").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for SurveyPromptShape.
+		/// </summary>
+		internal static partial class SurveyPromptShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for SurveyPromptShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.SurveyPrompt.TextDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecorator1").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for InputTypeTextShape.
+		/// </summary>
+		internal static partial class InputTypeTextShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for InputTypeTextShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Company.MyDslComponents.InputTypeText.TextDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "TextDecorator1").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -246,6 +302,9 @@ namespace Company.MyDslComponents
 		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxGauge), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.ITxButton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.FetchData), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.Counter), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.SurveyPrompt), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::Company.MyDslComponents.InputTypeText), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -322,6 +381,39 @@ namespace Company.MyDslComponents
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForFetchData((global::Company.MyDslComponents.FetchData)childElement);
+				} else
+				if(childElement is global::Company.MyDslComponents.Counter)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForCounter(Counter childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForCounter((global::Company.MyDslComponents.Counter)childElement);
+				} else
+				if(childElement is global::Company.MyDslComponents.SurveyPrompt)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForSurveyPrompt(SurveyPrompt childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForSurveyPrompt((global::Company.MyDslComponents.SurveyPrompt)childElement);
+				} else
+				if(childElement is global::Company.MyDslComponents.InputTypeText)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForInputTypeText(InputTypeText childElement)
+					// {
+					// }
+					// must be implemented in a partial class of Company.MyDslComponents.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForInputTypeText((global::Company.MyDslComponents.InputTypeText)childElement);
 				} else
 				{
 					parentElement = null;

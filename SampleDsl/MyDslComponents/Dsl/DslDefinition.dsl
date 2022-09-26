@@ -75,11 +75,52 @@
       <BaseClass>
         <DomainClassMoniker Name="ITxComponent" />
       </BaseClass>
+      <Properties>
+        <DomainProperty Id="c1f7337e-c60c-40a3-906a-b362efd318a0" Description="Description for Company.MyDslComponents.ITxGauge.Range Start" Name="RangeStart" DisplayName="Range Start">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a7d15316-2950-46e2-a40a-a31df8dcba5a" Description="Description for Company.MyDslComponents.ITxGauge.Range End" Name="RangeEnd" DisplayName="Range End">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Double" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
     <DomainClass Id="541f6787-5773-45c1-b138-1cd03234803e" Description="Description for Company.MyDslComponents.FetchData" Name="FetchData" DisplayName="Fetch Data" Namespace="Company.MyDslComponents">
       <BaseClass>
         <DomainClassMoniker Name="ITxComponent" />
       </BaseClass>
+    </DomainClass>
+    <DomainClass Id="76d94e4c-8f82-4886-a5f8-fbee7f765849" Description="Description for Company.MyDslComponents.Counter" Name="Counter" DisplayName="Counter" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="d011dc29-ddb4-4672-bf7a-77c5fe7c521e" Description="Description for Company.MyDslComponents.SurveyPrompt" Name="SurveyPrompt" DisplayName="Survey Prompt" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="1e4c625f-5f05-401d-bfa9-c1570b8c1da0" Description="Description for Company.MyDslComponents.SurveyPrompt.Text" Name="Text" DisplayName="Text">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="56632c78-d03b-4f28-ac35-5976a7e1f094" Description="Description for Company.MyDslComponents.InputTypeText" Name="InputTypeText" DisplayName="Input Type Text" Namespace="Company.MyDslComponents">
+      <BaseClass>
+        <DomainClassMoniker Name="ITxComponent" />
+      </BaseClass>
+      <Properties>
+        <DomainProperty Id="b625a6c9-5259-4197-a9e7-a8a35ca46375" Description="Description for Company.MyDslComponents.InputTypeText.Text" Name="Text" DisplayName="Text">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -174,7 +215,7 @@
         <ImageShapeMoniker Name="BaseShape" />
       </BaseImageShape>
       <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="TextDecor" FontSize="12" />
+        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="Text Property" FontSize="12" />
       </ShapeHasDecorators>
     </ImageShape>
     <ImageShape Id="4016431d-6562-4885-b497-ce39b63a7320" Description="Description for Company.MyDslComponents.ITxButtonShape" Name="ITxButtonShape" DisplayName="ITx Button Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx Button Shape" TextColor="White" InitialWidth="2" InitialHeight="1" Image="Resources\buttonImage.png">
@@ -182,7 +223,7 @@
         <ImageShapeMoniker Name="BaseShape" />
       </BaseImageShape>
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="TextDecor" FontStyle="Bold" FontSize="14" />
+        <TextDecorator Name="TextDecor" DisplayName="Text Decor" DefaultText="Text Property" FontStyle="Bold" FontSize="14" />
       </ShapeHasDecorators>
     </ImageShape>
     <ImageShape Id="6d711054-bfd0-4968-84eb-6efc84794653" Description="Description for Company.MyDslComponents.ITxGaugeShape" Name="ITxGaugeShape" DisplayName="ITx Gauge Shape" Namespace="Company.MyDslComponents" FixedTooltipText="ITx Gauge Shape" InitialWidth="1" InitialHeight="1" Image="Resources\gaugeImage.png">
@@ -195,15 +236,25 @@
         <ImageShapeMoniker Name="BaseShape" />
       </BaseImageShape>
     </ImageShape>
-    <ImageShape Id="8979f075-3442-48c6-83e1-4d4bce445ea7" Description="Description for Company.MyDslComponents.CounterShape" Name="CounterShape" DisplayName="Counter Shape" Namespace="Company.MyDslComponents" FixedTooltipText="Counter Shape" InitialHeight="1" Image="Resources\counterImage.png" />
-    <ImageShape Id="fb1a9574-2934-4fa2-9fd3-d97d0ba00bab" Description="Description for Company.MyDslComponents.SurveryPromptShape" Name="SurveryPromptShape" DisplayName="Survery Prompt Shape" Namespace="Company.MyDslComponents" FixedTooltipText="Survery Prompt Shape" InitialHeight="1" Image="Resources\alertImage.png">
-      <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TextDecorator1" DisplayName="Text Decorator1" DefaultText="TextDecorator1" FontSize="12" />
+    <ImageShape Id="8979f075-3442-48c6-83e1-4d4bce445ea7" Description="Description for Company.MyDslComponents.CounterShape" Name="CounterShape" DisplayName="Counter Shape" Namespace="Company.MyDslComponents" FixedTooltipText="Counter Shape" InitialHeight="1" Image="Resources\counterImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
+    </ImageShape>
+    <ImageShape Id="fb1a9574-2934-4fa2-9fd3-d97d0ba00bab" Description="Description for Company.MyDslComponents.SurveyPromptShape" Name="SurveyPromptShape" DisplayName="Survey Prompt Shape" Namespace="Company.MyDslComponents" FixedTooltipText="Survey Prompt Shape" InitialHeight="1" Image="Resources\alertImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TextDecorator1" DisplayName="Text Decorator1" DefaultText="Text Property" FontSize="12" />
       </ShapeHasDecorators>
     </ImageShape>
     <ImageShape Id="eee0d11e-aad7-4c02-ae83-3364db6344f7" Description="Description for Company.MyDslComponents.InputTypeTextShape" Name="InputTypeTextShape" DisplayName="Input Type Text Shape" Namespace="Company.MyDslComponents" FixedTooltipText="Input Type Text Shape" InitialHeight="1" Image="Resources\textboxImage.png">
+      <BaseImageShape>
+        <ImageShapeMoniker Name="BaseShape" />
+      </BaseImageShape>
       <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="TextDecorator1" DisplayName="Text Decorator1" DefaultText="TextDecorator1" FontStyle="Bold" FontSize="12" />
+        <TextDecorator Name="TextDecorator1" DisplayName="Text Decorator1" DefaultText="Text Property" FontStyle="Bold" FontSize="12" />
       </ShapeHasDecorators>
     </ImageShape>
   </Shapes>
@@ -283,6 +334,14 @@
       </XmlClassData>
       <XmlClassData TypeName="ITxGauge" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxGaugeMoniker" ElementName="iTxGauge" MonikerTypeName="ITxGaugeMoniker">
         <DomainClassMoniker Name="ITxGauge" />
+        <ElementData>
+          <XmlPropertyData XmlName="rangeStart">
+            <DomainPropertyMoniker Name="ITxGauge/RangeStart" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="rangeEnd">
+            <DomainPropertyMoniker Name="ITxGauge/RangeEnd" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ITxTextboxShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="iTxTextboxShapeMoniker" ElementName="iTxTextboxShape" MonikerTypeName="ITxTextboxShapeMoniker">
         <ImageShapeMoniker Name="ITxTextboxShape" />
@@ -305,14 +364,33 @@
       <XmlClassData TypeName="CounterShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="counterShapeMoniker" ElementName="counterShape" MonikerTypeName="CounterShapeMoniker">
         <ImageShapeMoniker Name="CounterShape" />
       </XmlClassData>
-      <XmlClassData TypeName="SurveryPromptShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="surveryPromptShapeMoniker" ElementName="surveryPromptShape" MonikerTypeName="SurveryPromptShapeMoniker">
-        <ImageShapeMoniker Name="SurveryPromptShape" />
+      <XmlClassData TypeName="SurveyPromptShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="surveyPromptShapeMoniker" ElementName="surveyPromptShape" MonikerTypeName="SurveyPromptShapeMoniker">
+        <ImageShapeMoniker Name="SurveyPromptShape" />
       </XmlClassData>
       <XmlClassData TypeName="InputTypeTextShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="inputTypeTextShapeMoniker" ElementName="inputTypeTextShape" MonikerTypeName="InputTypeTextShapeMoniker">
         <ImageShapeMoniker Name="InputTypeTextShape" />
       </XmlClassData>
       <XmlClassData TypeName="FetchData" MonikerAttributeName="" SerializeId="true" MonikerElementName="fetchDataMoniker" ElementName="fetchData" MonikerTypeName="FetchDataMoniker">
         <DomainClassMoniker Name="FetchData" />
+      </XmlClassData>
+      <XmlClassData TypeName="Counter" MonikerAttributeName="" SerializeId="true" MonikerElementName="counterMoniker" ElementName="counter" MonikerTypeName="CounterMoniker">
+        <DomainClassMoniker Name="Counter" />
+      </XmlClassData>
+      <XmlClassData TypeName="SurveyPrompt" MonikerAttributeName="" SerializeId="true" MonikerElementName="surveyPromptMoniker" ElementName="surveyPrompt" MonikerTypeName="SurveyPromptMoniker">
+        <DomainClassMoniker Name="SurveyPrompt" />
+        <ElementData>
+          <XmlPropertyData XmlName="text">
+            <DomainPropertyMoniker Name="SurveyPrompt/Text" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="InputTypeText" MonikerAttributeName="" SerializeId="true" MonikerElementName="inputTypeTextMoniker" ElementName="inputTypeText" MonikerTypeName="InputTypeTextMoniker">
+        <DomainClassMoniker Name="InputTypeText" />
+        <ElementData>
+          <XmlPropertyData XmlName="text">
+            <DomainPropertyMoniker Name="InputTypeText/Text" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -380,6 +458,43 @@
         </ParentElementPath>
         <ImageShapeMoniker Name="FetchDataShape" />
       </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Counter" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <ImageShapeMoniker Name="CounterShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="SurveyPrompt" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="SurveyPromptShape/TextDecorator1" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="SurveyPrompt/Text" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <ImageShapeMoniker Name="SurveyPromptShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="InputTypeText" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="InputTypeTextShape/TextDecorator1" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="InputTypeText/Text" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <ImageShapeMoniker Name="InputTypeTextShape" />
+      </ShapeMap>
     </ShapeMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="MyDslComponents" EditorGuid="76753c16-6eca-44c9-a1dc-72ec21a12449">
@@ -390,23 +505,32 @@
       <XmlSerializationBehaviorMoniker Name="MyDslComponentsSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="MyDslComponents">
-      <ElementTool Name="ITxView" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxView" Tooltip="ITx View" HelpKeyword="ITxView">
-        <DomainClassMoniker Name="ITxView" />
+      <ElementTool Name="FetchData" ToolboxIcon="Resources\tablebmp.bmp" Caption="FetchData" Tooltip="Tabella con dati sample" HelpKeyword="FetchData">
+        <DomainClassMoniker Name="FetchData" />
       </ElementTool>
-      <ElementTool Name="ITxPanel" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxPanel" Tooltip="ITx Panel" HelpKeyword="ITxPanel">
-        <DomainClassMoniker Name="ITxPanel" />
+      <ElementTool Name="Counter" ToolboxIcon="Resources\counterbmp.bmp" Caption="Counter" Tooltip="Contatore con pulsante" HelpKeyword="Counter">
+        <DomainClassMoniker Name="Counter" />
       </ElementTool>
-      <ElementTool Name="ITxButton" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxButton" Tooltip="ITx Button" HelpKeyword="ITxButton">
+      <ElementTool Name="InputText" ToolboxIcon="Resources\inputtypetextbmp.bmp" Caption="InputText" Tooltip="Casella di testo sample" HelpKeyword="InputText">
+        <DomainClassMoniker Name="InputTypeText" />
+      </ElementTool>
+      <ElementTool Name="SurveyPrompt" ToolboxIcon="Resources\surveypromptbmp.bmp" Caption="SurveyPrompt" Tooltip="Banner con testo personalizzabile" HelpKeyword="SurveyPrompt">
+        <DomainClassMoniker Name="SurveyPrompt" />
+      </ElementTool>
+      <ElementTool Name="ITxButton" ToolboxIcon="Resources\itxbuttonbmp.bmp" Caption="ITxButton" Tooltip="ITx Button" HelpKeyword="ITxButton">
         <DomainClassMoniker Name="ITxButton" />
       </ElementTool>
-      <ElementTool Name="ITxGauge" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxGauge" Tooltip="ITx Gauge" HelpKeyword="ITxGauge">
-        <DomainClassMoniker Name="ITxGauge" />
-      </ElementTool>
-      <ElementTool Name="ITxTextbox" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="ITxTextbox" Tooltip="ITx Textbox" HelpKeyword="ITxTextbox">
+      <ElementTool Name="ITxTextbox" ToolboxIcon="Resources\itxtextboxbmp.bmp" Caption="ITxTextbox" Tooltip="ITx Textbox" HelpKeyword="ITxTextbox">
         <DomainClassMoniker Name="ITxTextbox" />
       </ElementTool>
-      <ElementTool Name="FetchData" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="FetchData" Tooltip="Fetch Data" HelpKeyword="FetchData">
-        <DomainClassMoniker Name="FetchData" />
+      <ElementTool Name="ITxGauge" ToolboxIcon="Resources\itxgaugebmp.bmp" Caption="ITxGauge" Tooltip="ITx Gauge" HelpKeyword="ITxGauge">
+        <DomainClassMoniker Name="ITxGauge" />
+      </ElementTool>
+      <ElementTool Name="ITxPanel" ToolboxIcon="Resources\itxpanelbmp.bmp" Caption="ITxPanel" Tooltip="ITx Panel" HelpKeyword="ITxPanel">
+        <DomainClassMoniker Name="ITxPanel" />
+      </ElementTool>
+      <ElementTool Name="ITxView" ToolboxIcon="Resources\itxviewbmp.bmp" Caption="ITxView" Tooltip="ITx View" HelpKeyword="ITxView">
+        <DomainClassMoniker Name="ITxView" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

@@ -260,6 +260,10 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: RangeStart -->
+        <xsd:attribute name="rangeStart" type="xsd:double" />
+        <!-- Property: RangeEnd -->
+        <xsd:attribute name="rangeEnd" type="xsd:double" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -296,6 +300,91 @@
   <xsd:complexType name="FetchDataMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for FetchData instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Counter -->
+  <xsd:element name="counter" type="Counter" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="Counter">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Counter Moniker -->
+  <xsd:element name="counterMoniker" type="CounterMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="CounterMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Counter instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SurveyPrompt -->
+  <xsd:element name="surveyPrompt" type="SurveyPrompt" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="SurveyPrompt">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- SurveyPrompt Moniker -->
+  <xsd:element name="surveyPromptMoniker" type="SurveyPromptMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="SurveyPromptMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for SurveyPrompt instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponentMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InputTypeText -->
+  <xsd:element name="inputTypeText" type="InputTypeText" substitutionGroup="iTxComponent" />
+  <xsd:complexType name="InputTypeText">
+    <xsd:complexContent>
+      <xsd:extension base="ITxComponent">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Text -->
+        <xsd:attribute name="text" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- InputTypeText Moniker -->
+  <xsd:element name="inputTypeTextMoniker" type="InputTypeTextMoniker" substitutionGroup="iTxComponentMoniker" />
+  <xsd:complexType name="InputTypeTextMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for InputTypeText instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ITxComponentMoniker">

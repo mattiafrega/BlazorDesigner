@@ -30,21 +30,37 @@ namespace Company.MyDslComponents
 	[VSShell::ProvideToolWindowVisibility(typeof(MyDslComponentsExplorerToolWindow), Constants.MyDslComponentsEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@MyDslComponentsToolboxTab;Company.MyDslComponents.Dsl.dll", "Company.MyDslComponents.MyDslComponentsToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
-					"@ITxViewToolboxItem;Company.MyDslComponents.Dsl.dll", 
-					"Company.MyDslComponents.ITxViewToolboxItem", 
+					"@FetchDataToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.FetchDataToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ITxView", 
-					"@ITxViewToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					"FetchData", 
+					"@FetchDataToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
 					0xff00ff,
 					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
-					"@ITxPanelToolboxItem;Company.MyDslComponents.Dsl.dll", 
-					"Company.MyDslComponents.ITxPanelToolboxItem", 
+					"@CounterToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.CounterToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ITxPanel", 
-					"@ITxPanelToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					"Counter", 
+					"@CounterToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
+	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
+					"@InputTextToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.InputTextToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"InputText", 
+					"@InputTextToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
+					"@SurveyPromptToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.SurveyPromptToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"SurveyPrompt", 
+					"@SurveyPromptToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
 					"@ITxButtonToolboxItem;Company.MyDslComponents.Dsl.dll", 
 					"Company.MyDslComponents.ITxButtonToolboxItem", 
@@ -52,15 +68,7 @@ namespace Company.MyDslComponents
 					"ITxButton", 
 					"@ITxButtonToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
 					0xff00ff,
-					Index = 2)]
-	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
-					"@ITxGaugeToolboxItem;Company.MyDslComponents.Dsl.dll", 
-					"Company.MyDslComponents.ITxGaugeToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ITxGauge", 
-					"@ITxGaugeToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
-					0xff00ff,
-					Index = 3)]
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
 					"@ITxTextboxToolboxItem;Company.MyDslComponents.Dsl.dll", 
 					"Company.MyDslComponents.ITxTextboxToolboxItem", 
@@ -68,15 +76,31 @@ namespace Company.MyDslComponents
 					"ITxTextbox", 
 					"@ITxTextboxToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
-	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
-					"@FetchDataToolboxItem;Company.MyDslComponents.Dsl.dll", 
-					"Company.MyDslComponents.FetchDataToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"FetchData", 
-					"@FetchDataToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
-					0xff00ff,
 					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
+					"@ITxGaugeToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.ITxGaugeToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ITxGauge", 
+					"@ITxGaugeToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
+					"@ITxPanelToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.ITxPanelToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ITxPanel", 
+					"@ITxPanelToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
+	[VSShell::ProvideStaticToolboxItem("Company.MyDslComponents.MyDslComponentsToolboxTab",
+					"@ITxViewToolboxItem;Company.MyDslComponents.Dsl.dll", 
+					"Company.MyDslComponents.ITxViewToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ITxView", 
+					"@ITxViewToolboxBitmap;Company.MyDslComponents.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
 	[VSShell::ProvideEditorFactory(typeof(MyDslComponentsEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(MyDslComponentsEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(MyDslComponentsEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

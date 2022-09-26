@@ -840,6 +840,182 @@ namespace Company.MyDslComponents
 		{
 		}
 		#endregion
+		#region RangeStart domain property code
+		
+		/// <summary>
+		/// RangeStart domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid RangeStartDomainPropertyId = new global::System.Guid(0xc1f7337e, 0xc60c, 0x40a3, 0x90, 0x6a, 0xb3, 0x62, 0xef, 0xd3, 0x18, 0xa0);
+		
+		/// <summary>
+		/// Storage for RangeStart
+		/// </summary>
+		private global::System.Double rangeStartPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of RangeStart domain property.
+		/// Description for Company.MyDslComponents.ITxGauge.Range Start
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxGauge/RangeStart.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxGauge/RangeStart.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c1f7337e-c60c-40a3-906a-b362efd318a0")]
+		public global::System.Double RangeStart
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return rangeStartPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				RangeStartPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ITxGauge.RangeStart domain property.
+		/// </summary>
+		internal sealed partial class RangeStartPropertyHandler : DslModeling::DomainPropertyValueHandler<ITxGauge, global::System.Double>
+		{
+			private RangeStartPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ITxGauge.RangeStart domain property value handler.
+			/// </summary>
+			public static readonly RangeStartPropertyHandler Instance = new RangeStartPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ITxGauge.RangeStart domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return RangeStartDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(ITxGauge element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.rangeStartPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ITxGauge element, global::System.Double newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Double oldValue = GetValue(element);
+				// double type precision is guaranteed only to 15th digit.
+				if (global::System.Math.Abs(newValue - oldValue) > 1e-15)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.rangeStartPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region RangeEnd domain property code
+		
+		/// <summary>
+		/// RangeEnd domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid RangeEndDomainPropertyId = new global::System.Guid(0xa7d15316, 0x2950, 0x46e2, 0xa4, 0x0a, 0xa3, 0x1d, 0xf8, 0xdc, 0xba, 0x5a);
+		
+		/// <summary>
+		/// Storage for RangeEnd
+		/// </summary>
+		private global::System.Double rangeEndPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of RangeEnd domain property.
+		/// Description for Company.MyDslComponents.ITxGauge.Range End
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.ITxGauge/RangeEnd.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.ITxGauge/RangeEnd.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a7d15316-2950-46e2-a40a-a31df8dcba5a")]
+		public global::System.Double RangeEnd
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return rangeEndPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				RangeEndPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ITxGauge.RangeEnd domain property.
+		/// </summary>
+		internal sealed partial class RangeEndPropertyHandler : DslModeling::DomainPropertyValueHandler<ITxGauge, global::System.Double>
+		{
+			private RangeEndPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ITxGauge.RangeEnd domain property value handler.
+			/// </summary>
+			public static readonly RangeEndPropertyHandler Instance = new RangeEndPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ITxGauge.RangeEnd domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return RangeEndDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Double GetValue(ITxGauge element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.rangeEndPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ITxGauge element, global::System.Double newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Double oldValue = GetValue(element);
+				// double type precision is guaranteed only to 15th digit.
+				if (global::System.Math.Abs(newValue - oldValue) > 1e-15)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.rangeEndPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace Company.MyDslComponents
@@ -880,6 +1056,303 @@ namespace Company.MyDslComponents
 			: base(partition, propertyAssignments)
 		{
 		}
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass Counter
+	/// Description for Company.MyDslComponents.Counter
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.Counter.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.Counter.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("76d94e4c-8f82-4886-a5f8-fbee7f765849")]
+	public partial class Counter : ITxComponent
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Counter domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x76d94e4c, 0x8f82, 0x4886, 0xa5, 0xf8, 0xfb, 0xee, 0x7f, 0x76, 0x58, 0x49);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Counter(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Counter(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass SurveyPrompt
+	/// Description for Company.MyDslComponents.SurveyPrompt
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.SurveyPrompt.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.SurveyPrompt.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("d011dc29-ddb4-4672-bf7a-77c5fe7c521e")]
+	public partial class SurveyPrompt : ITxComponent
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// SurveyPrompt domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd011dc29, 0xddb4, 0x4672, 0xbf, 0x7a, 0x77, 0xc5, 0xfe, 0x7c, 0x52, 0x1e);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public SurveyPrompt(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public SurveyPrompt(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Text domain property code
+		
+		/// <summary>
+		/// Text domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0x1e4c625f, 0x5f05, 0x401d, 0xbf, 0xa9, 0xc1, 0x57, 0x0b, 0x8c, 0x1d, 0xa0);
+		
+		/// <summary>
+		/// Storage for Text
+		/// </summary>
+		private global::System.String textPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Text domain property.
+		/// Description for Company.MyDslComponents.SurveyPrompt.Text
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.SurveyPrompt/Text.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.SurveyPrompt/Text.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1e4c625f-5f05-401d-bfa9-c1570b8c1da0")]
+		public global::System.String Text
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return textPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TextPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the SurveyPrompt.Text domain property.
+		/// </summary>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<SurveyPrompt, global::System.String>
+		{
+			private TextPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the SurveyPrompt.Text domain property value handler.
+			/// </summary>
+			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the SurveyPrompt.Text domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TextDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(SurveyPrompt element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.textPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(SurveyPrompt element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.textPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace Company.MyDslComponents
+{
+	/// <summary>
+	/// DomainClass InputTypeText
+	/// Description for Company.MyDslComponents.InputTypeText
+	/// </summary>
+	[DslDesign::DisplayNameResource("Company.MyDslComponents.InputTypeText.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("Company.MyDslComponents.InputTypeText.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("56632c78-d03b-4f28-ac35-5976a7e1f094")]
+	public partial class InputTypeText : ITxComponent
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// InputTypeText domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x56632c78, 0xd03b, 0x4f28, 0xac, 0x35, 0x59, 0x76, 0xa7, 0xe1, 0xf0, 0x94);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InputTypeText(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public InputTypeText(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Text domain property code
+		
+		/// <summary>
+		/// Text domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TextDomainPropertyId = new global::System.Guid(0xb625a6c9, 0x5259, 0x4197, 0xa9, 0xe7, 0xa8, 0xa3, 0x5c, 0xa4, 0x63, 0x75);
+		
+		/// <summary>
+		/// Storage for Text
+		/// </summary>
+		private global::System.String textPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Text domain property.
+		/// Description for Company.MyDslComponents.InputTypeText.Text
+		/// </summary>
+		[DslDesign::DisplayNameResource("Company.MyDslComponents.InputTypeText/Text.DisplayName", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("Company.MyDslComponents.InputTypeText/Text.Description", typeof(global::Company.MyDslComponents.MyDslComponentsDomainModel), "Company.MyDslComponents.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b625a6c9-5259-4197-a9e7-a8a35ca46375")]
+		public global::System.String Text
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return textPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TextPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the InputTypeText.Text domain property.
+		/// </summary>
+		internal sealed partial class TextPropertyHandler : DslModeling::DomainPropertyValueHandler<InputTypeText, global::System.String>
+		{
+			private TextPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the InputTypeText.Text domain property value handler.
+			/// </summary>
+			public static readonly TextPropertyHandler Instance = new TextPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the InputTypeText.Text domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TextDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(InputTypeText element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.textPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(InputTypeText element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.textPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
 		#endregion
 	}
 }

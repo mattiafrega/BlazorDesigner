@@ -1,15 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<myDslComponentsDiagram dslVersion="1.0.0.0" Id="bc16ccea-fa32-46f6-a489-a8f5d140a4f2" absoluteBounds="0, 0, 11.125, 8.5" name="Sample">
+<myDslComponentsDiagram dslVersion="1.0.0.0" Id="bc16ccea-fa32-46f6-a489-a8f5d140a4f2" absoluteBounds="0, 0, 15, 10.75" name="Sample">
   <iTxModelMoniker Id="bbe50076-a6c2-4bce-9c8d-4894fb573cdb" />
   <nestedChildShapes>
-    <iTxPanelShape Id="aa21ea51-2ab2-45d1-bd0f-0eb43184df29" absoluteBounds="5.25, 2.375, 5.625, 5.625">
-      <iTxPanelMoniker Id="14536881-0614-4002-8b55-e9b65fcaac69" />
-    </iTxPanelShape>
-    <iTxButtonShape Id="9ee75cd8-03eb-4d57-aa81-75d250e93ce6" absoluteBounds="6.875, 2.875, 2, 1">
-      <iTxButtonMoniker Id="ea1afa77-e60f-450f-9010-f64eb29e1194" />
-    </iTxButtonShape>
-    <iTxTextboxShape Id="ab9ac009-3626-4009-a203-3ce7938bd047" absoluteBounds="6.375, 4.875, 4, 1">
-      <iTxTextboxMoniker Id="2af9677b-ec1e-4940-96a0-1981b9120346" />
-    </iTxTextboxShape>
+    <fetchDataShape Id="76fd27a4-639d-48d0-a0a0-6d0584d913de" absoluteBounds="4.875, 1.625, 9.875, 4">
+      <fetchDataMoniker Id="f4e1e3bf-9b4d-4c44-b649-7feffb3f623a" />
+    </fetchDataShape>
+    <counterShape Id="cd0b3033-0ade-4f75-938e-1d5d7b1bfe79" absoluteBounds="4.875, 5.75, 9.875, 1.625">
+      <counterMoniker Id="761721da-e703-4aef-9da5-bc7153b50a37" />
+    </counterShape>
+    <inputTypeTextShape Id="dcf2010f-fbc8-4ed3-a992-1ef039a41fd2" absoluteBounds="4.875, 0.75, 9.75, 0.875">
+      <inputTypeTextMoniker Id="2eeda29f-08d5-48c6-9b15-b1cb16218758" />
+    </inputTypeTextShape>
+    <surveyPromptShape Id="b75d57ac-1a1f-4e61-870e-dcb3ed7e13c7" absoluteBounds="4.875, 7.625, 9.875, 0.625">
+      <surveyPromptMoniker Id="274ac1ea-21d0-4a1f-ae26-ebfa3a8b0b4a" />
+    </surveyPromptShape>
+    <iTxGaugeShape Id="31c29ce9-1cd6-4672-b5ea-68e0c4abbfac" absoluteBounds="8.25, 8.875, 1.75, 1.625">
+      <iTxGaugeMoniker Id="c756641b-3ab0-4f76-a4ea-dd941a5d910b" />
+    </iTxGaugeShape>
   </nestedChildShapes>
 </myDslComponentsDiagram>

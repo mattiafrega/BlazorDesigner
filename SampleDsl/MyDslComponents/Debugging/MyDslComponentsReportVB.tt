@@ -3,7 +3,7 @@
 <#@ MyDslComponents processor="MyDslComponentsDirectiveProcessor" requires="fileName='Sample.MyDslComponents'" #>
 <#@ import namespace="System.Collections" #>
 <#@ import namespace="System.Collections.Generic" #>
-<#//Recursive T4 to generate razor Markup from del DSL model#>
+<#//Recursive T4 to generate razor Markup from del DSL model -  DEBUG FILE#>
 <#
   foreach (ITxComponent itxcomponent in this.ITxModel.ITxComponent)
   {

@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <iTxModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bbe50076-a6c2-4bce-9c8d-4894fb573cdb" xmlns="http://schemas.microsoft.com/dsltools/MyDslComponents">
   <iTxComponent>
-    <iTxModelHasITxComponent Id="e112f7c2-77a3-4229-af7c-f8090acb91ff">
-      <iTxPanel Id="14536881-0614-4002-8b55-e9b65fcaac69" name="ITxPanel1">
-        <iTxComponent>
-          <iTxContainerHasITxComponent Id="6ab9443b-082a-490b-bd10-0850d1d48480">
-            <iTxButton Id="ea1afa77-e60f-450f-9010-f64eb29e1194" name="ITxButton1" text="OK" />
-          </iTxContainerHasITxComponent>
-          <iTxContainerHasITxComponent Id="c2a5810f-d6c4-4f4c-8f82-402a673328a1">
-            <iTxTextbox Id="2af9677b-ec1e-4940-96a0-1981b9120346" name="ITxTextbox1" text="esempio" />
-          </iTxContainerHasITxComponent>
-        </iTxComponent>
-      </iTxPanel>
+    <iTxModelHasITxComponent Id="405f3911-661c-4385-92ad-02f3e8d8a271">
+      <fetchData Id="f4e1e3bf-9b4d-4c44-b649-7feffb3f623a" name="FetchData1" />
+    </iTxModelHasITxComponent>
+    <iTxModelHasITxComponent Id="34b72a70-a688-4e82-8754-b502a46634b7">
+      <counter Id="761721da-e703-4aef-9da5-bc7153b50a37" name="Counter1" />
+    </iTxModelHasITxComponent>
+    <iTxModelHasITxComponent Id="e0200740-422d-4f78-b9e0-3f2b82cc910e">
+      <inputTypeText Id="2eeda29f-08d5-48c6-9b15-b1cb16218758" name="InputTypeText1" text="type here" />
+    </iTxModelHasITxComponent>
+    <iTxModelHasITxComponent Id="ab810fa6-a228-4d60-aaf2-a00b81c929ec">
+      <surveyPrompt Id="274ac1ea-21d0-4a1f-ae26-ebfa3a8b0b4a" name="SurveyPrompt1" text="How is Blazor Working for you?" />
+    </iTxModelHasITxComponent>
+    <iTxModelHasITxComponent Id="27803953-3f57-4960-9844-168d137a2b7c">
+      <iTxGauge Id="c756641b-3ab0-4f76-a4ea-dd941a5d910b" name="ITxGauge1" rangeStart="2" rangeEnd="5" />
     </iTxModelHasITxComponent>
   </iTxComponent>
 </iTxModel>

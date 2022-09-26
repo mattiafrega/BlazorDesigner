@@ -213,6 +213,22 @@
     <value>ITx Gauge</value>
     <comment>DisplayName for DomainClass &apos;ITxGauge&apos;</comment>
   </data>
+  <data name="Company.MyDslComponents.ITxGauge/RangeStart.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxGauge.Range Start</value>
+    <comment>Description for DomainProperty &apos;RangeStart&apos; on DomainClass &apos;ITxGauge&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.ITxGauge/RangeStart.DisplayName" xml:space="preserve">
+    <value>Range Start</value>
+    <comment>DisplayName for DomainProperty &apos;RangeStart&apos; on DomainClass &apos;ITxGauge&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.ITxGauge/RangeEnd.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.ITxGauge.Range End</value>
+    <comment>Description for DomainProperty &apos;RangeEnd&apos; on DomainClass &apos;ITxGauge&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.ITxGauge/RangeEnd.DisplayName" xml:space="preserve">
+    <value>Range End</value>
+    <comment>DisplayName for DomainProperty &apos;RangeEnd&apos; on DomainClass &apos;ITxGauge&apos;</comment>
+  </data>
   <data name="Company.MyDslComponents.FetchData.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.FetchData</value>
     <comment>Description for DomainClass &apos;FetchData&apos;</comment>
@@ -220,6 +236,46 @@
   <data name="Company.MyDslComponents.FetchData.DisplayName" xml:space="preserve">
     <value>Fetch Data</value>
     <comment>DisplayName for DomainClass &apos;FetchData&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.Counter.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.Counter</value>
+    <comment>Description for DomainClass &apos;Counter&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.Counter.DisplayName" xml:space="preserve">
+    <value>Counter</value>
+    <comment>DisplayName for DomainClass &apos;Counter&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.SurveyPrompt.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.SurveyPrompt</value>
+    <comment>Description for DomainClass &apos;SurveyPrompt&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.SurveyPrompt.DisplayName" xml:space="preserve">
+    <value>Survey Prompt</value>
+    <comment>DisplayName for DomainClass &apos;SurveyPrompt&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.SurveyPrompt/Text.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.SurveyPrompt.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;SurveyPrompt&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.SurveyPrompt/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;SurveyPrompt&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.InputTypeText.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.InputTypeText</value>
+    <comment>Description for DomainClass &apos;InputTypeText&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.InputTypeText.DisplayName" xml:space="preserve">
+    <value>Input Type Text</value>
+    <comment>DisplayName for DomainClass &apos;InputTypeText&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.InputTypeText/Text.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.InputTypeText.Text</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;InputTypeText&apos;</comment>
+  </data>
+  <data name="Company.MyDslComponents.InputTypeText/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;InputTypeText&apos;</comment>
   </data>
   <data name="Company.MyDslComponents.ITxModelHasITxComponent.Description" xml:space="preserve">
     <value>Description for Company.MyDslComponents.ITxModelHasITxComponent</value>
@@ -350,7 +406,7 @@
     <comment>DisplayName for DomainClass &apos;ITxTextboxShape&apos;</comment>
   </data>
   <data name="ITxTextboxShapeTextDecorDefaultText" xml:space="preserve">
-    <value>TextDecor</value>
+    <value>Text Property</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.MyDslComponents.ITxButtonShape.Description" xml:space="preserve">
@@ -362,7 +418,7 @@
     <comment>DisplayName for DomainClass &apos;ITxButtonShape&apos;</comment>
   </data>
   <data name="ITxButtonShapeTextDecorDefaultText" xml:space="preserve">
-    <value>TextDecor</value>
+    <value>Text Property</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.MyDslComponents.ITxGaugeShape.Description" xml:space="preserve">
@@ -389,16 +445,16 @@
     <value>Counter Shape</value>
     <comment>DisplayName for DomainClass &apos;CounterShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.SurveryPromptShape.Description" xml:space="preserve">
-    <value>Description for Company.MyDslComponents.SurveryPromptShape</value>
-    <comment>Description for DomainClass &apos;SurveryPromptShape&apos;</comment>
+  <data name="Company.MyDslComponents.SurveyPromptShape.Description" xml:space="preserve">
+    <value>Description for Company.MyDslComponents.SurveyPromptShape</value>
+    <comment>Description for DomainClass &apos;SurveyPromptShape&apos;</comment>
   </data>
-  <data name="Company.MyDslComponents.SurveryPromptShape.DisplayName" xml:space="preserve">
-    <value>Survery Prompt Shape</value>
-    <comment>DisplayName for DomainClass &apos;SurveryPromptShape&apos;</comment>
+  <data name="Company.MyDslComponents.SurveyPromptShape.DisplayName" xml:space="preserve">
+    <value>Survey Prompt Shape</value>
+    <comment>DisplayName for DomainClass &apos;SurveyPromptShape&apos;</comment>
   </data>
-  <data name="SurveryPromptShapeTextDecorator1DefaultText" xml:space="preserve">
-    <value>TextDecorator1</value>
+  <data name="SurveyPromptShapeTextDecorator1DefaultText" xml:space="preserve">
+    <value>Text Property</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="Company.MyDslComponents.InputTypeTextShape.Description" xml:space="preserve">
@@ -410,7 +466,7 @@
     <comment>DisplayName for DomainClass &apos;InputTypeTextShape&apos;</comment>
   </data>
   <data name="InputTypeTextShapeTextDecorator1DefaultText" xml:space="preserve">
-    <value>TextDecorator1</value>
+    <value>Text Property</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
@@ -433,20 +489,36 @@
     <value>MyDslComponents</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="ITxViewToolboxItem" xml:space="preserve">
-    <value>ITxView</value>
+  <data name="FetchDataToolboxItem" xml:space="preserve">
+    <value>FetchData</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ITxViewToolboxTooltip" xml:space="preserve">
-    <value>ITx View</value>
+  <data name="FetchDataToolboxTooltip" xml:space="preserve">
+    <value>Tabella con dati sample</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ITxPanelToolboxItem" xml:space="preserve">
-    <value>ITxPanel</value>
+  <data name="CounterToolboxItem" xml:space="preserve">
+    <value>Counter</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ITxPanelToolboxTooltip" xml:space="preserve">
-    <value>ITx Panel</value>
+  <data name="CounterToolboxTooltip" xml:space="preserve">
+    <value>Contatore con pulsante</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="InputTextToolboxItem" xml:space="preserve">
+    <value>InputText</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="InputTextToolboxTooltip" xml:space="preserve">
+    <value>Casella di testo sample</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="SurveyPromptToolboxItem" xml:space="preserve">
+    <value>SurveyPrompt</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="SurveyPromptToolboxTooltip" xml:space="preserve">
+    <value>Banner con testo personalizzabile</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ITxButtonToolboxItem" xml:space="preserve">
@@ -457,14 +529,6 @@
     <value>ITx Button</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ITxGaugeToolboxItem" xml:space="preserve">
-    <value>ITxGauge</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="ITxGaugeToolboxTooltip" xml:space="preserve">
-    <value>ITx Gauge</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="ITxTextboxToolboxItem" xml:space="preserve">
     <value>ITxTextbox</value>
     <comment>Toolbox item name</comment>
@@ -473,12 +537,28 @@
     <value>ITx Textbox</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="FetchDataToolboxItem" xml:space="preserve">
-    <value>FetchData</value>
+  <data name="ITxGaugeToolboxItem" xml:space="preserve">
+    <value>ITxGauge</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="FetchDataToolboxTooltip" xml:space="preserve">
-    <value>Fetch Data</value>
+  <data name="ITxGaugeToolboxTooltip" xml:space="preserve">
+    <value>ITx Gauge</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ITxPanelToolboxItem" xml:space="preserve">
+    <value>ITxPanel</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ITxPanelToolboxTooltip" xml:space="preserve">
+    <value>ITx Panel</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ITxViewToolboxItem" xml:space="preserve">
+    <value>ITxView</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ITxViewToolboxTooltip" xml:space="preserve">
+    <value>ITx View</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -638,36 +718,48 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\counterImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>CounterShape shape image</comment>
   </data>
-  <data name="SurveryPromptShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="SurveyPromptShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\alertImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>SurveryPromptShape shape image</comment>
+    <comment>SurveyPromptShape shape image</comment>
   </data>
   <data name="InputTypeTextShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\textboxImage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>InputTypeTextShape shape image</comment>
   </data>
-  <data name="ITxViewToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FetchDataToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\tablebmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ITxPanelToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CounterToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\counterbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="InputTextToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\inputtypetextbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="SurveyPromptToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\surveypromptbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ITxButtonToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="ITxGaugeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\itxbuttonbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ITxTextboxToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\itxtextboxbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="FetchDataToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ITxGaugeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\itxgaugebmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ITxPanelToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\itxpanelbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ITxViewToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\itxviewbmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
